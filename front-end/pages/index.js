@@ -14,11 +14,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to our screen <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Let's make this COSE map y'all.
+          Let's make this COSE map y'all!!
         </p>
 
         <button><Link href="/test_call">See the back end in action!</Link></button>
