@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "632bb4433b2e349d9cfebcba"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Soft Skills",
+  "skill_information": ""
+},{
+  "_id": {
+    "$oid": "632bb4db0e17f09d9c34c01f"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Life Long Learning",
+  "skill_information": ""
+},{
+  "_id": {
+    "$oid": "632bb5080e17f09d9c34c020"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Special Technical Skills, Techniques and Tools",
+  "skill_information": ""
+},{
+  "_id": {
+    "$oid": "632bb5120e17f09d9c34c021"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Fundamental Knowledge & Concepts",
+  "skill_information": ""
+},{
+  "_id": {
+    "$oid": "632bb51b0e17f09d9c34c022"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Citizenship",
+  "skill_information": ""
+}]
