@@ -2,10 +2,10 @@ import React from 'react'
 
 const Year = ({color, yearNumber, studentClass}) => {
   return (
-    <div style={{ backgroundColor: color }}>
+    <div style={{display: 'flex', flexDirection: 'column', backgroundColor: color,  flexGrow: 1, margin: '10px',}}>
       
-      <p>Year {yearNumber} </p>
-      <p> {studentClass} </p>
+      <h1 style={{alignSelf: 'center'}}>Year {yearNumber} </h1>
+      <h3 style={{alignSelf: 'center'}}> {studentClass} </h3>
     </div>
   )
 }
