@@ -1,21 +1,49 @@
 export default function test_call({msg}) {
-  return (
-    <div>
+ let tag = []	
+	msg.forEach(element => {
+		if (element.name=='Thomas'){
+		   tag.push(<h3>{element.name}</h3>)
+	   } else {
+		   tag.push(<h2>{element.title}{element.name}</h2>)
+	   }
+	   
+	   });
+    
+	return (
+	<div>
      <h1>Test</h1>
-		 <h3>{ msg.message }</h3>
-    </div>
+	{tag}
+
+
+	</div>
   )
 }
 
 
 export const getStaticProps = async() => {
-	const res = await fetch('http://localhost:3080/test_api')
+	// const res = await fetch('http://localhost:3080/test_api')
 
-	const msg = await res.json()
+	// const msg = await res.json()
 
 	return {
 		props: {
-			msg
+			msg: [
+				{ 
+				 name: 'Thomas',
+				 title: 'Mr.'
+				},
+				{
+				 name: 'Fred',
+				 title: 'Dr.'
+				},
+				{
+					name: 'Fred2',
+					title: 'Dr.'
+				}
+			 ]
 		}
 	}
 }
+
+
+
