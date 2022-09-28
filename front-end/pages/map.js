@@ -4,7 +4,7 @@ import Year from "../Components/Year";
 function Map() {
   return (
     <div className="App">
-        <div style={{backgroundColor: 'white', display: "flex", justifyContent: "space-around", margin: '10px'}}>
+        <div style={{backgroundColor: 'red', display: "flex", justifyContent: "space-around", }}>
             <Year
             color= '#f2f2f2'
             yearNumber='1' 
