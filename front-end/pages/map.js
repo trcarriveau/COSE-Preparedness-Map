@@ -1,38 +1,57 @@
-import Year from "../Components/Year";
+import styles from "../styles/Map.module.css"
+import Year from "../components/Year";
+import CoreSkill from "../components/CoreSkill";
+import Colors from "../components/Colors";
 
 
 function Map() {
   return (
-    <div className="App">
-        <div style={{backgroundColor: 'red', display: "flex", justifyContent: "space-around", }}>
-            <Year
-            color= '#f2f2f2'
+    <div>
+        <div className={styles.years}>
+           <Year
+            color= {Colors.gray1}
             yearNumber='1' 
             studentClass='Freshman'
             />
             <Year
-            color= '#d9d9d9'
+            color= {Colors.gray2}
             yearNumber='2' 
             studentClass='Sophomore'
             />
             <Year
-            color= '#bfbfbf'
+            color= {Colors.gray3}
             yearNumber='3' 
             studentClass='Junior'
             />
             <Year
-            color= '#a6a6a6'
+            color= {Colors.gray4}
             yearNumber='4' 
             studentClass='Senior'
             />
         </div>
-        {/* <p>Hello 2</p>
-        <div class = "flex-container"> 
-          <div class="item"> Item 1</div>
-          <div class="item"> Item 2</div>
-          <div class="item"> Item 3</div>
-          <div class="year" style={{backgroundColor: 'grey'}}> Year 4 <p> Senior</p></div>
-        </div>       */}
+        <div className={styles.skills}>
+            <CoreSkill className={styles.skill}
+                title="Soft Skill"
+                color={Colors.green5}
+            />
+            <CoreSkill
+                title="Life Long Learning"
+                color={Colors.green4}
+            />    
+            <CoreSkill
+                title="Special Technical Skills, Techniques, and Tools"
+                color={Colors.green3}
+            />
+            <CoreSkill
+                title="Fundamental Knowledge & Concepts"
+                color={Colors.green2}
+            />    
+            <CoreSkill
+                title="Citizenship"
+                color={Colors.green1}
+            />
+
+        </div>
     </div>
   );
 }
