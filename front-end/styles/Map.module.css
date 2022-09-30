@@ -5,6 +5,32 @@
    padding-left: 20%;
 }
 
+.seasonsContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;  
+    padding-left: 20%;
+    justify-content: 'space-around';
+    margin-top: 5px; 
+}
+
+.seasons{
+    background-color: blueviolet;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 60px;
+}
+
+.season {
+    background-color: orange;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 1px
+}
+
 .skills {
     display: flex;
     flex-direction: column;
@@ -14,6 +40,6 @@
     align-items: center;
 }
 .skill {
-    background-color: slateblue;
+    background-color: yellow;
     display: flex;
 }

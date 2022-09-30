@@ -29,29 +29,70 @@ function Map() {
             studentClass='Senior'
             />
         </div>
-        <div className={styles.skills}>
-            <CoreSkill className={styles.skill}
-                title="Soft Skill"
-                color={Colors.green5}
-            />
-            <CoreSkill
-                title="Life Long Learning"
-                color={Colors.green4}
-            />    
-            <CoreSkill
-                title="Special Technical Skills, Techniques, and Tools"
-                color={Colors.green3}
-            />
-            <CoreSkill
-                title="Fundamental Knowledge & Concepts"
-                color={Colors.green2}
-            />    
-            <CoreSkill
-                title="Citizenship"
-                color={Colors.green1}
-            />
+        <div>
+            {/* //TODO: make styles.seasons div into a component */}
+            <div className={styles.seasonsContainer}> 
+                <div className={styles.seasons}>
+                    <div className={styles.season}>
+                        Fall
+                    </div>
+                    <div className={styles.season}>
+                        Spring
+                    </div> 
+                </div>
+                <div className={styles.seasons}>
+                    <div className={styles.season}>
+                        Fall
+                    </div>
+                    <div className={styles.season}>
+                        Spring
+                    </div> 
+                </div>
+                <div className={styles.seasons}>
+                    <div className={styles.season}>
+                        Fall
+                    </div>
+                    <div className={styles.season}>
+                        Spring
+                    </div>
+                </div>
+                <div className={styles.seasons}>
+                    <div className={styles.season}>
+                        Fall
+                    </div>
+                    <div className={styles.season}>
+                        Spring
+                    </div>
+                </div>
 
+            </div>
+            <div className={styles.skills}>
+                <CoreSkill className={styles.skill}
+                    title="Soft Skill"
+                    color={Colors.green5}
+                />
+                <CoreSkill
+                    title="Life Long Learning"
+                    color={Colors.green4}
+                />    
+                <CoreSkill
+                    title="Special Technical Skills, Techniques, and Tools"
+                    color={Colors.green3}
+                />
+                <CoreSkill
+                    title="Fundamental Knowledge & Concepts"
+                    color={Colors.green2}
+                />    
+                <CoreSkill
+                    title="Citizenship"
+                    color={Colors.green1}
+                />
+            </div>
+            <div>
+               Test 
+            </div>
         </div>
+
     </div>
   );
 }
