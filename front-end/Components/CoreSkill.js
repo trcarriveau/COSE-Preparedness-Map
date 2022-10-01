@@ -2,9 +2,19 @@ import React from 'react'
 
 const CoreSkill = ({title, color}) => {
   return (
-    <h1 style={{display: 'flex', backgroundColor: color, width: '95%', height: '180px' }}>
+    <h2 
+        style={{
+            display: 'flex',
+            backgroundColor: color, 
+            width: '95%', 
+            height: '180px', 
+            justifyContent: 'center', 
+            alignItems: 'center',
+
+        }}
+    >
         {title}
-    </h1>
+    </h2>
   )
 }
 

@@ -33,8 +33,8 @@ export const getStaticProps = async() => {
 				 title: 'Mr.'
 				},
 				{
-				 name: 'Fred',
-				 title: 'Dr.'
+				 name: 'Thomas',
+				 title: 'Mrs.'
 				},
 				{
 					name: 'Fred2',

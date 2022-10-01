@@ -2,7 +2,7 @@ import styles from "../styles/Map.module.css"
 import Year from "../components/Year";
 import CoreSkill from "../components/CoreSkill";
 import Colors from "../components/Colors";
-
+import Course from "../components/Course";
 
 function Map() {
   return (
@@ -29,43 +29,44 @@ function Map() {
             studentClass='Senior'
             />
         </div>
-        <div>
-            {/* //TODO: make styles.seasons div into a component */}
-            <div className={styles.seasonsContainer}> 
-                <div className={styles.seasons}>
-                    <div className={styles.season}>
-                        Fall
-                    </div>
-                    <div className={styles.season}>
-                        Spring
-                    </div> 
-                </div>
-                <div className={styles.seasons}>
-                    <div className={styles.season}>
-                        Fall
-                    </div>
-                    <div className={styles.season}>
-                        Spring
-                    </div> 
-                </div>
-                <div className={styles.seasons}>
-                    <div className={styles.season}>
-                        Fall
-                    </div>
-                    <div className={styles.season}>
-                        Spring
-                    </div>
-                </div>
-                <div className={styles.seasons}>
-                    <div className={styles.season}>
-                        Fall
-                    </div>
-                    <div className={styles.season}>
-                        Spring
-                    </div>
-                </div>
 
+        {/* //TODO: make styles.seasons div into a component */}
+        <div className={styles.seasonsContainer}> 
+            <div className={styles.seasons}>
+                <div className={styles.season}>
+                    Fall
+                </div>
+                <div className={styles.season}>
+                    Spring
+                </div> 
             </div>
+            <div className={styles.seasons}>
+                <div className={styles.season}>
+                    Fall
+                </div>
+                <div className={styles.season}>
+                    Spring
+                </div> 
+            </div>
+            <div className={styles.seasons}>
+                <div className={styles.season}>
+                    Fall
+                </div>
+                <div className={styles.season}>
+                    Spring
+                </div>
+            </div>
+            <div className={styles.seasons}>
+                <div className={styles.season}>
+                    Fall
+                </div>
+                <div className={styles.season}>
+                    Spring
+                </div>
+            </div>
+        </div>
+
+        <div className={styles.middle}>
             <div className={styles.skills}>
                 <CoreSkill className={styles.skill}
                     title="Soft Skill"
@@ -88,12 +89,36 @@ function Map() {
                     color={Colors.green1}
                 />
             </div>
+            <div className={styles.testBox}>
+                Test 
+            </div>
             <div>
-               Test 
+                Test 
+            </div>
+            <div>
+                Test 
             </div>
         </div>
-
+        <div className={styles.key}>
+            <div>
+                Traits Key
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column'}}>             
+                <div className={styles.keyRow}>
+                    <div className={styles.box} style={{backgroundColor: Colors.courseBlue}}>     
+                    </div>
+                    <div className={styles.keyText}>Course</div>
+                </div>
+                <div className={styles.keyRow}>
+                    <div className={styles.box} style={{backgroundColor: Colors.ecYellow}} >
+                    </div>
+                    <div className={styles.keyText}>Extracurricular</div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
   );
 }
 

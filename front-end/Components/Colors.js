@@ -13,6 +13,12 @@ export const ColorCodes = {
     green: '#c5e0b4',
     darkGreen: '#a9d18e',
     darkestGreen: '#548235',
+
+    //course blue
+    blue: '#3e70c9',
+
+    //extracurricular yellow
+    yellow: '#ffff00'
 }
 
 export const Colors = {
@@ -25,7 +31,10 @@ export const Colors = {
     green2: ColorCodes.lightGreen,
     green3: ColorCodes.green,
     green4: ColorCodes.darkGreen,
-    green5: ColorCodes.darkestGreen
+    green5: ColorCodes.darkestGreen,
+
+    courseBlue: ColorCodes.blue,
+    ecYellow: ColorCodes.yellow,
 } 
 
 export default Colors
