@@ -1,7 +1,7 @@
 .box{
     display: flex; 
     width: 100px;
-    height: 50px;
+    height: 25px;
     border-radius: 10px;
 }
 .key{
@@ -13,6 +13,7 @@
 .keyRow{
     display: flex; 
     flex-direction: row;  
+    margin: 5px;
 }
 .keyText{
     padding-left: 10px;

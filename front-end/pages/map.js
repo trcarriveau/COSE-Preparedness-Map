@@ -103,7 +103,7 @@ function Map() {
             <div>
                 Traits Key
             </div>
-            <div style={{display: 'flex', flexDirection: 'column'}}>             
+            <div style={{display: 'flex', flexDirection: 'column', }}>             
                 <div className={styles.keyRow}>
                     <div className={styles.box} style={{backgroundColor: Colors.courseBlue}}>     
                     </div>
