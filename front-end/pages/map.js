@@ -122,15 +122,200 @@ function Map() {
                     color={Colors.green1}
                 />
             </div>
-            <div className={styles.testBox}>
-                Test 
-            </div>
-            <div>
-                Test 
-            </div>
-            <div>
-                Test 
-            </div>
+            <div className={styles.semesters_all}>
+                {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
+                
+                {/* ******************** Core Skill 1 ************************ */}
+                <div className={styles.semesters_by_skill}>
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            <Course
+                                courseName={'SE 221'}
+                                temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
+                            />
+                            <Course
+                                courseName={'SE 231'}
+                                temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
+                            />
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                </div> 
+
+                {/* ******************** Core Skill 2 ************************ */}
+                <div className={styles.semesters_by_skill}>
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            skill 2 test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            skill 2 test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                </div> 
+
+                {/* ******************** Core Skill 3 ************************ */}
+                <div className={styles.semesters_by_skill}>
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            skill 3 test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            skill 3 test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                </div> 
+                {/* ******************** Core Skill 4 ************************ */}
+                <div className={styles.semesters_by_skill}>
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            skill 4 test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            skill 4 test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                </div>            
+                 {/* ******************** Core Skill 5 ************************ */}
+                 <div className={styles.semesters_by_skill}>
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            skill 5 test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            skill 5 test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall1
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring1
+                        </div>
+                    </div>  
+                    <div className={styles.semesters}>   
+                        <div className={styles.semester}> 
+                            test fall2
+                        </div>
+                        <div className={styles.semester}> 
+                            test spring2
+                        </div>
+                    </div>  
+                </div>           
+           
+           </div>
+
+            
+
+            
+        
         </div>
         {/*TODO styles.key area needs to be converted to component to iterate through types */}
         <div className={styles.key}>
@@ -157,16 +342,16 @@ function Map() {
                 </div>
 
                 {/* **************TESTING AREA********* */}
-                <div className={styles.keyRow}>
+                {/* <div className={styles.keyRow}>
                     <Type type={types}/>
-                </div>
+                </div> */}
 
-                <div>
+                {/* <div>
                     <Course
                       courseName={'SE 460'}
                       temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
                     />
-                </div>
+                </div> */}
                 {/* **************TESTING AREA********* */}
 
             </div>

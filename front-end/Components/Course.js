@@ -13,6 +13,8 @@ const Course = ({courseName, description, skills, types, year_semester, is_ec, t
             justifyContent: 'space-between',
             borderRadius: '10px', 
             alignItems: 'center',
+            width: '90%',
+            margin: '2px',
     }}> 
         <div
             style={{
