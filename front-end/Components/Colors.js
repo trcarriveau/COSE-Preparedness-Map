@@ -18,7 +18,10 @@ export const ColorCodes = {
     blue: '#3e70c9',
 
     //extracurricular yellow
-    yellow: '#ffff00'
+    yellow: '#ffff00',
+
+    //icons 
+    i_yellow: '#ffffE0'
 }
 
 export const Colors = {
@@ -35,6 +38,8 @@ export const Colors = {
 
     courseBlue: ColorCodes.blue,
     ecYellow: ColorCodes.yellow,
+
+    icon_yellow: ColorCodes.i_yellow, 
 } 
 
 export default Colors

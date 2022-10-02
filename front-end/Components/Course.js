@@ -1,10 +1,36 @@
 import React from 'react'
 import Colors from './Colors'
 
-const Course = ({courseName}, {trait}) => {
-  return (
-    <div style={styles.courseContainer}>
-        {courseName}
+const Course = ({courseName, description, skills, types, year_semester, is_ec, temp_trait}) => {
+    return (
+    // <div style={styles.courseContainer}>
+   
+    <div 
+        style={{
+            display: 'flex',
+            backgroundColor: Colors.courseBlue,
+            color: 'white',
+            justifyContent: 'space-between',
+            borderRadius: '10px', 
+            alignItems: 'center',
+    }}> 
+        <div
+            style={{
+                display: 'flex',
+                marginLeft: '10px',
+             }}>
+            {temp_trait}
+        </div>
+        <div>
+            {courseName}
+        </div>
+        <div
+            style={{
+                display: 'flex',
+                marginRight: '10px',
+            }}>
+            <></>
+        </div>
     </div>
 
   )

@@ -69,6 +69,11 @@
     height: 50px;
     background-color: black;
 }
+.typeKey{
+    display: flex;
+    flex-direction: column;
+    margin: '10px';
+}
 .years {
    display: flex;
    justify-content: 'space-around'; 

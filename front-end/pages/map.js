@@ -1,17 +1,43 @@
+
 import styles from "../styles/Map.module.css"
 import Year from "../components/Year";
 import CoreSkill from "../components/CoreSkill";
 import Colors from "../components/Colors";
 import Course from "../components/Course";
+import Type from "../components/Type";
+
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
-import {GrGroup} from 'react-icons/gr'
 import {GiArchiveResearch} from 'react-icons/gi' 
-import {GiCube} from 'react-icons/gi'
+import {GrGroup} from 'react-icons/gr'
 import {BsTriangleFill} from 'react-icons/bs'
+import {HiUserGroup} from 'react-icons/hi'
+import {GiCube} from 'react-icons/gi'
+
+//test data for types 
+import type_data from '../components/test_objects/cose-types.json'
+
+import { useState} from 'react'
+
+
 
 function Map() {
+
+  
+
+  const [types, setTypes] = useState(
+    {
+        type_map: "Software Engineering",
+        type_name: "Labs & Experimental Learning (ISELF VizLab)",
+        type_information: "",
+        type_icon: GrGroup  
+    }
+
+  )
+
+  console.log(type_data)
+
   return (
     <div>
         <div className={styles.years}>
@@ -106,9 +132,9 @@ function Map() {
                 Test 
             </div>
         </div>
-        {/*TODO styles.key area needs to be converted to component to iterate through traits */}
+        {/*TODO styles.key area needs to be converted to component to iterate through types */}
         <div className={styles.key}>
-            <div style={{display: 'flex', flexDirection: 'column', margin: '10px'}}>
+            <div className={styles.typeKey}>
                 <div className={styles.keyRow}>
                     <RiComputerFill style={{color: 'orange'}}></RiComputerFill>
                     <div className={styles.keyText}>Labs & Experimental Learning (ISELF VizLab)</div>
@@ -118,7 +144,7 @@ function Map() {
                     <div className={styles.keyText}>Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)</div>
                 </div>
                 <div className={styles.keyRow}>
-                    <GrGroup style={{color: 'yellow'}}></GrGroup>
+                    <HiUserGroup style={{color: 'black' }}></HiUserGroup>
                     <div className={styles.keyText}>Group-based Semester Long Industry-Directed Projects</div>
                 </div>
                 <div className={styles.keyRow}>
@@ -126,12 +152,26 @@ function Map() {
                     <div className={styles.keyText}>Research Activities</div>
                 </div>            
                 <div className={styles.keyRow}>
-                    <GiCube style={{color: 'gray'}}></GiCube>
+                    <GiCube style={{color: 'gray', }}></GiCube>
                     <div className={styles.keyText}>Professional Working Experience</div>
                 </div>
+
+                {/* **************TESTING AREA********* */}
+                <div className={styles.keyRow}>
+                    <Type type={types}/>
+                </div>
+
+                <div>
+                    <Course
+                      courseName={'SE 460'}
+                      temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
+                    />
+                </div>
+                {/* **************TESTING AREA********* */}
+
             </div>
             
-            <div style={{display: 'flex', flexDirection: 'column', margin: '10px'}}>             
+            <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>
                     <div className={styles.box} style={{backgroundColor: Colors.courseBlue}}>     
                     </div>
