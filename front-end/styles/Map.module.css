@@ -1,0 +1,132 @@
+.box{
+    display: flex; 
+    width: 125px;
+    height: 25px;
+    border-radius: 10px;
+}
+.key{
+    display: flex;
+    flex-direction: row;
+    /* background-color: chocolate; */
+    justify-content: space-evenly;
+}
+.keyRow{
+    display: flex; 
+    flex-direction: row;  
+    margin: 5px;
+}
+.keyText{
+    padding-left: 10px;
+    align-self: center;
+    font-weight: bold;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+}
+.seasonsContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: yellow;  
+    padding-left: 20%;
+    justify-content: 'space-around';
+    margin-top: 5px; 
+}
+
+.seasons{
+    background-color: blueviolet;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 60px;
+}
+
+.season {
+    background-color: orange;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin: 1px
+}
+
+.semesters_all{
+    display: flex;
+    flex-direction: column;
+    background-color: darkmagenta;
+    flex-grow: 1;
+    margin: 1px; 
+}
+
+.semesters_by_skill{
+    display: flex; 
+    flex-grow: 1;
+    background-color: gray;
+    height: 20%;
+    margin: 2px;  
+}
+
+.semesters{
+    display: flex; 
+    background-color: firebrick;
+    width: 25%; 
+}
+
+.semester{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: darkgoldenrod;
+    width: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.semester_course{
+    display: flex; 
+    flex-direction: column;
+}
+
+.semester_ec{
+    display: flex; 
+    flex-direction: column-reverse;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    background-color: slateblue;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill {
+    background-color: yellow;
+    display: flex;
+}
+.testBox{
+    display: flex; 
+    width: 100px;
+    height: 50px;
+    background-color: black;
+}
+.testBox2{
+    display: flex; 
+    flex-grow: 5;
+    /* width: 100%; */
+    height: 50px;
+    background-color: greenyellow;
+}
+.typeKey{
+    display: flex;
+    flex-direction: column;
+    margin: '10px';
+}
+.years {
+   display: flex;
+   justify-content: 'space-around'; 
+   background-color: red;
+   padding-left: 20%;
+}
