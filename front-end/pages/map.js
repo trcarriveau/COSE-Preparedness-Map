@@ -19,13 +19,15 @@ import {GiCube} from 'react-icons/gi'
 import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
+import Extracurricular from "../components/Extracurricular";
+import Semester from "../components/Semester";
 
 
 
 function Map() {
 
   
-
+  //testing reading JSON info 
   const [types, setTypes] = useState(
     {
         type_map: "Software Engineering",
@@ -35,6 +37,8 @@ function Map() {
     }
 
   )
+
+
 
   console.log(type_data)
 
@@ -136,6 +140,9 @@ function Map() {
                             <Course
                                 courseName={'SE 231'}
                                 temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
+                            />
+                            <Extracurricular
+                                ecName={'Hackathons'}
                             />
                         </div>
                         <div className={styles.semester}> 
@@ -352,6 +359,9 @@ function Map() {
                       temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
                     />
                 </div> */}
+                {/* <Extracurricular
+                    ecName={'Hackathons'}
+                /> */}
                 {/* **************TESTING AREA********* */}
 
             </div>

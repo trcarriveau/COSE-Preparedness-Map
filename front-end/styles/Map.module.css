@@ -83,6 +83,17 @@
     margin-right: 5px;
 }
 
+.semester_course{
+    display: flex; 
+    flex-direction: column;
+}
+
+.semester_ec{
+    display: flex; 
+    flex-direction: column-reverse;
+}
+
+
 .skills {
     display: flex;
     flex-direction: column;

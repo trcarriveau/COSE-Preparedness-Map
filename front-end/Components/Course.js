@@ -26,6 +26,7 @@ const Course = ({courseName, description, skills, types, year_semester, is_ec, t
         <div>
             {courseName}
         </div>
+        {/* Nothing to display below  Just used for justify-content space-between  */}
         <div
             style={{
                 display: 'flex',
