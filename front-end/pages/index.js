@@ -10,15 +10,15 @@ export default function Home() {
         <form id="login">
               <h1 className={styles.title}>Login</h1>
               <div className={styles.group}>
-                  <input type="text" className={styles.input1} autofocus placeholder="Username or email" />
+                  <input type="text" className={styles.input1} autoFocus placeholder="Username or email" />
               </div>
               <div className={styles.group}>
-                  <input type="password" className={styles.input1} autofocus placeholder="Password" />
+                  <input type="password" className={styles.input1} autoFocus placeholder="Password" />
               </div>
               <button className={styles.button} type="submit">Sign In</button>
               <p></p>
               <p className={styles.next}>
-                  <a className={styles.link} href="" id="linkLogin">Don't have an account? Create account</a>
+                  <a className={styles.link} href="/registration" id="linkLogin">Don't have an account? Create account</a>
               </p>
           </form>
       </div>
