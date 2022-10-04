@@ -6,6 +6,7 @@ import Colors from "../components/Colors";
 import Course from "../components/Course";
 import Type from "../components/Type";
 import Years from "../Components/Years";
+import Season from "../components/Season";
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
@@ -21,6 +22,7 @@ import type_data from '../components/test_objects/cose-types.json'
 import { useState} from 'react'
 import Extracurricular from "../components/Extracurricular";
 import Semester from "../components/Semester";
+import Seasons from "../components/Seasons";
 
 
 
@@ -343,7 +345,14 @@ function Map() {
                 /> */}
 
                 {/* **************TESTING AREA********* */}
-                <Years />
+                {/* <Season 
+                    label={'test'} 
+                    color= {Colors.gray1}
+                /> */}
+                <Seasons
+                    total_years={5}
+                />   
+                
             </div>
             
             <div className={styles.typeKey}>             

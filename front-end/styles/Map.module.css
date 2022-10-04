@@ -38,6 +38,7 @@
     background-color: blueviolet;
     display: flex;
     flex-grow: 1;
+    
     /* margin-left: 5px; */
     /* margin-right: 5px; */
     height: 60px;
@@ -48,7 +49,8 @@
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    margin: 1px
+    margin: 1px;
+    width: 50%;
 }
 
 .semesters_all{
@@ -127,6 +129,13 @@
 .years {
    display: flex;
    justify-content: 'space-around'; 
-   background-color: red;
+   background-color: white;
    padding-left: 20%;
 }
+/* years2 is a test style and can be deleted later */
+.years2 {
+    display: flex;
+    justify-content: 'space-around'; 
+    background-color: red;
+    padding-left: 20%;
+ }
