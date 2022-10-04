@@ -8,8 +8,8 @@ import {GiCube} from 'react-icons/gi'
 import {BsTriangleFill} from 'react-icons/bs'
 import TypesKey from './TypesKey'
 
-const Type = ({ type}) => {
-    let Ikon = type.type_icon
+const Type = ({ type }) => {
+    let Icon = type.type_icon
     console.log("icon is: ",type.type_icon)
     return (
     <div>
@@ -20,7 +20,7 @@ const Type = ({ type}) => {
         <h3>
             <type.type_icon/>
             {type.type_map}
-            <Ikon/>
+            <Icon/>
 
         </h3>
     </div>

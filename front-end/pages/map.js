@@ -5,7 +5,7 @@ import CoreSkill from "../components/CoreSkill";
 import Colors from "../components/Colors";
 import Course from "../components/Course";
 import Type from "../components/Type";
-
+import Years from "../Components/Years";
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
@@ -43,29 +43,8 @@ function Map() {
   console.log(type_data)
 
   return (
-    <div>
-        <div className={styles.years}>
-           <Year
-            color= {Colors.gray1}
-            yearNumber='1' 
-            studentClass='Freshman'
-            />
-            <Year
-            color= {Colors.gray2}
-            yearNumber='2' 
-            studentClass='Sophomore'
-            />
-            <Year
-            color= {Colors.gray3}
-            yearNumber='3' 
-            studentClass='Junior'
-            />
-            <Year
-            color= {Colors.gray4}
-            yearNumber='4' 
-            studentClass='Senior'
-            />
-        </div>
+    <div>    
+        <Years />
 
         {/* //TODO: make styles.seasons div into a component */}
         <div className={styles.seasonsContainer}> 
@@ -362,8 +341,9 @@ function Map() {
                 {/* <Extracurricular
                     ecName={'Hackathons'}
                 /> */}
-                {/* **************TESTING AREA********* */}
 
+                {/* **************TESTING AREA********* */}
+                <Years />
             </div>
             
             <div className={styles.typeKey}>             
