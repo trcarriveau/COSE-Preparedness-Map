@@ -307,15 +307,12 @@ function Map() {
                 
                 />
 
-                <Types
-
+                <Course 
+                    courseName={'Test'}
+                    types={<Types/>}
                 />
 
-                <Type 
-                    type_name = {"Testing a type"}
-                    type_icon = {<RiComputerFill style={{color: 'orange'}}/>}
-
-                />
+                <Types/>
 
                 {/* **************TESTING AREA********* */}
 

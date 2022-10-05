@@ -2,7 +2,7 @@
 import React from 'react'
 import Colors from './Colors'
 
-//temp trait is a stand in until we have functional type icons and labels
+//temp trait is a stand in until we have functional type icons and labels using types component
 const Course = ({courseName, description, skills, types, year_semester, is_ec, temp_trait}) => {
     return (
     // <div style={styles.courseContainer}>
@@ -22,8 +22,12 @@ const Course = ({courseName, description, skills, types, year_semester, is_ec, t
             style={{
                 display: 'flex',
                 marginLeft: '10px',
+                flexDirection: 'row',
+                gap: '5px'
              }}>
             {temp_trait}
+            {types}
+
         </div>
         <div>
             {courseName}
