@@ -28,14 +28,13 @@
 .seasonsContainer{
     display: flex;
     flex-direction: row;
-    background-color: yellow;  
     padding-left: 20%;
     justify-content: 'space-around';
     margin-top: 5px; 
 }
 
 .seasons{
-    background-color: blueviolet;
+    background-color: white;
     display: flex;
     flex-grow: 1;
     

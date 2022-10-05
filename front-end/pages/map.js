@@ -49,7 +49,7 @@ function Map() {
         <Years />
 
         {/* //TODO: make styles.seasons div into a component */}
-        <div className={styles.seasonsContainer}> 
+        {/* <div className={styles.seasonsContainer}> 
             <div className={styles.seasons}>
                 <div className={styles.season}>
                     Fall
@@ -82,29 +82,30 @@ function Map() {
                     Spring
                 </div>
             </div>
-        </div>
+        </div> */}
+        <Seasons total_years={4} />
 
         <div className={styles.middle}>
             <div className={styles.skills}>
                 <CoreSkill className={styles.skill}
                     title="Soft Skill"
-                    color={Colors.green5}
+                    color={Colors.secondaryDarkest}
                 />
                 <CoreSkill
                     title="Life Long Learning"
-                    color={Colors.green4}
+                    color={Colors.secondaryDark}
                 />    
                 <CoreSkill
                     title="Special Technical Skills, Techniques, and Tools"
-                    color={Colors.green3}
+                    color={Colors.secondaryMain}
                 />
                 <CoreSkill
                     title="Fundamental Knowledge & Concepts"
-                    color={Colors.green2}
+                    color={Colors.secondaryLight}
                 />    
                 <CoreSkill
                     title="Citizenship"
-                    color={Colors.green1}
+                    color={Colors.secondaryLightest}
                 />
             </div>
             <div className={styles.semesters_all}>
@@ -357,12 +358,12 @@ function Map() {
             
             <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>
-                    <div className={styles.box} style={{backgroundColor: Colors.courseBlue}}>     
+                    <div className={styles.box} style={{backgroundColor: Colors.course}}>     
                     </div>
                     <div className={styles.keyText}>Course</div>
                 </div>
                 <div className={styles.keyRow}>
-                    <div className={styles.box} style={{backgroundColor: Colors.ecYellow}} >
+                    <div className={styles.box} style={{backgroundColor: Colors.ec}} >
                     </div>
                     <div className={styles.keyText}>Extracurricular</div>
                 </div>

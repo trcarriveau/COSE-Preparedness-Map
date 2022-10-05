@@ -26,19 +26,19 @@ export const ColorCodes = {
 }
 
 export const Colors = {
-    gray1: ColorCodes.lightestGray,
-    gray2: ColorCodes.lightGray,
-    gray3: ColorCodes.gray,
-    gray4: ColorCodes.darkGray,
+    primaryLightest: ColorCodes.lightestGray,
+    primaryLight: ColorCodes.lightGray,
+    primaryMain: ColorCodes.gray,
+    primaryDark: ColorCodes.darkGray,
 
-    green1: ColorCodes.lightestGreen,
-    green2: ColorCodes.lightGreen,
-    green3: ColorCodes.green,
-    green4: ColorCodes.darkGreen,
-    green5: ColorCodes.darkestGreen,
+    secondaryLightest: ColorCodes.lightestGreen,
+    secondaryLight: ColorCodes.lightGreen,
+    secondaryMain: ColorCodes.green,
+    secondaryDark: ColorCodes.darkGreen,
+    secondaryDarkest: ColorCodes.darkestGreen,
 
-    courseBlue: ColorCodes.blue,
-    ecYellow: ColorCodes.yellow,
+    course: ColorCodes.blue,
+    ec: ColorCodes.yellow,
 
     icon_yellow: ColorCodes.i_yellow, 
 } 

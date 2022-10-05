@@ -8,7 +8,7 @@ const Course = ({courseName, description, skills, types, year_semester, is_ec, t
     <div 
         style={{
             display: 'flex',
-            backgroundColor: Colors.courseBlue,
+            backgroundColor: Colors.course,
             color: 'white',
             justifyContent: 'space-between',
             borderRadius: '10px', 
@@ -42,7 +42,7 @@ const Course = ({courseName, description, skills, types, year_semester, is_ec, t
 let styles = {
     courseContainer: {
         display: 'flex',
-        backgroundColor: Colors.courseBlue,
+        backgroundColor: Colors.course,
         color: 'white',
         justifyContent: 'center',
         borderRadius: '10px'
