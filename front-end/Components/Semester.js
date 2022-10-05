@@ -1,15 +1,21 @@
+//This is a component to hold the contents of a single courses and ecs component 
+//It will display their output on a particular fall/spring rectangle on the career-map
+
 import React from 'react'
 import Colors from './Colors'
+import Courses from './Courses'
+import Extracurriculars from './Extracurriculars'
 
-const Semester = ({courses, ecs}) => {
-    console.log("in semester", courses.courseName)
+
+const Semester = () => {
+    
     return (
-    <div> 
+    <div style={styles.semester}> 
        <div style={styles.coursesContainer}>
-            {courses.courseName}
+            <Courses /> 
         </div>
         <div style={styles.ecContainer}>
-            EC1
+            <Extracurriculars />
         </div>
     </div>
   )
@@ -19,16 +25,26 @@ let styles = {
     coursesContainer: {
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'black',
-        flexGrow: '1',
-
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
     },
 
     ecContainer: {
         display: 'flex',
         flexDirection: 'column-reverse',
-        backgroundColor: 'gray',
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'flex-start'
     },
+    
+    semester: {
+        display:'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+
+        width: '50%',
+    }
 }
 
 export default Semester

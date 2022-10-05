@@ -86,7 +86,8 @@ const courses =  [
 
 const Courses = () => {
   return (
-    <div className={styles.semester}>
+    // <div className={styles.semester}>
+    <>
          {courses.map((course) =>
          (
             // <div style={{width: '100%', alignContent: 'center', justifyContent: 'center'}}>
@@ -98,7 +99,7 @@ const Courses = () => {
                 />
             </>
          ))}
-    </div>
+    </>
   )
 }
 

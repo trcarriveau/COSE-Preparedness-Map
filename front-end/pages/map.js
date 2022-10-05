@@ -75,7 +75,7 @@ function Map() {
                             <Extracurriculars/>
                         </div>
                         {/* Test of Courses component at Year1/Spring && CoreSkill 1 */}
-                        <Courses/>
+                        <Semester />
                         
                     </div>  
                     <div className={styles.semesters}>   
@@ -308,7 +308,7 @@ function Map() {
 
                 <Extracurriculars />
 
- 
+                <Semester />
 
                 {/* **************TESTING AREA********* */}
 
