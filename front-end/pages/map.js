@@ -28,6 +28,7 @@ import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
 import Types from "../components/Types";
+import Extracurriculars from "../components/Extracurriculars";
 
 
 
@@ -71,9 +72,7 @@ function Map() {
                                 courseName={'SE 231'}
                                 temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
                             />
-                            <Extracurricular
-                                ecName={'Hackathons'}
-                            />
+                            <Extracurriculars/>
                         </div>
                         {/* Test of Courses component at Year1/Spring && CoreSkill 1 */}
                         <Courses/>
@@ -307,12 +306,9 @@ function Map() {
                 
                 />
 
-                <Course 
-                    courseName={'Test'}
-                    types={<Types/>}
-                />
+                <Extracurriculars />
 
-                <Types/>
+ 
 
                 {/* **************TESTING AREA********* */}
 

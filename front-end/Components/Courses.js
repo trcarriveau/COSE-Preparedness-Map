@@ -5,6 +5,7 @@ import React from 'react'
 
 import styles from '../styles/Map.module.css'
 import Course from './Course'
+import Types from './Types'
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
@@ -92,7 +93,8 @@ const Courses = () => {
             <>
                 <Course
                   courseName={course.item_name} 
-                  temp_trait={<RiComputerFill style={{color: 'orange'}}/>} 
+                //   temp_trait={<RiComputerFill style={{color: 'orange'}}/>} 
+                  types={<Types/>}
                 />
             </>
          ))}
