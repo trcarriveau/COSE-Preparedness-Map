@@ -27,6 +27,7 @@ import {GiCube} from 'react-icons/gi'
 import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
+import Types from "../components/Types";
 
 
 
@@ -304,6 +305,16 @@ function Map() {
 
                 <Courses 
                 
+                />
+
+                <Types
+
+                />
+
+                <Type 
+                    type_name = {"Testing a type"}
+                    type_icon = {<RiComputerFill style={{color: 'orange'}}/>}
+
                 />
 
                 {/* **************TESTING AREA********* */}

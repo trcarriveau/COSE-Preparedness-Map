@@ -8,21 +8,12 @@ import {GiCube} from 'react-icons/gi'
 import {BsTriangleFill} from 'react-icons/bs'
 import TypesKey from './TypesKey'
 
-const Type = ({ type }) => {
-    let Icon = type.type_icon
-    console.log("icon is: ",type.type_icon)
+const Type = ({type_map, type_name, type_information, type_icon }) => {
+    //let Icon = type.type_icon
+    //console.log("icon is: ",type.type_icon)
     return (
     <div>
-        
-        <GrGroup></GrGroup>
-        {type.type_name}
-        
-        <h3>
-            <type.type_icon/>
-            {type.type_map}
-            <Icon/>
-
-        </h3>
+         {type_icon}
     </div>
   )
 }
