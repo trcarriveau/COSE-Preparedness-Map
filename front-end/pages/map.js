@@ -1,12 +1,19 @@
 
 import styles from "../styles/Map.module.css"
+
+//internal components
 import Year from "../components/Year";
 import CoreSkill from "../components/CoreSkill";
+import CoreSkills from "../components/CoreSkills";
 import Colors from "../components/Colors";
 import Course from "../components/Course";
+import Courses from "../components/Courses";
+import Extracurricular from "../components/Extracurricular";
+import Season from "../components/Season";
+import Seasons from "../components/Seasons";
+import Semester from "../components/Semester";
 import Type from "../components/Type";
 import Years from "../Components/Years";
-import Season from "../components/Season";
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
@@ -20,10 +27,6 @@ import {GiCube} from 'react-icons/gi'
 import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
-import Extracurricular from "../components/Extracurricular";
-import Semester from "../components/Semester";
-import Seasons from "../components/Seasons";
-import CoreSkills from "../components/CoreSkills";
 
 
 
@@ -71,16 +74,26 @@ function Map() {
                                 ecName={'Hackathons'}
                             />
                         </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
+                        {/* Test of Courses component at Year1/Spring && CoreSkill 1 */}
+                        <Courses/>
+                        
                     </div>  
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             test fall2
                         </div>
                         <div className={styles.semester}> 
-                            test spring2
+                            <Course
+                                    courseName={'SE 221'}
+                                    temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
+                                />
+                                <Course
+                                    courseName={'SE 231'}
+                                    temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
+                                />
+                                <Extracurricular
+                                    ecName={'Hackathons'}
+                                />
                         </div>
                     </div>  
                     <div className={styles.semesters}>   
@@ -289,11 +302,12 @@ function Map() {
                     ecName={'Hackathons'}
                 /> */}
 
-                {/* **************TESTING AREA********* */}
-                <Season 
-                    label={'test'} 
-                    color= {Colors.gray1}
+                <Courses 
+                
                 />
+
+                {/* **************TESTING AREA********* */}
+
  
                 
             </div>

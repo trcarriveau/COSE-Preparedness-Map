@@ -1,6 +1,8 @@
+//component responsible for display of a single course on on the map
 import React from 'react'
 import Colors from './Colors'
 
+//temp trait is a stand in until we have functional type icons and labels
 const Course = ({courseName, description, skills, types, year_semester, is_ec, temp_trait}) => {
     return (
     // <div style={styles.courseContainer}>
