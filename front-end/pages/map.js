@@ -23,6 +23,7 @@ import { useState} from 'react'
 import Extracurricular from "../components/Extracurricular";
 import Semester from "../components/Semester";
 import Seasons from "../components/Seasons";
+import CoreSkills from "../components/CoreSkills";
 
 
 
@@ -47,46 +48,10 @@ function Map() {
   return (
     <div>    
         <Years />
-
-        {/* //TODO: make styles.seasons div into a component */}
-        {/* <div className={styles.seasonsContainer}> 
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div> 
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div> 
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div>
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div>
-            </div>
-        </div> */}
         <Seasons total_years={4} />
 
         <div className={styles.middle}>
-            <div className={styles.skills}>
+            {/* <div className={styles.skills}>
                 <CoreSkill className={styles.skill}
                     title="Soft Skill"
                     color={Colors.secondaryDarkest}
@@ -107,7 +72,8 @@ function Map() {
                     title="Citizenship"
                     color={Colors.secondaryLightest}
                 />
-            </div>
+            </div> */}
+            <CoreSkills />
             <div className={styles.semesters_all}>
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
                 
@@ -350,8 +316,8 @@ function Map() {
                     label={'test'} 
                     color= {Colors.gray1}
                 /> */}
-                <Seasons
-                    total_years={5}
+                <CoreSkills
+                    
                 />   
                 
             </div>

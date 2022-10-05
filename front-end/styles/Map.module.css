@@ -98,7 +98,7 @@
 .skills {
     display: flex;
     flex-direction: column;
-    background-color: slateblue;
+    background-color: white;
     width: 20%;
     justify-content: space-between;
     align-items: center;
