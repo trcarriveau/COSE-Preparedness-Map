@@ -1,3 +1,5 @@
+//Used in Seasons component --> Makes the Fall/Spring column label under year
+
 import React from 'react'
 import styles from '../styles/Map.module.css'
 

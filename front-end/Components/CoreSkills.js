@@ -1,3 +1,5 @@
+//This iterates over the CoreSkill components and is responsible for the entire column of Row labels
+
 import React from 'react'
 import styles from '../styles/Map.module.css'
 import CoreSkill from './CoreSkill'

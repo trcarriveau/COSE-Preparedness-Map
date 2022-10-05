@@ -51,28 +51,6 @@ function Map() {
         <Seasons total_years={4} />
 
         <div className={styles.middle}>
-            {/* <div className={styles.skills}>
-                <CoreSkill className={styles.skill}
-                    title="Soft Skill"
-                    color={Colors.secondaryDarkest}
-                />
-                <CoreSkill
-                    title="Life Long Learning"
-                    color={Colors.secondaryDark}
-                />    
-                <CoreSkill
-                    title="Special Technical Skills, Techniques, and Tools"
-                    color={Colors.secondaryMain}
-                />
-                <CoreSkill
-                    title="Fundamental Knowledge & Concepts"
-                    color={Colors.secondaryLight}
-                />    
-                <CoreSkill
-                    title="Citizenship"
-                    color={Colors.secondaryLightest}
-                />
-            </div> */}
             <CoreSkills />
             <div className={styles.semesters_all}>
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
@@ -312,13 +290,11 @@ function Map() {
                 /> */}
 
                 {/* **************TESTING AREA********* */}
-                {/* <Season 
+                <Season 
                     label={'test'} 
                     color= {Colors.gray1}
-                /> */}
-                <CoreSkills
-                    
-                />   
+                />
+ 
                 
             </div>
             

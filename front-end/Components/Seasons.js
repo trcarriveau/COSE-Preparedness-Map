@@ -1,3 +1,6 @@
+//Iterates through season components to make the line of column labels below total years
+// and above each semester schedule
+
 import React, { useEffect } from 'react'
 import styles from '../styles/Map.module.css'
 import Season from './Season'
