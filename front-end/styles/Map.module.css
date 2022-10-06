@@ -1,6 +1,6 @@
 .box{
     display: flex; 
-    width: 125px;
+    width: 225px;
     height: 25px;
     border-radius: 10px;
 }

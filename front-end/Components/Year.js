@@ -6,7 +6,7 @@ const Year = ({color, yearNumber, studentClass, has_summer}) => {
       display: 'flex', 
       flexDirection: 'column', 
       backgroundColor: color,  
-      flexGrow: has_summer ? 1.87: 1, 
+      flexGrow: has_summer ? 1.61: 1, 
       margin: '2px',
     }}>
       
