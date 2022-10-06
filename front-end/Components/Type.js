@@ -1,3 +1,5 @@
+//Component for displaying an icon associated with a class type 
+
 import React from 'react'
 
 //icons (from react-icons)

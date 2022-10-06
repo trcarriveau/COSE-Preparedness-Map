@@ -62,7 +62,7 @@ function Map() {
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
                 
                 {/* ******************** Core Skill 1 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             <Course
@@ -75,7 +75,7 @@ function Map() {
                             />
                             <Extracurriculars/>
                         </div>
-                        {/* Test of Courses component at Year1/Spring && CoreSkill 1 */}
+                        
                         <Semester />
                         
                     </div>  
@@ -113,10 +113,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
-
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 2 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 2 test fall1
@@ -149,10 +151,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
-
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 3 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 3 test fall1
@@ -185,9 +189,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 4 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 4 test fall1
@@ -220,7 +227,11 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div>            
+                </div>    */}
+                <SemestersRow
+                    total_years={4}
+                />
+
                  {/* ******************** Core Skill 5 ************************ */}
                  {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
@@ -292,27 +303,7 @@ function Map() {
                 </div>
 
                 {/* **************TESTING AREA********* */}
-                {/* <div className={styles.keyRow}>
-                    <Type type={types}/>
-                </div> */}
 
-                {/* <div>
-                    <Course
-                      courseName={'SE 460'}
-                      temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
-                    />
-                </div> */}
-                {/* <Extracurricular
-                    ecName={'Hackathons'}
-                /> */}
-
-                <Semester 
-                    color={Colors.primaryLight}
-                />
-
-                <SemestersRow 
-                    total_years={4}
-                />
 
                 {/* **************TESTING AREA********* */}
 

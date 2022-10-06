@@ -23,7 +23,7 @@
 .middle{
     display: flex;
     flex-direction: row;
-    background-color: aqua;
+    background-color: whitesmoke;
 }
 .seasonsContainer{
     display: flex;
@@ -55,7 +55,7 @@
 .semesters_all{
     display: flex;
     flex-direction: column;
-    background-color: darkmagenta;
+    background-color: white;
     flex-grow: 1;
     margin: 1px; 
 }
@@ -70,7 +70,7 @@
 
 .semesters{
     display: flex; 
-    background-color: firebrick;
+    background-color: white;
     width: 25%;
     flex-grow: 1; 
 }   

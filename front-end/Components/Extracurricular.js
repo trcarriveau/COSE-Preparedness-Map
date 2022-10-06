@@ -1,3 +1,5 @@
+//Displays a single extracurricular activity
+
 import React from 'react'
 import Colors from './Colors'
 
