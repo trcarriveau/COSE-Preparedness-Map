@@ -1,3 +1,5 @@
+//Displays a single extracurricular activity
+
 import React from 'react'
 import Colors from './Colors'
 
@@ -6,7 +8,7 @@ const Extracurricular = ({ecName, description, skills, types, year_semester, is_
     <div 
         style={{
             display: 'flex',
-            backgroundColor: Colors.ecYellow,
+            backgroundColor: Colors.ec,
             color: 'black',
             justifyContent: 'center',
             borderRadius: '10px', 

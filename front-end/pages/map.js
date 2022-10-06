@@ -1,11 +1,19 @@
 
 import styles from "../styles/Map.module.css"
+
+//internal components
 import Year from "../components/Year";
 import CoreSkill from "../components/CoreSkill";
+import CoreSkills from "../components/CoreSkills";
 import Colors from "../components/Colors";
 import Course from "../components/Course";
+import Courses from "../components/Courses";
+import Extracurricular from "../components/Extracurricular";
+import Season from "../components/Season";
+import Seasons from "../components/Seasons";
+import Semester from "../components/Semester";
 import Type from "../components/Type";
-
+import Years from "../Components/Years";
 
 //icons (from react-icons)
 import {RiComputerFill} from 'react-icons/ri'
@@ -19,8 +27,9 @@ import {GiCube} from 'react-icons/gi'
 import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
-import Extracurricular from "../components/Extracurricular";
-import Semester from "../components/Semester";
+import Types from "../components/Types";
+import Extracurriculars from "../components/Extracurriculars";
+import SemestersRow from "../components/SemestersRow";
 
 
 
@@ -43,94 +52,17 @@ function Map() {
   console.log(type_data)
 
   return (
-    <div>
-        <div className={styles.years}>
-           <Year
-            color= {Colors.gray1}
-            yearNumber='1' 
-            studentClass='Freshman'
-            />
-            <Year
-            color= {Colors.gray2}
-            yearNumber='2' 
-            studentClass='Sophomore'
-            />
-            <Year
-            color= {Colors.gray3}
-            yearNumber='3' 
-            studentClass='Junior'
-            />
-            <Year
-            color= {Colors.gray4}
-            yearNumber='4' 
-            studentClass='Senior'
-            />
-        </div>
-
-        {/* //TODO: make styles.seasons div into a component */}
-        <div className={styles.seasonsContainer}> 
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div> 
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div> 
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div>
-            </div>
-            <div className={styles.seasons}>
-                <div className={styles.season}>
-                    Fall
-                </div>
-                <div className={styles.season}>
-                    Spring
-                </div>
-            </div>
-        </div>
+    <div>    
+        <Years />
+        <Seasons total_years={4} />
 
         <div className={styles.middle}>
-            <div className={styles.skills}>
-                <CoreSkill className={styles.skill}
-                    title="Soft Skill"
-                    color={Colors.green5}
-                />
-                <CoreSkill
-                    title="Life Long Learning"
-                    color={Colors.green4}
-                />    
-                <CoreSkill
-                    title="Special Technical Skills, Techniques, and Tools"
-                    color={Colors.green3}
-                />
-                <CoreSkill
-                    title="Fundamental Knowledge & Concepts"
-                    color={Colors.green2}
-                />    
-                <CoreSkill
-                    title="Citizenship"
-                    color={Colors.green1}
-                />
-            </div>
+            <CoreSkills />
             <div className={styles.semesters_all}>
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
                 
                 {/* ******************** Core Skill 1 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             <Course
@@ -141,20 +73,28 @@ function Map() {
                                 courseName={'SE 231'}
                                 temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
                             />
-                            <Extracurricular
-                                ecName={'Hackathons'}
-                            />
+                            <Extracurriculars/>
                         </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
+                        
+                        <Semester />
+                        
                     </div>  
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             test fall2
                         </div>
                         <div className={styles.semester}> 
-                            test spring2
+                            <Course
+                                    courseName={'SE 221'}
+                                    temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
+                                />
+                                <Course
+                                    courseName={'SE 231'}
+                                    temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
+                                />
+                                <Extracurricular
+                                    ecName={'Hackathons'}
+                                />
                         </div>
                     </div>  
                     <div className={styles.semesters}>   
@@ -173,10 +113,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
-
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 2 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 2 test fall1
@@ -209,10 +151,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
-
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 3 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 3 test fall1
@@ -245,9 +189,12 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div> 
+                </div>  */}
+                <SemestersRow
+                    total_years={4}
+                />
                 {/* ******************** Core Skill 4 ************************ */}
-                <div className={styles.semesters_by_skill}>
+                {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 4 test fall1
@@ -280,9 +227,13 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div>            
+                </div>    */}
+                <SemestersRow
+                    total_years={4}
+                />
+
                  {/* ******************** Core Skill 5 ************************ */}
-                 <div className={styles.semesters_by_skill}>
+                 {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 5 test fall1
@@ -315,7 +266,10 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div>           
+                </div>            */}
+                <SemestersRow
+                    total_years={4}
+                />
            
            </div>
 
@@ -349,31 +303,22 @@ function Map() {
                 </div>
 
                 {/* **************TESTING AREA********* */}
-                {/* <div className={styles.keyRow}>
-                    <Type type={types}/>
-                </div> */}
 
-                {/* <div>
-                    <Course
-                      courseName={'SE 460'}
-                      temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
-                    />
-                </div> */}
-                {/* <Extracurricular
-                    ecName={'Hackathons'}
-                /> */}
+
                 {/* **************TESTING AREA********* */}
 
+ 
+                
             </div>
             
             <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>
-                    <div className={styles.box} style={{backgroundColor: Colors.courseBlue}}>     
+                    <div className={styles.box} style={{backgroundColor: Colors.course}}>     
                     </div>
                     <div className={styles.keyText}>Course</div>
                 </div>
                 <div className={styles.keyRow}>
-                    <div className={styles.box} style={{backgroundColor: Colors.ecYellow}} >
+                    <div className={styles.box} style={{backgroundColor: Colors.ec}} >
                     </div>
                     <div className={styles.keyText}>Extracurricular</div>
                 </div>
