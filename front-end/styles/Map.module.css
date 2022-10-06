@@ -12,7 +12,7 @@
 }
 .keyRow{
     display: flex; 
-    flex-direction: row;  
+    flex-direction: row;
     margin: 5px;
 }
 .keyText{
