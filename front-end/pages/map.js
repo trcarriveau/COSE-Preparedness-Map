@@ -29,6 +29,7 @@ import type_data from '../components/test_objects/cose-types.json'
 import { useState} from 'react'
 import Types from "../components/Types";
 import Extracurriculars from "../components/Extracurriculars";
+import SemestersRow from "../components/SemestersRow";
 
 
 
@@ -221,7 +222,7 @@ function Map() {
                     </div>  
                 </div>            
                  {/* ******************** Core Skill 5 ************************ */}
-                 <div className={styles.semesters_by_skill}>
+                 {/* <div className={styles.semesters_by_skill}>
                     <div className={styles.semesters}>   
                         <div className={styles.semester}> 
                             skill 5 test fall1
@@ -254,7 +255,10 @@ function Map() {
                             test spring2
                         </div>
                     </div>  
-                </div>           
+                </div>            */}
+                <SemestersRow
+                    total_years={4}
+                />
            
            </div>
 
@@ -302,13 +306,13 @@ function Map() {
                     ecName={'Hackathons'}
                 /> */}
 
-                <Courses 
-                
+                <Semester 
+                    color={Colors.primaryLight}
                 />
 
-                <Extracurriculars />
-
-                <Semester />
+                <SemestersRow 
+                    total_years={4}
+                />
 
                 {/* **************TESTING AREA********* */}
 

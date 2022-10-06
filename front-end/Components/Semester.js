@@ -6,11 +6,22 @@ import Colors from './Colors'
 import Courses from './Courses'
 import Extracurriculars from './Extracurriculars'
 
-
-const Semester = () => {
+//TODO receive prop data for a semester
+const Semester = ( {color}) => {
     
     return (
-    <div style={styles.semester}> 
+    <div 
+        style={
+            {
+                display: 'flex', 
+                flexDirection: 'column', 
+                justifyContent: 'space-between', 
+                width: '50%', 
+                backgroundColor: color,
+                marginLeft: '2px',
+                marginRight: '2px', 
+            }}
+    > 
        <div style={styles.coursesContainer}>
             <Courses /> 
         </div>
@@ -21,7 +32,7 @@ const Semester = () => {
   )
 }
 
-let styles = {
+let styles  = {
     coursesContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -42,7 +53,7 @@ let styles = {
         display:'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-
+        // backgroundColor: {color},
         width: '50%',
     }
 }

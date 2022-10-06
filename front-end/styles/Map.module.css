@@ -63,7 +63,7 @@
 .semesters_by_skill{
     display: flex; 
     flex-grow: 1;
-    background-color: gray;
+    background-color: black;
     height: 20%;
     margin: 2px;  
 }
@@ -71,8 +71,9 @@
 .semesters{
     display: flex; 
     background-color: firebrick;
-    width: 25%; 
-}
+    width: 25%;
+    flex-grow: 1; 
+}   
 
 .semester{
     display: flex;
