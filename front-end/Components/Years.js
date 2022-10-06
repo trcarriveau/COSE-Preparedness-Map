@@ -8,22 +8,26 @@ const years = [
     color: Colors.primaryLightest,
     yearNumber: '1', 
     studentClass: 'Freshman',
+    has_summer: false,
   },
 
   {
     color: Colors.primaryLight,
     yearNumber:'2', 
     studentClass:'Sophomore',
+    has_summer: false,
   },
   {
     color: Colors.primaryMain,
     yearNumber:'3', 
     studentClass:'Junior',
+    has_summer: true,
   },
   {
     color: Colors.primaryDark,
     yearNumber:'4', 
     studentClass:'Senior',
+    has_summer: false,
   },
 ]
 
@@ -39,6 +43,7 @@ const Years = ( ) => {
                 color={year.color}
                 yearNumber={year.yearNumber}
                 studentClass={year.studentClass}
+                has_summer={year.has_summer}
               />
             </>
         ))}
