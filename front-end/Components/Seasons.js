@@ -13,7 +13,7 @@ const Seasons = ({ total_years,  } ) => {
     let seasons= [];
     let has_summer = false;
     let i = 1;
-    //TODO Adjust summer to be based off boolean value
+    //TODO Adjust summer to be dynamic and available in any column
     while (i <= total_years) {
     if (i%4 == 1) {
         fall = {id: i, label: 'Fall  ', color: Colors.primaryLightest}

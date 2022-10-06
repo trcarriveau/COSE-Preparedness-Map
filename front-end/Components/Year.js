@@ -6,8 +6,9 @@ const Year = ({color, yearNumber, studentClass, has_summer}) => {
       display: 'flex', 
       flexDirection: 'column', 
       backgroundColor: color,  
-      flexGrow: has_summer ? 3 : 2, 
-      margin: '10px',}}>
+      flexGrow: has_summer ? 1.87: 1, 
+      margin: '2px',
+    }}>
       
       <h1 style={{alignSelf: 'center'}}>Year {yearNumber} </h1>
       <h3 style={{alignSelf: 'center'}}> {studentClass} </h3>
