@@ -47,7 +47,7 @@ const types = [
   },
 ]
 
-
+//TODO figure out spacing on Type component so icon and text in key are not pushed together
 const TypesKey = () => {
   return (
     <div className={styles.keyRow}>
