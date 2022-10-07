@@ -1,34 +1,84 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Registration.module.css'
 import Link from 'next/link';
+import Colors from '../Components/Colors';
+import Button from '../Components/Button';
+
+//TODO: More form validation  Password matching hook Toggle password visbility icon 
 
 export default function Registration() {
   return (
     <div className={styles.body}>
-      <div className={styles.container}>
-        <form id="createAccount">
-              <h1 className={styles.title}>Register</h1>
-              <div className={styles.group}>
-                  <input type="text" id="signupUsername" className={styles.input1} autoFocus placeholder="Username" />
-              </div>
-              <div className={styles.group}>
-                  <input type="text" className={styles.input1} autoFocus placeholder="Email Address" />
-              </div>
-              <div className={styles.group}>
-                  <input type="password" className={styles.input1} autoFocus placeholder="Password" />
-              </div>
-              <div className={styles.group}>
-                  <input type="password" className={styles.input1} autoFocus placeholder="Confirm password" />
-              </div>
-              <button className={styles.button} type="submit">Resgister</button>
-              <p></p>
-              <button className={styles.button2} type="submit">Cancel</button>
-              <p className={styles.next}>
-                  <a className={styles.link} href="/" id="linkLogin">Already have an account? Sign in</a>
-              </p>
-          </form>
+      <Image
+        src="/../public/huskies_logo.png"
+        layout="fill"
+        objectFit='contain'
+      />
+    <div className={styles.container}>
+      <div>
+          <h1 className={styles.title}>Register</h1>
+          <hr style={{ color: 'white'}} />
       </div>
+      <form id="createAccount">
+          <div className={styles.group}>
+            <p className={styles.textInputTitle}>
+              Username:
+            </p>
+            <input 
+              type="text" 
+              id="signupUsername" 
+              className={styles.input1} 
+              autoFocus 
+              placeholder="Username"
+              required 
+            />
+          </div>
+          <div className={styles.group}>
+            <p className={styles.textInputTitle}>
+              Email:
+            </p>
+            <input 
+              type="email" 
+              className={styles.input1} 
+              placeholder="Email Address"
+              required 
+            />
+          </div>
+          <div className={styles.group}>
+            <p className={styles.textInputTitle}>
+              Password:
+            </p>
+            <input 
+              type="password" 
+              className={styles.input1} 
+              placeholder="Minimum length 8 characters" 
+              required 
+              minLength={8}  
+            />
+          </div>
+          <div className={styles.group}>
+              <p className={styles.textInputTitle}>
+                Confirm Password:
+              </p>
+              <input 
+                type="password" 
+                className={styles.input1} 
+                placeholder="Confirm password"
+                minLength={8} 
+              />
+          </div>
+          <button className={styles.button} type="submit">Register</button>
+      </form>
+      <p className={styles.text}>
+        Already have an account? Sign in
+      </p>
+      <Link href="/" passHref >
+        <Button
+          color={Colors.button}
+          text = {'Cancel'}
+        />
+      </Link> 
     </div>
+  </div>
   )
 }

@@ -8,9 +8,9 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 18px;
-	background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/St._Cloud_State_Huskies_logo.svg/1024px-St._Cloud_State_Huskies_logo.svg.png);
 	background-size:100%;
-background-color:#736F6E;
+	background-image: linear-gradient(rgba(104,104,104,.9),rgba(0, 0, 0, 1) );
+	opacity: .9;
 
 }
 .h1{
@@ -24,7 +24,8 @@ color:white;
 	padding: 2rem;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 	border-radius: 20px;
-	background:#686868;
+	background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(150,150,150,.95));
+	z-index: 1;
 }
 
 .container,
@@ -40,6 +41,7 @@ color:white;
 .title {
 	margin-bottom: 2rem;
 	text-align: center;
+	color: white;
 }
 .group {
 	margin-bottom: 1rem;
@@ -68,11 +70,12 @@ color:white;
 	font-weight: bold;
 	font-size: 1.1rem;
 	color: #ffffff;
-	border: none;
-	border-radius: var(--border-radius);
+	border-style: solid;
+	border-color: black; 
+	border-radius: 10px;
 	outline: none;
 	cursor: pointer;
- background: var(--color-primary-dark);
+ 	background: var(--color-primary-dark);
  
 }
 .button2 {
@@ -90,6 +93,16 @@ background: var(--color-primary-dark);
 }
 .next {
 	text-align: center;
+}
+.text {
+	text-align: center;
+	color: white;
+	font-size: 1.1rem;
+}
+.textInputTitle {
+	text-align: left;
+	color: white;
+	font-size: 1.3rem;
 }
 
 .link {

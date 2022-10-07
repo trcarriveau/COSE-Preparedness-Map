@@ -23,11 +23,11 @@ export default function Home() {
         objectFit='contain'
       />
       <div className={styles.container}>
+        <div>
+          <h1 className={styles.title}>Login</h1>
+          <hr style={{ color: 'white'}} />
+        </div>
         <form id="login">
-          <div>
-            <h1 className={styles.title}>Login</h1>
-            <hr style={{ color: 'white'}} />
-          </div>
           <p className={styles.textInputTitle}>
               Username or Email:
           </p>
