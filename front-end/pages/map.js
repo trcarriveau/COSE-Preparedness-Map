@@ -53,11 +53,11 @@ function Map() {
   console.log(type_data)
 
   return (
-    <div>    
+    <div style={{backgroundColor: Colors.background}}>    
         <Years />
         <Seasons total_years={4} />
 
-        <div className={styles.middle}>
+        <div className={styles.middle} style={{backgroundColor: Colors.background}}>
             <CoreSkills />
             <div className={styles.semesters_all}>
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
