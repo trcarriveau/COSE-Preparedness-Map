@@ -103,6 +103,7 @@ export default function Registration() {
               type={passwordShown ? "text" : "password"}
               className={styles.input1}
               placeholder="Confirm password"
+              required
               minLength={8}
             />
           </div>

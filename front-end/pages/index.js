@@ -14,7 +14,7 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 
 export default function Home() {
   //example function that can be passed in a button component
-  //example on line 74
+  //example on line 92
   const onClickExample = () => {
     console.log("clicked");
   };
