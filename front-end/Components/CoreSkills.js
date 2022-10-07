@@ -32,7 +32,7 @@ const skills = [
 
 const CoreSkills = ( ) => {
   return (
-    <div className={styles.skills}>
+    <div className={styles.skills} style={{backgroundColor: Colors.background}}>
        {skills.map((skill) =>
        (
             <>

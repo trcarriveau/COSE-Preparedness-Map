@@ -44,8 +44,8 @@ const Seasons = ({ total_years,  } ) => {
 
 
   return (
-    <div className={styles.seasonsContainer}>
-       <div className={styles.seasons}>
+    <div className={styles.seasonsContainer} style={{backgroundColor: Colors.background}}>
+       <div className={styles.seasons} style={{backgroundColor: Colors.background}}>
             {seasons.map((season) =>
             
             (
