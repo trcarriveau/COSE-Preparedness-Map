@@ -1,61 +1,126 @@
-//This is a component to hold the contents of a single courses and ecs component 
+//This is a component to hold the contents of a single courses and ecs component
 //It will display their output on a particular fall/spring rectangle on the career-map
 
-import React from 'react'
-import Colors from './Colors'
-import Courses from './Courses'
-import Extracurriculars from './Extracurriculars'
+import React from "react";
+import Courses from "./Courses";
+import Extracurriculars from "./Extracurriculars";
 
 //TODO receive prop data for a semester
-const Semester = ( {color}) => {
-    
-    return (
-    <div 
-        style={
-            {
-                display: 'flex', 
-                flexDirection: 'column', 
-                justifyContent: 'space-between', 
-                width: '50%', 
-                backgroundColor: color,
-                marginLeft: '2px',
-                marginRight: '2px', 
-            }}
-    > 
-       <div style={styles.coursesContainer}>
-            <Courses /> 
-        </div>
-        <div style={styles.ecContainer}>
-            <Extracurriculars />
-        </div>
+const courses = [
+  {
+    item_name: "SE 221",
+    item_description: "",
+    item_type: [
+      {
+        type_id: {
+          $oid: "632bb5313b2e349d9cfebcbd",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5f20e17f09d9c34c023",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5fd0e17f09d9c34c024",
+        },
+      },
+    ],
+    is_extra_curricular: false,
+  },
+  {
+    item_name: "SE 250",
+    item_description: "",
+    item_type: [
+      {
+        type_id: {
+          $oid: "632bb5313b2e349d9cfebcbd",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5f20e17f09d9c34c023",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5fd0e17f09d9c34c024",
+        },
+      },
+    ],
+    is_extra_curricular: false,
+  },
+  {
+    item_name: "SE 342",
+    item_description: "",
+    item_type: [
+      {
+        type_id: {
+          $oid: "632bb5313b2e349d9cfebcbd",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5f20e17f09d9c34c023",
+        },
+      },
+      {
+        type_id: {
+          $oid: "632bb5fd0e17f09d9c34c024",
+        },
+      },
+    ],
+    is_extra_curricular: false,
+  },
+];
+const Semester = ({ color }) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        width: "50%",
+        backgroundColor: color,
+        marginLeft: "2px",
+        marginRight: "2px",
+      }}
+    >
+      <div style={styles.coursesContainer}>
+        <Courses courses={courses} />
+      </div>
+      <div style={styles.ecContainer}>
+        <Extracurriculars />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-let styles  = {
-    coursesContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-    },
+let styles = {
+  coursesContainer: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
 
-    ecContainer: {
-        display: 'flex',
-        flexDirection: 'column-reverse',
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'flex-start'
-    },
-    
-    semester: {
-        display:'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        // backgroundColor: {color},
-        width: '50%',
-    }
-}
+  ecContainer: {
+    display: "flex",
+    flexDirection: "column-reverse",
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "flex-start",
+  },
 
-export default Semester
+  semester: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    // backgroundColor: {color},
+    width: "50%",
+  },
+};
+
+export default Semester;

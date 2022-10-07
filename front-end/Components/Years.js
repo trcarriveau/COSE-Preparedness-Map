@@ -35,7 +35,7 @@ const years = [
 
 const Years = ( ) => {
   return (
-    <div className={styles.years}>
+    <div className={styles.years} style={{backgroundColor: Colors.background}}>
         {years.map((year) => 
         (
             <>
