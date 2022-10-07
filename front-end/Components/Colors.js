@@ -1,46 +1,52 @@
-import React from 'react'
-//Test push 
+import React from "react";
+//Test push
 
 export const ColorCodes = {
-    //grays without opacity
-    lightestGray: '#f2f2f2',
-    lightGray: '#d9d9d9',
-    gray: '#bfbfbf',
-    darkGray: '#a6a6a6',
+  //grays without opacity
+  lightestGray: "#f2f2f2",
+  lightGray: "#d9d9d9",
+  gray: "#bfbfbf",
+  darkGray: "#a6a6a6",
 
-    //greens without opacity
-    lightestGreen: '#e2f0d9',
-    lightGreen: '#c5e0b4',
-    green: '#c5e0b4',
-    darkGreen: '#a9d18e',
-    darkestGreen: '#548235',
+  //greens without opacity
+  lightestGreen: "#e2f0d9",
+  lightGreen: "#c5e0b4",
+  green: "#c5e0b4",
+  darkGreen: "#a9d18e",
+  darkestGreen: "#548235",
+  
+  background: "white",  
 
-    //course blue
-    blue: '#3e70c9',
+  //course blue
+  blue: "#3e70c9",
 
-    //extracurricular yellow
-    yellow: '#ffff00',
+  //extracurricular yellow
+  yellow: "#ffff00",
 
-    //icons 
-    i_yellow: '#ffffE0'
-}
+  //icons
+  i_yellow: "#ffffE0",
+
+};
 
 export const Colors = {
-    primaryLightest: ColorCodes.lightestGray,
-    primaryLight: ColorCodes.lightGray,
-    primaryMain: ColorCodes.gray,
-    primaryDark: ColorCodes.darkGray,
+  primaryLightest: ColorCodes.lightestGray,
+  primaryLight: ColorCodes.lightGray,
+  primaryMain: ColorCodes.gray,
+  primaryDark: ColorCodes.darkGray,
 
-    secondaryLightest: ColorCodes.lightestGreen,
-    secondaryLight: ColorCodes.lightGreen,
-    secondaryMain: ColorCodes.green,
-    secondaryDark: ColorCodes.darkGreen,
-    secondaryDarkest: ColorCodes.darkestGreen,
+  secondaryLightest: ColorCodes.lightestGreen,
+  secondaryLight: ColorCodes.lightGreen,
+  secondaryMain: ColorCodes.green,
+  secondaryDark: ColorCodes.darkGreen,
+  secondaryDarkest: ColorCodes.darkestGreen,
 
-    course: ColorCodes.blue,
-    ec: ColorCodes.yellow,
+  background: ColorCodes.background,
 
-    icon_yellow: ColorCodes.i_yellow, 
-} 
+  course: ColorCodes.blue,
+  ec: ColorCodes.yellow,
 
-export default Colors
+  icon_yellow: ColorCodes.i_yellow,
+
+};
+
+export default Colors;
