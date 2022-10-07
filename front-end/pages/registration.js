@@ -3,6 +3,11 @@ import styles from '../styles/Registration.module.css'
 import Link from 'next/link';
 import Colors from '../Components/Colors';
 import Button from '../Components/Button';
+import { useState } from 'react';
+
+//icons
+import {AiFillEye} from 'react-icons/ai'
+import {AiFillEyeInvisible} from 'react-icons/ai'
 
 //TODO: 
     // More form validation  
@@ -11,6 +16,12 @@ import Button from '../Components/Button';
   
 
 export default function Registration() {
+
+  const [passwordShown, setPasswordShown] = useState(false); 
+
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  }
   return (
     <div className={styles.body}>
       <Image
@@ -53,23 +64,31 @@ export default function Registration() {
               Password:
             </p>
             <input 
-              type="password" 
+              type={passwordShown ? "text" : "password"}
               className={styles.input1} 
               placeholder="Minimum length 8 characters" 
               required 
               minLength={8}  
             />
+            {passwordShown ? 
+              <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
+              <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
+            } 
           </div>
           <div className={styles.group}>
               <p className={styles.textInputTitle}>
                 Confirm Password:
               </p>
               <input 
-                type="password" 
+                type={passwordShown ? "text" : "password"}
                 className={styles.input1} 
                 placeholder="Confirm password"
                 minLength={8} 
               />
+              {passwordShown ? 
+                <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
+                <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
+              } 
           </div>
           <button className={styles.button} type="submit">Register</button>
       </form>

@@ -63,6 +63,11 @@ color:white;
 	border-color: var(--color-primary);
 	background: #ffffff;
 }
+.inputIcon {
+	position: relative;
+	left: 295px;
+	bottom: 39px;
+}
 
 .button {
 	width: 100%;
