@@ -9,8 +9,8 @@ import Button from '../Components/Button';
 export default function Home() {
   
   //example function that can be passed in a button component
-  //example on line 69
-  const onClick = () => {
+  //example on line 74
+  const onClickExample = () => {
     console.log("clicked")
   }
 
@@ -40,7 +40,6 @@ export default function Home() {
                 // id =""
                 // name = ""
                 required
-
               />
           </div>
           <p className={styles.textInputTitle}>
@@ -51,34 +50,39 @@ export default function Home() {
                 type="password" 
                 className={styles.input1} 
                 autoFocus 
-                placeholder="Password" 
+                placeholder="Minimum length 8 characters" 
                 // id =""
                 // name = "" 
                 required
                 minLength={8}
               />
           </div>
-          <button className={styles.button3} style={{backgroundColor: Colors.button}} type="submit">Sign In</button>
-          </form>
-          <p className={styles.text}>
-              Forgot Password? 
-          </p>
+          <button 
+            className={styles.button3} 
+            style={{backgroundColor: Colors.button}} 
+            type="submit"
+          >  
+            Sign In
+          </button>
+        </form>
+        <p className={styles.text}>
+            Forgot Password? 
+        </p>
+        <Button
+          color={Colors.button}
+          text = {'Reset Password'}
+          onClick = {onClickExample}
+          />
+        <p className={styles.text}>
+            Don't have an account?
+        </p>
+        <Link href="/registration" passHref >
           <Button
             color={Colors.button}
-            text = {'Reset Password'}
-            onClick = {onClick}
-           />
-          <p className={styles.text}>
-              Don't have an account?
-          </p>
-          <Link href="/registration" passHref >
-            <Button
-              color={Colors.button}
-              text = {'Register'}
-            />
-          </Link> 
+            text = {'Register'}
+          />
+        </Link> 
       </div>
-
     </div>
   )
 }
