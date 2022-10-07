@@ -62,6 +62,10 @@ export default function Registration() {
           <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Password:
+              {passwordShown ? 
+                <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
+                <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
+              } 
             </p>
             <input 
               type={passwordShown ? "text" : "password"}
@@ -70,14 +74,14 @@ export default function Registration() {
               required 
               minLength={8}  
             />
-            {passwordShown ? 
-              <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
-              <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
-            } 
           </div>
           <div className={styles.group}>
               <p className={styles.textInputTitle}>
                 Confirm Password:
+                {passwordShown ? 
+                  <AiFillEye className={styles.inputIcon2} size='35px'color={Colors.button} onClick={togglePassword}/> : 
+                  <AiFillEyeInvisible className={styles.inputIcon2} size='35px' color={Colors.button} onClick={togglePassword}/>
+                } 
               </p>
               <input 
                 type={passwordShown ? "text" : "password"}
@@ -85,10 +89,6 @@ export default function Registration() {
                 placeholder="Confirm password"
                 minLength={8} 
               />
-              {passwordShown ? 
-                <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
-                <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
-              } 
           </div>
           <button className={styles.button} type="submit">Register</button>
       </form>

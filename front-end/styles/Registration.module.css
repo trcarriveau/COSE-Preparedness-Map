@@ -65,8 +65,13 @@ color:white;
 }
 .inputIcon {
 	position: relative;
-	left: 295px;
-	bottom: 39px;
+	left: 195px;
+	top: 65px;
+}
+.inputIcon2 {
+	position: relative;
+	left: 111px;
+	top: 65px;
 }
 
 .button {
