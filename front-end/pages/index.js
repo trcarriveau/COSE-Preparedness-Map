@@ -49,7 +49,6 @@ export default function Home() {
               <input 
                 type="password" 
                 className={styles.input1} 
-                autoFocus 
                 placeholder="Minimum length 8 characters" 
                 // id =""
                 // name = "" 

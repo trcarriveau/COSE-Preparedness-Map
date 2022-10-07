@@ -4,7 +4,11 @@ import Link from 'next/link';
 import Colors from '../Components/Colors';
 import Button from '../Components/Button';
 
-//TODO: More form validation  Password matching hook Toggle password visbility icon 
+//TODO: 
+    // More form validation  
+    // Password matching hook 
+    // Toggle password visbility icon 
+  
 
 export default function Registration() {
   return (
