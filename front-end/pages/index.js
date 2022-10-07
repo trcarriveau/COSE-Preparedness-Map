@@ -7,6 +7,9 @@ import Button from '../Components/Button';
 
 
 export default function Home() {
+  
+  //example function that can be passed in a button component
+  //example on line 69
   const onClick = () => {
     console.log("clicked")
   }
@@ -28,16 +31,34 @@ export default function Home() {
           <p className={styles.textInputTitle}>
               Username or Email:
           </p>
-              <div className={styles.group}>
-                  <input type="text" className={styles.input1} autoFocus placeholder="Username or email" />
-              </div>
+          <div className={styles.group}>
+              <input 
+                type="text" 
+                className={styles.input1} 
+                autoFocus 
+                placeholder="Username or email" 
+                // id =""
+                // name = ""
+                required
+
+              />
+          </div>
           <p className={styles.textInputTitle}>
               Password:
           </p>    
-              <div className={styles.group}>
-                  <input type="password" className={styles.input1} autoFocus placeholder="Password" />
-              </div>
-              <button className={styles.button3} style={{backgroundColor: Colors.button}} type="submit">Sign In</button>
+          <div className={styles.group}>
+              <input 
+                type="password" 
+                className={styles.input1} 
+                autoFocus 
+                placeholder="Password" 
+                // id =""
+                // name = "" 
+                required
+                minLength={8}
+              />
+          </div>
+          <button className={styles.button3} style={{backgroundColor: Colors.button}} type="submit">Sign In</button>
           </form>
           <p className={styles.text}>
               Forgot Password? 
