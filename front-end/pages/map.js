@@ -30,6 +30,7 @@ import { useState} from 'react'
 import Types from "../components/Types";
 import Extracurriculars from "../components/Extracurriculars";
 import SemestersRow from "../components/SemestersRow";
+import TypesKey from "../components/TypesKey";
 
 
 
@@ -280,7 +281,8 @@ function Map() {
         </div>
         {/*TODO styles.key area needs to be converted to component to iterate through types */}
         <div className={styles.key}>
-            <div className={styles.typeKey}>
+            <TypesKey />
+            {/* <div className={styles.typeKey}>
                 <div className={styles.keyRow}>
                     <RiComputerFill style={{color: 'orange'}}></RiComputerFill>
                     <div className={styles.keyText}>Labs & Experimental Learning (ISELF VizLab)</div>
@@ -302,15 +304,14 @@ function Map() {
                     <div className={styles.keyText}>Professional Working Experience</div>
                 </div>
 
-                {/* **************TESTING AREA********* */}
+            </div> */}
+            {/* **************TESTING AREA********* */}
 
 
-                {/* **************TESTING AREA********* */}
+            {/* **************TESTING AREA********* */}
 
  
                 
-            </div>
-            
             <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>
                     <div className={styles.box} style={{backgroundColor: Colors.course}}>     

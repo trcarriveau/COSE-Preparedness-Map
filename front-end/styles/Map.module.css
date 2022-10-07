@@ -1,6 +1,6 @@
 .box{
     display: flex; 
-    width: 125px;
+    width: 225px;
     height: 25px;
     border-radius: 10px;
 }
@@ -12,7 +12,7 @@
 }
 .keyRow{
     display: flex; 
-    flex-direction: row;  
+    flex-direction: row;
     margin: 5px;
 }
 .keyText{
@@ -132,10 +132,3 @@
    background-color: white;
    padding-left: 20%;
 }
-/* years2 is a test style and can be deleted later */
-.years2 {
-    display: flex;
-    justify-content: 'space-around'; 
-    background-color: red;
-    padding-left: 20%;
- }

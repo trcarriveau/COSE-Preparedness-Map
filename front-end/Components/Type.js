@@ -12,8 +12,9 @@ import TypesKey from './TypesKey'
 
 const Type = ({type_map, type_name, type_information, type_icon, type_icon2,type_color }) => {
     return (
-    <div>
-         {type_icon}    
+    <div style={{paddingLeft: '1px'}}>
+        {type_icon}  
+        {type_name}  
     </div>
   )
 }
