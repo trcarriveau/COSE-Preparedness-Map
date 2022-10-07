@@ -2,9 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
+import { useState } from 'react';
+
+//our components
 import Colors from '../Components/Colors'
 import Button from '../Components/Button';
 
+//icons
+import {AiFillEye} from 'react-icons/ai'
+import {AiFillEyeInvisible} from 'react-icons/ai'
 
 export default function Home() {
   
@@ -14,6 +20,13 @@ export default function Home() {
     console.log("clicked")
   }
 
+  const [passwordShown, setPasswordShown] = useState(false); 
+
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  }
+   
+ 
 
   return (
     <div className={styles.body}>
@@ -41,20 +54,25 @@ export default function Home() {
                 // name = ""
                 required
               />
+              
           </div>
           <p className={styles.textInputTitle}>
               Password:
           </p>    
           <div className={styles.group}>
               <input 
-                type="password" 
+                type= {passwordShown ? "text" : "password"}
                 className={styles.input1} 
                 placeholder="Minimum length 8 characters" 
                 // id =""
                 // name = "" 
                 required
-                minLength={8}
+                minLength={8}   
               />
+            {passwordShown ? 
+                <AiFillEye className={styles.inputIcon} size='35px'color={Colors.button} onClick={togglePassword}/> : 
+                <AiFillEyeInvisible className={styles.inputIcon} size='35px' color={Colors.button} onClick={togglePassword}/>
+            }  
           </div>
           <button 
             className={styles.button3} 
@@ -82,6 +100,7 @@ export default function Home() {
           />
         </Link> 
       </div>
+      
     </div>
   )
 }
