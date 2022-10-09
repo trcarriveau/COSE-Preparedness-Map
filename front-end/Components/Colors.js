@@ -22,7 +22,12 @@ export const ColorCodes = {
     yellow: '#ffff00',
 
     //icons 
-    i_yellow: '#ffffE0'
+    i_yellow: '#ffffE0',
+
+    //Husky Red
+    husky_red: '#cc0000',
+    //Dark red
+    dark_red: '#923032',
 }
 
 export const Colors = {
@@ -41,6 +46,8 @@ export const Colors = {
     ec: ColorCodes.yellow,
 
     icon_yellow: ColorCodes.i_yellow, 
+
+    button: ColorCodes.husky_red,
 } 
 
 export default Colors
