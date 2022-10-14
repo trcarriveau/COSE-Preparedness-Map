@@ -48,6 +48,7 @@ class RegistrationForm extends React.Component {
     const msg = await res.text()
 		console.log('msg:')
     console.log(msg)
+    console.log("msg comp:"+msg.errors)
 		setResp.setState({ messageBack: msg });
 	}
 
@@ -63,8 +64,8 @@ class RegistrationForm extends React.Component {
     render() {
     const { username, email, password, confirmPassword, messageBack,  passwordShown} = this.state
 		return (
-			<div>
-			<form id="createAccount" onSubmit={this.submitHandler}>
+      <div >
+			  <form id="createAccount" onSubmit={this.submitHandler}>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>Username:</p>
             <input
@@ -158,8 +159,8 @@ class RegistrationForm extends React.Component {
             Register
           </button>
         </form>
-				<h2>{this.state.messageBack}</h2>
-				</div>
+        <h2 className={styles.textError} style={{color: Colors.text_error}}>{this.state.messageBack}</h2>
+      </div>
 		)
 	}
 }

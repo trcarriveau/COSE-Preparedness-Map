@@ -17,11 +17,11 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 
 export default function Registration({msg}) {
   
-  const [passwordShown, setPasswordShown] = useState(false);
+  // const [passwordShown, setPasswordShown] = useState(false);
 
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  }
+  // const togglePassword = () => {
+  //   setPasswordShown(!passwordShown);
+  // }
 
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
@@ -75,7 +75,7 @@ export default function Registration({msg}) {
           <hr style={{ color: "white" }} />
         </div>
         <h2>{msg}</h2>
-        <RegistrationForm password={passwordShown} togglePassword={togglePassword}/>
+        <RegistrationForm/>
         {/* <form id="createAccount" onSubmit={handleSubmit}>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>Username:</p>
@@ -158,7 +158,7 @@ export default function Registration({msg}) {
             Register
           </button>
         </form> */}
-        <p className={styles.text}>Already have an account? Sign in</p>
+        <p className={styles.text} >Already have an account? Sign in</p>
         <Link href="/" passHref>
           <Button color={Colors.button} text={"Cancel"} />
         </Link>

@@ -48,6 +48,7 @@ export const Colors = {
     icon_yellow: ColorCodes.i_yellow, 
 
     button: ColorCodes.husky_red,
+    text_error: ColorCodes.dark_red,
 } 
 
 export default Colors
