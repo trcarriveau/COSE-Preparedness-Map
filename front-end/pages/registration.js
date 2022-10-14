@@ -75,7 +75,7 @@ export default function Registration({msg}) {
           <hr style={{ color: "white" }} />
         </div>
         <h2>{msg}</h2>
-        <RegistrationForm />
+        <RegistrationForm password={passwordShown} togglePassword={togglePassword}/>
         {/* <form id="createAccount" onSubmit={handleSubmit}>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>Username:</p>

@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import Colors from "./Colors";
 import styles from "../styles/Registration.module.css";
-
+import { useState } from 'react';
 //icons
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 
 // https://www.youtube.com/watch?v=x9UEDRbLhJE
 
-class RegistrationForm extends Component {
+
+
+
+class RegistrationForm extends React.Component {
 	constructor(props) {
 		super(props)
 
@@ -17,10 +20,11 @@ class RegistrationForm extends Component {
 			email: '',
 			password: '',
 			confirmPassword: '',
-			messageBack: ''
+			messageBack: '',
+      passwordShown: false
 		}
 	}
-
+  
 
 	changeHandler = (e) => {
 		this.setState({ [e.target.name]: e.target.value})
@@ -47,8 +51,17 @@ class RegistrationForm extends Component {
 		setResp.setState({ messageBack: msg });
 	}
 
-	render() {
-		const { username, email, password, confirmPassword, messageBack } = this.state
+
+
+  togglePassword = (pwState) => {
+    this.setState(prevState => ({
+      passwordShown: !prevState.passwordShown
+    }));
+    console.log("in togglePassword, passwordShown: "+this.state.passwordShown)
+  } 
+    
+    render() {
+    const { username, email, password, confirmPassword, messageBack,  passwordShown} = this.state
 		return (
 			<div>
 			<form id="createAccount" onSubmit={this.submitHandler}>
@@ -82,25 +95,24 @@ class RegistrationForm extends Component {
           <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Password:
-              {/* {passwordShown ? (
+              {passwordShown ? (
                 <AiFillEye
                   className={styles.inputIcon}
                   size="35px"
                   color={Colors.button}
-                  onClick={togglePassword}
+                  onClick={this.togglePassword}
                 />
               ) : (
                 <AiFillEyeInvisible
                   className={styles.inputIcon}
                   size="35px"
                   color={Colors.button}
-                  onClick={togglePassword}
+                  onClick={this.togglePassword}
                 />
-              )} */}
+              )}
             </p>
             <input
-              // type={passwordShown ? "text" : "password"}
-							type="text"
+              type={passwordShown ? "text" : "password"}
               id="password"
 							name="password"
               className={styles.input1}
@@ -114,25 +126,24 @@ class RegistrationForm extends Component {
           <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Confirm Password:
-              {/* {passwordShown ? (
+              {passwordShown ? (
                 <AiFillEye
                   className={styles.inputIcon2}
                   size="35px"
                   color={Colors.button}
-                  onClick={togglePassword}
+                  onClick={this.togglePassword}
                 />
               ) : (
                 <AiFillEyeInvisible
                   className={styles.inputIcon2}
                   size="35px"
                   color={Colors.button}
-                  onClick={togglePassword}
+                  onClick={this.togglePassword}
                 />
-              )} */}
+              )}
             </p>
             <input
-              // type={passwordShown ? "text" : "password"}
-							type="text"
+              type={passwordShown ? "text" : "password"}
               id="confirmPassword"
 							name="confirmPassword"
               className={styles.input1}
