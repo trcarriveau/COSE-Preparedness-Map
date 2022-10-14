@@ -17,6 +17,7 @@ class RegistrationForm extends React.Component {
       email: "",
       password: "",
       confirmPassword: "",
+      major: "",
       messageBack: "",
       passwordShown: false,
     };
@@ -42,7 +43,7 @@ class RegistrationForm extends React.Component {
     let setResp = this;
     const res = await fetch("http://localhost:3080/registration", options);
     const msg = await res.json();
-    console.log("msg:");
+    console.log("msg: "+msg);
     console.log(msg);
 
     let feedback = "";
@@ -54,6 +55,8 @@ class RegistrationForm extends React.Component {
       msg.errors.forEach((err, e) => {
         feedback += `${err.msg}\n`;
       });
+    } else {
+      feedback += msg.errorMessage
     }
     console.log("feedback: " + feedback);
     setResp.setState({ messageBack: feedback });
@@ -130,6 +133,22 @@ class RegistrationForm extends React.Component {
             />
           </div>
           <div className={styles.group}>
+            <p className={styles.textInputTitle}>Major:</p>
+            <select
+              id="major"
+              name="major"
+              className={styles.input1}
+              placeholder="Select your Major"
+            >
+              <option value="" disabled selected>
+                Select your Major
+              </option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Placeholder 1">Placeholder 1</option>
+              <option value="Placeholder 2">Placeholder 2</option>
+            </select>
+          </div>
+          <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Password:
               {passwordShown ? (
@@ -191,19 +210,16 @@ class RegistrationForm extends React.Component {
               onChange={this.changeHandler}
             />
           </div>
-        <h2 className={styles.textError} style={{ color: Colors.text_error }}>
-          {this.state.messageBack}{" "}
-        </h2>
+          <h2 className={styles.textError} style={{ color: Colors.text_error }}>
+            {this.state.messageBack}{" "}
+          </h2>
           <button className={styles.button} type="submit">
             Register
           </button>
         </form>
-
       </div>
     );
   }
 }
 
 export default RegistrationForm;
-
-
