@@ -123,8 +123,9 @@ background: var(--color-primary-dark);
 .textError {
 	text-align: left;
 	word-wrap: break-word;
-	-webkit-text-stroke-width: .2px;
-	-webkit-text-stroke-color: black;
+	font-size: 1em;
+	/* -webkit-text-stroke-width: .2px;
+	-webkit-text-stroke-color: white; */
 	
 }
 
