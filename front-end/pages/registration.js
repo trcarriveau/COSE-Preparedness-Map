@@ -19,7 +19,53 @@ export default function Registration() {
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
-  };
+  }
+
+  const handleSubmit = async (event) => {
+    // Stop the form from submitting and refreshing the page.
+    event.preventDefault()
+
+    const data = {
+      username: event.target.username.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      confirmPassword: event.target.confirmPassword.value,
+    }
+
+    const options = {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      payload: data
+    }
+		console.log('options:')
+		console.log(options)
+
+		const res = await fetch('http://localhost:3080/registration', options)
+		const msg = await res.text()
+
+		// fetch('/registration', {
+		// 	method: 'POST',
+		// 	headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+		// 	payload: JSON.stringify(data)
+		// })
+		// 	.then(async (response) => {
+		// 		console.log('Response:')
+		// 		console.log(response)
+		// 		let text = await response.json()
+		// 		console.log(text)
+		// 	})
+		// 	.catch((error) => {
+		// 		console.log(`Caught error in fetch ofr registration: ${error}`)
+		// 	})
+  }
+
+	
+
   return (
     <div className={styles.body}>
       <Image
@@ -32,12 +78,12 @@ export default function Registration() {
           <h1 className={styles.title}>Register</h1>
           <hr style={{ color: "white" }} />
         </div>
-        <form id="createAccount">
+        <form id="createAccount" onSubmit={handleSubmit}>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>Username:</p>
             <input
               type="text"
-              id="signupUsername"
+              id="username"
               className={styles.input1}
               autoFocus
               placeholder="Username"
@@ -48,6 +94,7 @@ export default function Registration() {
             <p className={styles.textInputTitle}>Email:</p>
             <input
               type="email"
+              id="email"
               className={styles.input1}
               placeholder="Email Address"
               required
@@ -74,6 +121,7 @@ export default function Registration() {
             </p>
             <input
               type={passwordShown ? "text" : "password"}
+              id="password"
               className={styles.input1}
               placeholder="Minimum length 8 characters"
               required
@@ -101,6 +149,7 @@ export default function Registration() {
             </p>
             <input
               type={passwordShown ? "text" : "password"}
+              id="confirmPassword"
               className={styles.input1}
               placeholder="Confirm password"
               required

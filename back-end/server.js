@@ -49,7 +49,7 @@ app.post(
 	body('username').trim().escape(),
 	body('email').isEmail().normalizeEmail().trim().escape(),
 	// password must be at least 5 chars long
-	body('password').isLength({ min: 5 }),
+	body('password').isLength({ min: 8 }),
 	body('confirmPassword').custom((value, { req }) => {
 		if (value !== req.body.password) {
 			throw new Error('Password confirmation does not match password');
