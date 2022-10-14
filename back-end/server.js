@@ -12,11 +12,16 @@ const app = express();
 const bodyParser = require("body-parser");
 const port = 3080;
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({  extended: true }));
-//use cookie for tracking logins
-// app.use(cookie());
+app.use(bodyParser.json());
 
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 /* ####################### Start - Mongo DB Models ####################### */
 const Users = mongoose.model('Users', {
@@ -44,6 +49,21 @@ const Users = mongoose.model('Users', {
 
 
 /* ####################### Start - App Routes ####################### */
+
+// app.post('/registration', async function(req, res) {
+
+// 		try {
+// 			console.log(`In Body: ${util.inspect(req.body, true, null, true)}`);
+// 			res.send('Hi')
+			
+// 		} catch (error) {
+// 			console.log("Caught Error in /registration:" + error);
+// 			errMsg = 'We ran into a server issue'
+// 			console.log(`Responding with: res.status(500).json(${util.inspect({errorMessage: errMsg}, true, null, true)})`)
+// 			return res.status(500).json({errorMessage: errMsg})
+// 		}
+// });
+
 app.post(
 	'/registration', 
 	body('username').trim().escape(),

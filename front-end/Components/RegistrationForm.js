@@ -1,91 +1,69 @@
-import Image from "next/image";
+import React, { Component } from 'react'
+import Colors from "./Colors";
 import styles from "../styles/Registration.module.css";
-import Link from "next/link";
-import Colors from "../Components/Colors";
-import Button from "../Components/Button";
-import RegistrationForm from "../Components/RegistrationForm";
-import { useState } from "react";
 
 //icons
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 
-//TODO:
-// More form validation
-// Password matching hook
-// Toggle password visbility icon
+// https://www.youtube.com/watch?v=x9UEDRbLhJE
 
-export default function Registration({msg}) {
-  
-  const [passwordShown, setPasswordShown] = useState(false);
+class RegistrationForm extends Component {
+	constructor(props) {
+		super(props)
 
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  }
+		this.state = {
+			username: '',
+			email: '',
+			password: '',
+			confirmPassword: '',
+			messageBack: ''
+		}
+	}
 
-  const handleSubmit = async (event) => {
-    // Stop the form from submitting and refreshing the page.
-    event.preventDefault()
 
-    const data = {
-      username: event.target.username.value,
-      email: event.target.email.value,
-      password: event.target.password.value,
-      confirmPassword: event.target.confirmPassword.value,
-    }
+	changeHandler = (e) => {
+		this.setState({ [e.target.name]: e.target.value})
+	}
 
-    console.log('Data:');
-    console.log(data);
+	submitHandler = async (e) => {
+		e.preventDefault()
+		console.log(this.state)
 
-    const options = {
+		const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(this.state)
     }
     console.log('options:')
     console.log(options)
-
-    const res = await fetch('http://localhost:3080/registration', options)
+		let setResp = this;
+		const res = await fetch('http://localhost:3080/registration', options)
     const msg = await res.text()
-    console.log('msg:')
+		console.log('msg:')
     console.log(msg)
+		setResp.setState({ messageBack: msg });
+	}
 
-    return {
-      props: {
-        msg: msg
-      }
-    }
-
-  }
-
-  
-
-  return (
-    <div className={styles.body}>
-      <Image
-        src="/../public/huskies_logo.png"
-        layout="fill"
-        objectFit="contain"
-      />
-      <div className={styles.container}>
-        <div>
-          <h1 className={styles.title}>Register</h1>
-          <hr style={{ color: "white" }} />
-        </div>
-        <h2>{msg}</h2>
-        <RegistrationForm />
-        {/* <form id="createAccount" onSubmit={handleSubmit}>
+	render() {
+		const { username, email, password, confirmPassword, messageBack } = this.state
+		return (
+			<div>
+			<form id="createAccount" onSubmit={this.submitHandler}>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>Username:</p>
             <input
               type="text"
               id="username"
+							name="username"
               className={styles.input1}
               autoFocus
               placeholder="Username"
               required
+							value={username}
+							onChange={this.changeHandler}
             />
           </div>
           <div className={styles.group}>
@@ -93,15 +71,18 @@ export default function Registration({msg}) {
             <input
               type="email"
               id="email"
+							name="email"
               className={styles.input1}
               placeholder="Email Address"
               required
+							value={email}
+							onChange={this.changeHandler}
             />
           </div>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Password:
-              {passwordShown ? (
+              {/* {passwordShown ? (
                 <AiFillEye
                   className={styles.inputIcon}
                   size="35px"
@@ -115,21 +96,25 @@ export default function Registration({msg}) {
                   color={Colors.button}
                   onClick={togglePassword}
                 />
-              )}
+              )} */}
             </p>
             <input
-              type={passwordShown ? "text" : "password"}
+              // type={passwordShown ? "text" : "password"}
+							type="text"
               id="password"
+							name="password"
               className={styles.input1}
               placeholder="Minimum length 8 characters"
               required
               minLength={8}
+							value={password}
+							onChange={this.changeHandler}
             />
           </div>
           <div className={styles.group}>
             <p className={styles.textInputTitle}>
               Confirm Password:
-              {passwordShown ? (
+              {/* {passwordShown ? (
                 <AiFillEye
                   className={styles.inputIcon2}
                   size="35px"
@@ -143,26 +128,29 @@ export default function Registration({msg}) {
                   color={Colors.button}
                   onClick={togglePassword}
                 />
-              )}
+              )} */}
             </p>
             <input
-              type={passwordShown ? "text" : "password"}
+              // type={passwordShown ? "text" : "password"}
+							type="text"
               id="confirmPassword"
+							name="confirmPassword"
               className={styles.input1}
               placeholder="Confirm password"
               required
               minLength={8}
+							value={confirmPassword}
+							onChange={this.changeHandler}
             />
           </div>
           <button className={styles.button} type="submit">
             Register
           </button>
-        </form> */}
-        <p className={styles.text}>Already have an account? Sign in</p>
-        <Link href="/" passHref>
-          <Button color={Colors.button} text={"Cancel"} />
-        </Link>
-      </div>
-    </div>
-  );
+        </form>
+				<h2>{this.state.messageBack}</h2>
+				</div>
+		)
+	}
 }
+
+export default RegistrationForm
