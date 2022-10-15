@@ -57,6 +57,8 @@ color:white;
 	outline: none;
 	background: #FFFFFF;
 	transition: background 0.2s, border-color 0.2s;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: black;
 }
 
 .input1:focus {
@@ -108,11 +110,23 @@ background: var(--color-primary-dark);
 	text-align: center;
 	color: white;
 	font-size: 1.1rem;
+	/* text-shadow: 1px 1px white;  */
+	/* -webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: black; */
 }
 .textInputTitle {
 	text-align: left;
 	color: white;
 	font-size: 1.3rem;
+}
+
+.textError {
+	text-align: left;
+	word-wrap: break-word;
+	font-size: 1em;
+	/* -webkit-text-stroke-width: .2px;
+	-webkit-text-stroke-color: white; */
+	
 }
 
 .link {

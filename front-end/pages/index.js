@@ -42,6 +42,7 @@ export default function Home() {
           <div className={styles.group}>
             <input
               type="text"
+              id="username"
               className={styles.input1}
               autoFocus
               placeholder="Username or email"
@@ -54,6 +55,7 @@ export default function Home() {
           <div className={styles.group}>
             <input
               type={passwordShown ? "text" : "password"}
+              id="password"
               className={styles.input1}
               placeholder="Minimum length 8 characters"
               // id =""
