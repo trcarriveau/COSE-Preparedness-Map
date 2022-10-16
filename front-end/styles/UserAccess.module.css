@@ -1,0 +1,27 @@
+.container {
+    background-color: orange;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.usercontainer {
+    background-color: red;
+    flex-grow: 2;
+    text-align: center;
+}   
+
+.arrow {
+    background-color: green ;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    
+}
+.username{
+ text-align: center;
+
+}

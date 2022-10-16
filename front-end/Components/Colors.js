@@ -28,6 +28,8 @@ export const ColorCodes = {
     husky_red: '#cc0000',
     //Dark red
     dark_red: '#923032',
+
+    alga_color: '#00ff00',
 }
 
 export const Colors = {
@@ -48,6 +50,8 @@ export const Colors = {
     icon_yellow: ColorCodes.i_yellow, 
 
     button: ColorCodes.husky_red,
+
+    tast: ColorCodes.alga_color,
 } 
 
 export default Colors

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "../styles/Registration.module.css";
 import Link from "next/link";
-import Colors from "../Components/Colors";
-import Button from "../Components/Button";
+import Colors from "../components/Colors";
+import Button from "../components/Button";
 import { useState } from "react";
 
 //icons
@@ -113,8 +113,9 @@ export default function Registration() {
         </form>
         <p className={styles.text}>Already have an account? Sign in</p>
         <Link href="/" passHref>
-          <Button color={Colors.button} text={"Cancel"} />
+          <Button color={Colors.tast} text={"Cancel"} />
         </Link>
+        <Button color = {Colors.tast} text = {"submit3"} alga_var={"alga messge"}/>
       </div>
     </div>
   );

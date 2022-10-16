@@ -2,7 +2,7 @@ import Colors from "./Colors"
 import PropTypes from 'prop-types'
 import React from "react"
 
-const Button = React.forwardRef(({color, text, onClick, href }, ref) => {
+const Button = React.forwardRef(({color, text, alga_var, onClick, href }, ref) => {
 // const Button = ({ color, text, onClick }) => {
   return (
     <>
@@ -29,7 +29,7 @@ const Button = React.forwardRef(({color, text, onClick, href }, ref) => {
             >
                 
                 {text}                   
-                
+                {alga_var}
             </button>
         {/* </a>  */}
     </>

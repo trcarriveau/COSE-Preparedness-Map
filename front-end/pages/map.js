@@ -306,7 +306,7 @@ function Map() {
 
             </div> */}
             {/* **************TESTING AREA********* */}
-
+            <Course/>
 
             {/* **************TESTING AREA********* */}
 
