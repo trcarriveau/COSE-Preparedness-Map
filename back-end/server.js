@@ -42,6 +42,7 @@ const Users = mongoose.model('Users', {
 		type: String,
 		required: true,
 	},
+	major: String,
 	role: String
 });
 /* ####################### End - Mongo DB Models ####################### */
@@ -68,7 +69,7 @@ app.post(
 	'/registration', 
 	body('username').trim().escape(),
 	body('email').isEmail().normalizeEmail().trim().escape(),
-	// password must be at least 5 chars long
+	// password must be at least 8 chars long
 	body('password').isLength({ min: 8 }),
 	body('confirmPassword').custom((value, { req }) => {
 		if (value !== req.body.password) {
@@ -77,6 +78,8 @@ app.post(
 		// Indicates the success of this synchronous custom validator
 		return true;
 	}),
+	body('major').trim().escape(),
+	
 	async function(req, res) {
 	
 		try {

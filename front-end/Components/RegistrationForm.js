@@ -58,6 +58,10 @@ class RegistrationForm extends React.Component {
     } else {
       feedback += msg.errorMessage
     }
+
+    if (typeof msg == "object" && msg.hasOwnProperty("message")) {
+      feedback = msg.message
+    }
     console.log("feedback: " + feedback);
     setResp.setState({ messageBack: feedback });
   };
@@ -97,6 +101,7 @@ class RegistrationForm extends React.Component {
     const {
       username,
       email,
+      major,
       password,
       confirmPassword,
       messageBack,
@@ -139,6 +144,7 @@ class RegistrationForm extends React.Component {
               name="major"
               className={styles.input1}
               placeholder="Select your Major"
+              onChange={this.changeHandler}
             >
               <option value="" disabled selected>
                 Select your Major
