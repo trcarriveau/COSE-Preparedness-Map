@@ -7,14 +7,13 @@ const bcrypt = require('bcryptjs');
 const { body, validationResult } = require('express-validator');
 const util = require('util')
 
-const db = mongoose.connect('mongodb://localhost:27017/COSE-Preparedness-Map', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/COSE-Preparedness-Map', {useNewUrlParser: true, useUnifiedTopology: true});
 const app = express();
 const bodyParser = require("body-parser");
 const port = 3080;
 
-// app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({  extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({  extended: true }));
 
 
 app.use(function(req, res, next) {
@@ -42,7 +41,8 @@ const Users = mongoose.model('Users', {
 		type: String,
 		required: true,
 	},
-	role: String
+	role: String,
+	major: String
 });
 /* ####################### End - Mongo DB Models ####################### */
 
@@ -50,19 +50,40 @@ const Users = mongoose.model('Users', {
 
 /* ####################### Start - App Routes ####################### */
 
-// app.post('/registration', async function(req, res) {
+app.get('/registration', async function(req, res) {
 
-// 		try {
-// 			console.log(`In Body: ${util.inspect(req.body, true, null, true)}`);
-// 			res.send('Hi')
+		try {
+			// console.log('In GET registration');
+			res.status(200).send('Hi')
 			
-// 		} catch (error) {
-// 			console.log("Caught Error in /registration:" + error);
-// 			errMsg = 'We ran into a server issue'
-// 			console.log(`Responding with: res.status(500).json(${util.inspect({errorMessage: errMsg}, true, null, true)})`)
-// 			return res.status(500).json({errorMessage: errMsg})
-// 		}
-// });
+		} catch (error) {
+			console.log("Caught Error in /registration:" + error);
+			errMsg = 'We ran into a server issue'
+			console.log(`Responding with: res.status(500).json(${util.inspect({errorMessage: errMsg}, true, null, true)})`)
+			return res.status(500).json({errorMessage: errMsg})
+		}
+});
+
+/*
+app.post('/registration', async function(req, res) {
+		try {
+			console.log(`In Headers: ${util.inspect(req.headers, true, null, true)}`);
+			let goodMsg = '', errMsg = ''
+			let errors = []
+			var salt = bcrypt.genSaltSync(10);
+			req.body.password = bcrypt.hashSync(req.body.password, salt);
+			req.body.confirmPassword = bcrypt.hashSync(req.body.confirmPassword, salt);
+			console.log(`In Body: ${util.inspect(req.body, true, null, true)}`);
+			res.send('Hi')
+			
+		} catch (error) {
+			console.log("Caught Error in /registration:" + error);
+			errMsg = 'We ran into a server issue'
+			console.log(`Responding with: res.status(500).json(${util.inspect({errorMessage: errMsg}, true, null, true)})`)
+			return res.status(500).json({errorMessage: errMsg})
+		}
+});*/
+
 
 app.post(
 	'/registration', 
@@ -204,7 +225,11 @@ app.get('/test_api', (req, res) => {
 
 
 /* ####################### Start - Functions ####################### */
-app.listen(port, () => {
+const server = app.listen(port, () => {
 	console.log(`Server listening on the port::${port}`);
 });
 /* ####################### End - Functions ####################### */
+
+//Need this so we can import our server it into our unit tests
+// module.exports = app;
+module.exports = {app, mongoose, server}
