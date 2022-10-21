@@ -1,0 +1,85 @@
+export const cose_map = 
+
+[{
+  "_id": {
+    "$oid": "632bb2d73b2e349d9cfebcb9"
+  },
+  "map_name": "Software Engineering",
+  "map_items": [
+    {
+      "item_name": "SE 221",
+      "item_description": "",
+      "item_skill": [
+        {
+          "skill_id": {
+            "$oid": "632bb4433b2e349d9cfebcba"
+          }
+        },
+        {
+          "skill_id": {
+            "$oid": "632bb4db0e17f09d9c34c01f"
+          }
+        }
+      ],
+      "item_type": [
+        {
+          "type_id": {
+            "$oid": "632bb5313b2e349d9cfebcbd"
+          }
+        },
+        {
+          "type_id": {
+            "$oid": "632bb5f20e17f09d9c34c023"
+          }
+        },
+        {
+          "type_id": {
+            "$oid": "632bb5fd0e17f09d9c34c024"
+          }
+        }
+      ],
+      "item_year_semester": [
+        {
+          "year": 1,
+          "semester": "Fall"
+        }
+      ],
+      "is_extra_curricular": false
+    },
+    {
+      "item_name": "SE 231",
+      "item_description": "",
+      "item_skill": [
+        {
+          "skill_id": {
+            "$oid": "632bb4433b2e349d9cfebcba"
+          }
+        },
+        {
+          "skill_id": {
+            "$oid": "632bb4db0e17f09d9c34c01f"
+          }
+        },
+        {
+          "skill_id": {
+            "$oid": "3"
+          }
+        }
+      ],
+      "item_type": [
+        {
+          "type_id": {
+            "$oid": "632bb5313b2e349d9cfebcbd"
+          }
+        }
+      ],
+      "item_year_semester": [
+        {
+          "year": 1,
+          "semester": "Spring"
+        }
+      ],
+      "is_extra_curricular": false
+    }
+  ]
+}]
