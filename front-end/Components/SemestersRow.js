@@ -6,7 +6,7 @@ import Colors from './Colors';
 
 //TODO: Add a parameter to receive data props for the semesters associated with a particular skill
 
-const SemestersRow = ( {total_years}) => {
+const SemestersRow = ( {total_years, getMap}) => {
 
     let fall = '';
     let spring = '';

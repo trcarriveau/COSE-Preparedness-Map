@@ -25,8 +25,12 @@ import {GiCube} from 'react-icons/gi'
 
 //test data for types 
 import type_data from '../components/test_objects/cose-types.json'
+import skill_data from '../Components/test_objects/cose-skills.json'
+import map_data from '../Components/test_objects/cose-maps.json'
 
-import { useState} from 'react'
+
+
+import { useEffect, useState} from 'react'
 import Types from "../components/Types";
 import Extracurriculars from "../components/Extracurriculars";
 import SemestersRow from "../components/SemestersRow";
@@ -48,47 +52,60 @@ function Map() {
 
   )
 
-  const [skills, setSkills] = useState (
-    [{
-        "_id": {
-          "$oid": "632bb4433b2e349d9cfebcba"
-        },
-        "skill_map": "Software Engineering",
-        "skill_name": "Soft Skills",
-        "skill_information": ""
-      },{
-        "_id": {
-          "$oid": "632bb4db0e17f09d9c34c01f"
-        },
-        "skill_map": "Software Engineering",
-        "skill_name": "Life Long Learning",
-        "skill_information": ""
-      },{
-        "_id": {
-          "$oid": "632bb5080e17f09d9c34c020"
-        },
-        "skill_map": "Software Engineering",
-        "skill_name": "Special Technical Skills, Techniques and Tools",
-        "skill_information": ""
-      },{
-        "_id": {
-          "$oid": "632bb5120e17f09d9c34c021"
-        },
-        "skill_map": "Software Engineering",
-        "skill_name": "Fundamental Knowledge & Concepts",
-        "skill_information": ""
-      },{
-        "_id": {
-          "$oid": "632bb51b0e17f09d9c34c022"
-        },
-        "skill_map": "Software Engineering",
-        "skill_name": "Citizenship",
-        "skill_information": ""
-      }]
-  )
+  const [skills, setSkills] = useState (skill_data)
+  const [career_map, setcareer_Map] = useState(map_data)
+  const [map, setMap] = useState(null)
+  const [mapItems, setMapItems] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
-  console.log(type_data)
+  //change this fetch to match backend 
+  const fetchMap = async () => {
+    const response = await fetch ('./api/cose-map')
+    const data = await response.json() 
+    console.log("Map.js fetchMap data is: ",data)
+    setMap(data)
+  }
+//   //testing function
+//   const getMap = (map) => {
+//     setMapItems(map.filter((map) => map.map_name == "Software Engineering"))
+//     console.log(mapItems)
+//   }
 
+//   useEffect( () => {
+//     const getMap = async () => {
+//         const res = await fetch ('../../back-end/mongo/schema/cose-maps.json')
+//         console.log(res)
+//         // const data = await res.json()
+//         // console.log(data) 
+//     }
+//     getMap()
+//   })
+
+//   useEffect( () => {
+//     setIsLoading(true)
+//     fetchMap()
+//     setIsLoading(false)
+//   })
+
+
+useEffect(() => {
+    setIsLoading(true);
+    fetch('./api/cose-map')
+      .then((res) => res.json())
+      .then((data) => {
+        setMap(data);
+        setIsLoading(false);
+      });
+    console.log("Map.js Use Effect: map: ",map)
+  }, []);
+
+    
+
+
+  console.log("after setting map is: ",map)
+  if (isLoading) return <p>Loading...</p>;
+  if (!map) return <p>No map available for selected major</p>;
+  
   return (
     <div style={{backgroundColor: Colors.background}}>    
         <Years />
@@ -136,6 +153,32 @@ function Map() {
 
             {/* **************TESTING AREA********* */}
 
+            <div>
+                {career_map.map((items) =>
+                (
+                    <>
+                        Map test:                 
+                        {items.map_name}
+                    </>
+  
+                ))}
+            
+            </div> 
+
+            <div>
+                {career_map.filter(c_map => c_map.map_name =="Software Engineering").map(filteredMap =>
+                (
+                    <>
+                       Filtered Map: 
+                       {filteredMap.map_name} 
+                    </>
+
+                    
+                ))}
+            
+            </div> 
+
+            <button onClick={fetchMap}>test fetchMap</button> 
 
             {/* **************TESTING AREA********* */}
                 
