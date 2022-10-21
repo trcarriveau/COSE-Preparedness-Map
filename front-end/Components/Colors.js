@@ -8,12 +8,12 @@ export const ColorCodes = {
   gray: "#bfbfbf",
   darkGray: "#a6a6a6",
 
-    //greens without opacity
-    lightestGreen: '#e2f0d9',
-    lightGreen: '#c5e0b4',
-    green: '#c5e0b4',
-    darkGreen: '#a9d18e',
-    darkestGreen: '#548235',
+  //greens without opacity
+  lightestGreen: "#e2f0d9",
+  lightGreen: "#c5e0b4",
+  green: "#c5e0b4",
+  darkGreen: "#a9d18e",
+  darkestGreen: "#548235",
 
   //course blue
   blue: "#3e70c9",
@@ -21,14 +21,14 @@ export const ColorCodes = {
   //extracurricular yellow
   yellow: "#ffff00",
 
-    //icons 
-    i_yellow: '#ffffE0',
+  //icons
+  i_yellow: "#ffffE0",
 
-    //Husky Red
-    husky_red: '#cc0000',
-    //Dark red
-    dark_red: '#923032',
-}
+  //Husky Red
+  husky_red: "#cc0000",
+  //Dark red
+  dark_red: "#923032",
+};
 
 export const Colors = {
   primaryLightest: ColorCodes.lightestGray,
@@ -42,11 +42,13 @@ export const Colors = {
   secondaryDark: ColorCodes.darkGreen,
   secondaryDarkest: ColorCodes.darkestGreen,
 
-    course: ColorCodes.blue,
-    ec: ColorCodes.yellow,
+  course: ColorCodes.blue,
+  ec: ColorCodes.yellow,
 
-    icon_yellow: ColorCodes.i_yellow, 
+  icon_yellow: ColorCodes.i_yellow,
 
-    button: ColorCodes.husky_red,
-    text_error: ColorCodes.husky_red,
-} 
+  button: ColorCodes.husky_red,
+  text_error: ColorCodes.husky_red,
+};
+
+export default Colors;
