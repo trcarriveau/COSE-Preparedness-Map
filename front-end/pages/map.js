@@ -48,7 +48,44 @@ function Map() {
 
   )
 
-
+  const [skills, setSkills] = useState (
+    [{
+        "_id": {
+          "$oid": "632bb4433b2e349d9cfebcba"
+        },
+        "skill_map": "Software Engineering",
+        "skill_name": "Soft Skills",
+        "skill_information": ""
+      },{
+        "_id": {
+          "$oid": "632bb4db0e17f09d9c34c01f"
+        },
+        "skill_map": "Software Engineering",
+        "skill_name": "Life Long Learning",
+        "skill_information": ""
+      },{
+        "_id": {
+          "$oid": "632bb5080e17f09d9c34c020"
+        },
+        "skill_map": "Software Engineering",
+        "skill_name": "Special Technical Skills, Techniques and Tools",
+        "skill_information": ""
+      },{
+        "_id": {
+          "$oid": "632bb5120e17f09d9c34c021"
+        },
+        "skill_map": "Software Engineering",
+        "skill_name": "Fundamental Knowledge & Concepts",
+        "skill_information": ""
+      },{
+        "_id": {
+          "$oid": "632bb51b0e17f09d9c34c022"
+        },
+        "skill_map": "Software Engineering",
+        "skill_name": "Citizenship",
+        "skill_information": ""
+      }]
+  )
 
   console.log(type_data)
 
@@ -58,259 +95,49 @@ function Map() {
         <Seasons total_years={4} />
 
         <div className={styles.middle} style={{backgroundColor: Colors.background}}>
-            <CoreSkills />
+            <CoreSkills 
+                skills = {skills}
+            />
             <div className={styles.semesters_all}>
                 {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
                 
                 {/* ******************** Core Skill 1 ************************ */}
-                {/* <div className={styles.semesters_by_skill}>
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            <Course
-                                courseName={'SE 221'}
-                                temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
-                            />
-                            <Course
-                                courseName={'SE 231'}
-                                temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
-                            />
-                            <Extracurriculars/>
-                        </div>
-                        
-                        <Semester />
-                        
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            <Course
-                                    courseName={'SE 221'}
-                                    temp_trait={<RiComputerFill style={{color: 'orange'}}/>}
-                                />
-                                <Course
-                                    courseName={'SE 231'}
-                                    temp_trait={<HiUserGroup style={{color: 'black'}}/>}    
-                                />
-                                <Extracurricular
-                                    ecName={'Hackathons'}
-                                />
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                </div>  */}
+
                 <SemestersRow
                     total_years={4}
                 />
                 {/* ******************** Core Skill 2 ************************ */}
-                {/* <div className={styles.semesters_by_skill}>
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            skill 2 test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            skill 2 test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                </div>  */}
+               
                 <SemestersRow
                     total_years={4}
                 />
                 {/* ******************** Core Skill 3 ************************ */}
-                {/* <div className={styles.semesters_by_skill}>
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            skill 3 test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            skill 3 test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                </div>  */}
+              
                 <SemestersRow
                     total_years={4}
                 />
                 {/* ******************** Core Skill 4 ************************ */}
-                {/* <div className={styles.semesters_by_skill}>
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            skill 4 test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            skill 4 test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                </div>    */}
+            
                 <SemestersRow
                     total_years={4}
                 />
 
                  {/* ******************** Core Skill 5 ************************ */}
-                 {/* <div className={styles.semesters_by_skill}>
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            skill 5 test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            skill 5 test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall1
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring1
-                        </div>
-                    </div>  
-                    <div className={styles.semesters}>   
-                        <div className={styles.semester}> 
-                            test fall2
-                        </div>
-                        <div className={styles.semester}> 
-                            test spring2
-                        </div>
-                    </div>  
-                </div>            */}
+                
                 <SemestersRow
                     total_years={4}
                 />
            
-           </div>
-
-            
-
-            
-        
+           </div>         
         </div>
         {/*TODO styles.key area needs to be converted to component to iterate through types */}
         <div className={styles.key}>
             <TypesKey />
-            {/* <div className={styles.typeKey}>
-                <div className={styles.keyRow}>
-                    <RiComputerFill style={{color: 'orange'}}></RiComputerFill>
-                    <div className={styles.keyText}>Labs & Experimental Learning (ISELF VizLab)</div>
-                </div>
-                <div className={styles.keyRow}>
-                    <GiArchiveResearch style={{color: 'red'}}></GiArchiveResearch>
-                    <div className={styles.keyText}>Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)</div>
-                </div>
-                <div className={styles.keyRow}>
-                    <HiUserGroup style={{color: 'black' }}></HiUserGroup>
-                    <div className={styles.keyText}>Group-based Semester Long Industry-Directed Projects</div>
-                </div>
-                <div className={styles.keyRow}>
-                    <BsTriangleFill style={{color: 'green'}}></BsTriangleFill>
-                    <div className={styles.keyText}>Research Activities</div>
-                </div>            
-                <div className={styles.keyRow}>
-                    <GiCube style={{color: 'gray', }}></GiCube>
-                    <div className={styles.keyText}>Professional Working Experience</div>
-                </div>
 
-            </div> */}
             {/* **************TESTING AREA********* */}
 
 
             {/* **************TESTING AREA********* */}
-
- 
                 
             <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>

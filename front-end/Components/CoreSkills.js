@@ -5,40 +5,23 @@ import styles from '../styles/Map.module.css'
 import CoreSkill from './CoreSkill'
 import Colors from './Colors'
 
-//TODO: skills array should be a parameter {skills} on line 31 and be read dynamically from DB
-const skills = [
-    {
-        title: "Soft Skill",
-        color: Colors.secondaryDarkest,
-    },
-    {
-        title: "Life Long Learning",
-        color: Colors.secondaryDark,
-    },
-    {
-        title: "Special Technical Skills, Techniques, and Tools",
-        color: Colors.secondaryMain,
-    },
-    {
-        title: "Fundamental Knowledge & Concepts",
-        color: Colors.secondaryLight,
-    },
-    {
-        title: "Citizenship",
-        color: Colors.secondaryLightest,
-    },
+const skill_colors = [
+    Colors.secondaryDarkest,
+    Colors.secondaryDark,
+    Colors.secondaryMain,
+    Colors.secondaryLight,
+    Colors.secondaryLightest,
 ]
 
-
-const CoreSkills = ( ) => {
+const CoreSkills = ({ skills }) => {
   return (
     <div className={styles.skills} style={{backgroundColor: Colors.background}}>
-       {skills.map((skill) =>
+       {skills.map((skill, index) =>
        (
             <>
                 <CoreSkill
-                   title={skill.title} 
-                   color={skill.color}
+                   title={skill.skill_name} 
+                   color={skill_colors[index % skill_colors.length]}
                 />
             </>
        ))} 
