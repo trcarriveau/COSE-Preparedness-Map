@@ -41,7 +41,7 @@ const Users = mongoose.model('Users', {
 		type: String,
 		required: true,
 	},
-unit-tests_login_registration
+
 	role: String,
 	major: String
 
