@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 import { useState } from "react";
 
 //our components
@@ -13,6 +14,8 @@ import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 
 export default function Home() {
+  const router = useRouter() 
+
   //example function that can be passed in a button component
   //example on line 92
   const onClickExample = () => {
@@ -31,6 +34,7 @@ export default function Home() {
     const name = event.target.name;
     const value = event.target.value;
     setUser((values) => ({ ...values, [name]: value }));
+    setMessage();
     console.log("handle change user: ", user);
   };
 
@@ -52,6 +56,7 @@ export default function Home() {
         setMessage(resJson.message);
         console.log("Range 200-300", resJson);
         //TODO Redirect to map
+        router.push('/map')
         //TODO Username as a cookie
       } else if (res.status >= 400 && res.status < 500) {
         setMessage(resJson.errorMessage);
@@ -119,7 +124,7 @@ export default function Home() {
               />
             )}
           </div>
-          <h2>{message}</h2>
+          <h2 className={styles.textError} style={{ color: Colors.text_error }}>{message}</h2>
           <button
             className={styles.button3}
             style={{ backgroundColor: Colors.button }}
@@ -134,7 +139,7 @@ export default function Home() {
           text={"Reset Password"}
           onClick={onClickExample}
         />
-        <p className={styles.text}>Don't have an account?</p>
+        <p className={styles.text} >Don't have an account?</p>
         <Link href="/registration" passHref>
           <Button color={Colors.button} text={"Register"} />
         </Link>
