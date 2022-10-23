@@ -26,6 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: pwd
     - run: cd back-end
     - run: npm install back-end/
     - run: npm test
