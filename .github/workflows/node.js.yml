@@ -21,7 +21,6 @@ jobs:
         mongodb-version: ['4.0.6']
 
     steps:
-    - name: Git Checkout
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -l
@@ -33,4 +32,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd back-end && npm install
+    - run: npm install
+    - run: cd back-end && npm test
