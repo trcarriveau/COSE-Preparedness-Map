@@ -42,4 +42,4 @@ jobs:
         mongodb-version: ${{ matrix.mongodb-version }}
   
     - run: cd back-end && npm install
-    - run: cd back-end && npm test-silent
+    - run: cd back-end && jest --silent
