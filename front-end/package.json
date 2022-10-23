@@ -2,6 +2,7 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3080",
   "scripts": {
     "dev": "npm install && next dev",
     "build": "next build",

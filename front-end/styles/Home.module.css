@@ -156,6 +156,14 @@ color:white;
 	color: white;
 	font-size: 1.3rem;
 }
+.textError {
+	text-align: left;
+	word-wrap: break-word;
+	font-size: 1.5em;
+	/* -webkit-text-stroke-width: .2px;
+	-webkit-text-stroke-color: white; */
+	
+}
 .wrapper {
 	z-index: 2;
 	width: 100%;
