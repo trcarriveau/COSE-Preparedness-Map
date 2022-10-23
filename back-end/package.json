@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "npm install && nodemon server.js",
     "test": "jest",
-    "test:silent": "jest --silent",
+    "test-silent": "jest --silent",
     "test:watch": "jest --watch"
   },
   "author": "",
