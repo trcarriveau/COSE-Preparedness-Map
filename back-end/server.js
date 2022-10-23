@@ -143,7 +143,7 @@ app.post(
 						return res.status(400).json({errorMessage: errMsg})
 					} else {
 						if (userExist) {
-							errMsg = 'Username aleady exists'
+							errMsg = 'Username already exists'
 							console.log(`Responding with: res.status(400).json(${util.inspect({errorMessage: errMsg}, true, null, true)})`)
 							return res.status(400).json({errorMessage: errMsg})
 						} else if (emailExist) {
@@ -232,4 +232,4 @@ const server = app.listen(port, () => {
 
 //Need this so we can import our server it into our unit tests
 // module.exports = app;
-module.exports = {app, mongoose, server}
+module.exports = {app, mongoose, server, Users}
