@@ -22,6 +22,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: pwd
+    - run: ls -l
+    - run: ln -s back-end/package-lock.json package-lock.json
+    - run: ls -l
     - run: cd back-end
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
