@@ -18,18 +18,28 @@ jobs:
       matrix:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        mongodb-version: ['4.0.6']
 
     steps:
+    - name: Git Checkout
     - uses: actions/checkout@v3
     - run: pwd
     - run: ls -l
     - run: ln -s back-end/package-lock.json package-lock.json
     - run: ls -l
     - run: cd back-end
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.8.0
+      with:
+        mongodb-version: ${{ matrix.mongodb-version }}
+        
+        
     - run: cd back-end && npm install
     - run: cd back-end && npm test
