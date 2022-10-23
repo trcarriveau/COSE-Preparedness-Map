@@ -33,6 +33,8 @@ afterAll(async () => {
 
 
 /* ======================================  Tests ====================================== */
+
+/* ################# Registration API - Start ################# */
 describe('POST - /registration', function() {
 
   it.only('Not a Good Email Address', function(done) {
@@ -214,4 +216,121 @@ describe('POST - /registration', function() {
       });
   });
 });
+/* ################# Registration API - End ################# */
+
+
+/* #################### Login API - Start #################### */
+describe('POST - /login', function() {
+	it.only('Non Existing User - Sign In With Username', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'JonnyDoe',
+        password: '!VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(400)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.errorMessage).toMatch('The username does not exist');
+        done();
+      });
+  });
+
+	it.only('Non Existing User - Sign In With Email', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'JonnyDoe@gmail.com',
+        password: '!VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(400)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.errorMessage).toMatch('The email does not exist');
+        done();
+      });
+  });
+
+	it.only('Existing User - Bad Password - Sign In With Username', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'JohnDoe',
+        password: 'VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(400)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.errorMessage).toMatch('The password is invalid');
+        done();
+      });
+  });
+
+	it.only('Existing User - Bad Password - Sign In With Email', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'johndoe@gmail.com',
+        password: 'VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(400)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.errorMessage).toMatch('The password is invalid');
+        done();
+      });
+  });
+
+	it.only('Existing User - Sign In With Username', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'JohnDoe',
+        password: '!VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.message).toMatch('Successfulled logged in!');
+				expect(res.body.username).toMatch('JohnDoe');
+        done();
+      });
+  });
+
+	it.only('Existing User - Sign In With Email', function(done) {
+    request(app)
+      .post('/login')
+      .type('application/json')
+      .send({
+        username: 'johndoe@gmail.com',
+        password: '!VikingsRock!'
+      })
+      .set('Accept', 'application/json')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) throw err;
+        console.log(res.body);
+        expect(res.body.message).toMatch('Successfulled logged in!');
+				expect(res.body.username).toMatch('JohnDoe');
+        done();
+      });
+  });
+});
+/* #################### Login API - End #################### */
+
 /* ======================================  Tests ====================================== */
