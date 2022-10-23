@@ -20,11 +20,49 @@ export default function Home() {
   };
 
   const [passwordShown, setPasswordShown] = useState(false);
+  const [user, setUser] = useState({});
+  const [message, setMessage] = useState();
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
 
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setUser((values) => ({ ...values, [name]: value }));
+    console.log("handle change user: ", user);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log("before send user is", user);
+
+    try {
+      let res = await fetch("http://localhost:3080/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      let resJson = await res.json();
+      console.log("This is the response message", resJson);
+      if (res.status >= 200 && res.status < 300) {
+        setMessage(resJson.message);
+        console.log("Range 200-300", resJson);
+        //TODO Redirect to map
+        //TODO Username as a cookie
+      } else if (res.status >= 400 && res.status < 500) {
+        setMessage(resJson.errorMessage);
+        console.log("Range 400-500", message);
+      } else {
+        setMessage("Range outside defined ranges", resJson.message);
+      }
+    } catch (err) {
+      //console.log(err);
+    }
+  };
   return (
     <div className={styles.body}>
       <Image
@@ -37,17 +75,18 @@ export default function Home() {
           <h1 className={styles.title}>Login</h1>
           <hr style={{ color: "white" }} />
         </div>
-        <form id="login">
+        <form id="login" onSubmit={handleSubmit}>
           <p className={styles.textInputTitle}>Username or Email:</p>
           <div className={styles.group}>
             <input
               type="text"
+              name="username"
               id="username"
               className={styles.input1}
               autoFocus
               placeholder="Username or email"
-              // id =""
-              // name = ""
+              value={user.username || ""}
+              onChange={handleChange}
               required
             />
           </div>
@@ -55,11 +94,12 @@ export default function Home() {
           <div className={styles.group}>
             <input
               type={passwordShown ? "text" : "password"}
+              name="password"
               id="password"
               className={styles.input1}
               placeholder="Minimum length 8 characters"
-              // id =""
-              // name = ""
+              value={user.password || ""}
+              onChange={handleChange}
               required
               minLength={8}
             />
@@ -79,6 +119,7 @@ export default function Home() {
               />
             )}
           </div>
+          <h2>{message}</h2>
           <button
             className={styles.button3}
             style={{ backgroundColor: Colors.button }}
