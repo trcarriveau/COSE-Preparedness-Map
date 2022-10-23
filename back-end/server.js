@@ -186,7 +186,7 @@ app.post('/login',
 		
 		//Should we also send back the username? for cookie/session stuff?
 		goodMsg = 'Successfulled logged in!'
-		res.send({ message: goodMsg, username: user.username});
+		return res.status(200).json({ message: goodMsg, username: user.username});
 		} catch (error) {
 			console.log("Caught Error in /login:" + error);
 			errMsg = 'We ran into a server issue'
