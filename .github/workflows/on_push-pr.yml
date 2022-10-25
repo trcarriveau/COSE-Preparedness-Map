@@ -24,11 +24,8 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v3
       
-    - run: pwd
-    - run: ls -l
-    - run: ln -s back-end/package-lock.json package-lock.json
-    - run: ls -l
-    - run: cd back-end
+    - name: Symlink for package-lock.json so next step is happy
+      run: ln -s back-end/package-lock.json package-lock.json
     
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -41,6 +38,7 @@ jobs:
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
         
+    - name: Create Mongo DB Table
     - run: |
           mongo << EOF
           show dbs
@@ -48,11 +46,19 @@ jobs:
           show dbs 
           EOF
     
-    - run: mongoimport --version
-    - run: |
+    - name: Import Mongo Records
+      run: |
         cd back-end/mongo/schema
-        ls -l && mongoimport --db "COSE-Preparedness-Map" --collection "cose-maps"  --type "json" --file "cose-maps.json"
-    - run: cd back-end/mongo/schema && mongoimport --collection=cose-skills --db=COSE-Preparedness-Map --file=cose-skills.json
-    - run: cd back-end/mongo/schema && mongoimport --collection=cose-types --db=COSE-Preparedness-Map --file=cose-types.json
-    - run: cd back-end && npm install
-    - run: cd back-end && npm test
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-maps"  --type "json" --file "cose-maps.json"
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-skills"  --type "json" --file "cose-skills.json"
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-types"  --type "json" --file "cose-types.json"
+    
+    - name: Install Node Modules
+      run: |
+        cd back-end
+        npm install
+        
+    - name: Run Tests
+      run: |
+        cd back-end
+        npm test
