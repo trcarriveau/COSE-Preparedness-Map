@@ -49,7 +49,9 @@ jobs:
           EOF
     
     - run: mongoimport --version
-    - run: cd back-end/mongo/schema && ls -l && mongoimport --db=COSE-Preparedness-Map --collection=cose-maps --file=cose-maps.json
+    - run: |
+        cd back-end/mongo/schema
+        ls -l && mongoimport --db "COSE-Preparedness-Map" --collection "cose-maps"  --type "json" --file "cose-maps.json"
     - run: cd back-end/mongo/schema && mongoimport --collection=cose-skills --db=COSE-Preparedness-Map --file=cose-skills.json
     - run: cd back-end/mongo/schema && mongoimport --collection=cose-types --db=COSE-Preparedness-Map --file=cose-types.json
     - run: cd back-end && npm install
