@@ -38,8 +38,6 @@ jobs:
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
         
-
-    
     - name: Import Mongo Records
       run: |
         cd back-end/mongo/schema
