@@ -42,10 +42,10 @@ jobs:
         mongodb-version: ${{ matrix.mongodb-version }}
         
     - run: |
-          mongo <<< EOF \ 
-          show dbs \
-          use COSE-Preparedness-Map \ 
-          show dbs \
+          mongo << EOF
+          show dbs
+          use COSE-Preparedness-Map  
+          show dbs 
           EOF
     
     - run: mongoimport --version
