@@ -11,12 +11,14 @@
 		"preset": "@shelf/jest-mongodb",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ]
+    ],
+    "setupFilesAfterEnv": ["./tests/setup.js"]
   },
   "scripts": {
     "dev": "npm install && nodemon server.js",
     "test": "jest",
     "test:silent": "jest --silent",
+    "test:verbose": "jest --verbose",
     "test:watch": "jest --watch"
   },
   "author": "",
