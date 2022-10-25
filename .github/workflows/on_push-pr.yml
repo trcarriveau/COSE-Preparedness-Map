@@ -38,13 +38,7 @@ jobs:
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
         
-    - name: Create Mongo DB Table
-    - run: |
-          mongo << EOF
-          show dbs
-          use COSE-Preparedness-Map  
-          show dbs 
-          EOF
+
     
     - name: Import Mongo Records
       run: |
