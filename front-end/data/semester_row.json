@@ -1,0 +1,90 @@
+[
+    {
+      "item_name": "SE 101",
+      "item_description": "", 
+      "item_year_semester": [
+        {
+          "year": 1,
+          "semester": "Fall"
+        }
+      ],
+      "is_extra_curricular": false
+    },
+    {
+        "item_name": "SE 102",
+        "item_description": "", 
+        "item_year_semester": [
+          {
+            "year": 1,
+            "semester": "Spring"
+          }
+        ],
+        "is_extra_curricular": false
+      },
+      {
+        "item_name": "SE 201",
+        "item_description": "", 
+        "item_year_semester": [
+          {
+            "year": 2,
+            "semester": "Fall"
+          }
+        ],
+        "is_extra_curricular": false
+      },
+      {
+          "item_name": "SE 202",
+          "item_description": "", 
+          "item_year_semester": [
+            {
+              "year": 2,
+              "semester": "Spring"
+            }
+          ],
+          "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 301",
+            "item_description": "", 
+            "item_year_semester": [
+              {
+                "year": 3,
+                "semester": "Fall"
+              }
+            ],
+            "is_extra_curricular": false
+          },
+          {
+              "item_name": "SE 302",
+              "item_description": "", 
+              "item_year_semester": [
+                {
+                  "year": 3,
+                  "semester": "Spring"
+                }
+              ],
+              "is_extra_curricular": false
+            },
+            {
+                "item_name": "SE 401",
+                "item_description": "", 
+                "item_year_semester": [
+                  {
+                    "year": 4,
+                    "semester": "Fall"
+                  }
+                ],
+                "is_extra_curricular": false
+              },
+              {
+                  "item_name": "SE 402",
+                  "item_description": "", 
+                  "item_year_semester": [
+                    {
+                      "year": 4,
+                      "semester": "Spring"
+                    }
+                  ],
+                  "is_extra_curricular": false
+                }
+]

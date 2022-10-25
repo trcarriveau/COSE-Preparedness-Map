@@ -88,6 +88,16 @@ function Map() {
   //     setIsLoading(false)
   //   })
 
+  const setCoreSkills = () => {
+    //console.log("am I working");
+    // console.log(map[0].map_items);
+    // {
+    //   data.map((skill) => {
+    //     console.log(skill);
+    //   });
+    // }
+  };
+
   useEffect(() => {
     setIsLoading(true);
     fetch("./api/cose-map")
@@ -95,11 +105,11 @@ function Map() {
       .then((data) => {
         setMap(data);
         setIsLoading(false);
+        //console.log("Map.js Use Effect: map: ",map)
       });
-    console.log("Map.js Use Effect: map: ", map);
+    setCoreSkills(map);
   }, []);
 
-  console.log("after setting map is: ", map);
   if (isLoading) return <p>Loading...</p>;
   if (!map) return <p>No map available for selected major</p>;
 
@@ -112,7 +122,7 @@ function Map() {
         className={styles.middle}
         style={{ backgroundColor: Colors.background }}
       >
-        <CoreSkills skills={skills} />
+        <CoreSkills skills={skills1} />
         <div className={styles.semesters_all}>
           {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
 
