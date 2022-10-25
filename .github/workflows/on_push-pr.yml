@@ -41,5 +41,6 @@ jobs:
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
   
+    - run: mongoimport --version
     - run: cd back-end && npm install
     - run: cd back-end && npm test
