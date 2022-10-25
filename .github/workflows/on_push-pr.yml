@@ -40,7 +40,14 @@ jobs:
       uses: supercharge/mongodb-github-action@1.8.0
       with:
         mongodb-version: ${{ matrix.mongodb-version }}
-  
+        
+    - run: |
+          mongo << EOF \ 
+          show dbs \
+          use COSE-Preparedness-Map \ 
+          show dbs \
+          EOF
+    
     - run: mongoimport --version
     - run: cd back-end/mongo/schema && ls -l && mongoimport --collection=cose-maps --db=COSE-Preparedness-Map --file=cose-maps.json
     - run: cd back-end/mongo/schema && mongoimport --collection=cose-skills --db=COSE-Preparedness-Map --file=cose-skills.json
