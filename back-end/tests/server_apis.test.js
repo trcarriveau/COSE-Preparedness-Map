@@ -221,7 +221,7 @@ describe('POST - /registration', function() {
 
 /* #################### Login API - Start #################### */
 describe('POST - /login', function() {
-	it.only('Non Existing User - Sign In With Username', function(done) {
+  it.only('Non Existing User - Sign In With Username', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -239,7 +239,7 @@ describe('POST - /login', function() {
       });
   });
 
-	it.only('Non Existing User - Sign In With Email', function(done) {
+  it.only('Non Existing User - Sign In With Email', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -257,7 +257,7 @@ describe('POST - /login', function() {
       });
   });
 
-	it.only('Existing User - Bad Password - Sign In With Username', function(done) {
+  it.only('Existing User - Bad Password - Sign In With Username', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -275,7 +275,7 @@ describe('POST - /login', function() {
       });
   });
 
-	it.only('Existing User - Bad Password - Sign In With Email', function(done) {
+  it.only('Existing User - Bad Password - Sign In With Email', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -293,7 +293,7 @@ describe('POST - /login', function() {
       });
   });
 
-	it.only('Existing User - Sign In With Username', function(done) {
+  it.only('Existing User - Sign In With Username', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -307,12 +307,14 @@ describe('POST - /login', function() {
         if (err) throw err;
         console.log(res.body);
         expect(res.body.message).toMatch('Successfulled logged in!');
-				expect(res.body.username).toMatch('JohnDoe');
+        expect(res.body.username).toMatch('JohnDoe');
+        expect(res.body.major).toMatch('Software Engineering');
+        expect(res.body.map.map_name).toMatch('Software Engineering');
         done();
       });
   });
 
-	it.only('Existing User - Sign In With Email', function(done) {
+  it.only('Existing User - Sign In With Email', function(done) {
     request(app)
       .post('/login')
       .type('application/json')
@@ -326,7 +328,9 @@ describe('POST - /login', function() {
         if (err) throw err;
         console.log(res.body);
         expect(res.body.message).toMatch('Successfulled logged in!');
-				expect(res.body.username).toMatch('JohnDoe');
+        expect(res.body.username).toMatch('JohnDoe');
+        expect(res.body.major).toMatch('Software Engineering');
+        expect(res.body.map.map_name).toMatch('Software Engineering');
         done();
       });
   });
