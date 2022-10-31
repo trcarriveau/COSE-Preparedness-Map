@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 
-const User = ({name, role}) => {
+const User = ({ name, role, selectUser, id }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  const clickHandler = (selectUser) => {
+    setIsActive((current) => !current);
+  };
+
+  //TODO: Change background color toggles
   return (
-    <div>{name}      {role}</div>
-  )
-}
+    <div
+      style={{
+        backgroundColor: isActive ? "blue" : "green",
+      }}
+      onClick={clickHandler}
+    >
+      {name} {role} {id}
+    </div>
+  );
+};
 
-export default User
+export default User;
