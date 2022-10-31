@@ -115,6 +115,9 @@ export default function Registration() {
         <Link href="/" passHref>
           <Button color={Colors.button} text={"Cancel"} />
         </Link>
+     
+
+        
       </div>
     </div>
   );

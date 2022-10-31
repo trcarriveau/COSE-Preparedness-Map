@@ -307,7 +307,7 @@ function Map() {
             </div> */}
             {/* **************TESTING AREA********* */}
 
-
+             <Course courseName={'SE 490'} RG_var={'ghj'}/>
             {/* **************TESTING AREA********* */}
 
  

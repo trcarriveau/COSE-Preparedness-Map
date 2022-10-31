@@ -96,6 +96,7 @@ const Courses = () => {
                   courseName={course.item_name} 
                 //   temp_trait={<RiComputerFill style={{color: 'orange'}}/>} 
                   types={<Types/>}
+                  RG_var={'fghjk'}
                 />
             </>
          ))}
