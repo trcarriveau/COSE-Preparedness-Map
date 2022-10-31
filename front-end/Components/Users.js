@@ -28,7 +28,7 @@ import User from "./User";
 //     },
 //   ]
 
-const Users = ({ users, selectUser }) => {
+const Users = ({ users, getUserId }) => {
   return (
     <div>
       {users.map((user) => (
@@ -36,8 +36,8 @@ const Users = ({ users, selectUser }) => {
           <User
             name={user.username}
             role={user.role}
-            selectUser={selectUser}
             id={user._id}
+            getUserId={getUserId}
           />
         </>
       ))}

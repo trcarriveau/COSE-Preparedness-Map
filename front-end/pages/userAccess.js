@@ -64,7 +64,9 @@ export default function userAccess() {
     [users, selectedUserId]
   );
 
-  const selectUser = ({ id }) => {
+  const getUserId = (id) => {
+    //setSelectedUserId(id);
+    console.log("In selectUser, id is: ", id);
     setSelectedUserId(id);
   };
 
@@ -76,11 +78,15 @@ export default function userAccess() {
     }
   };
 
+  const deleteUser = (id) => {
+    console.log("delete", id);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.usercontainer}>
         <h3> Users</h3>
-        <Users users={users} selectUser={selectUser} />
+        <Users users={users} getUserId={getUserId} />
       </div>
       <div className={styles.arrow}>
         <MdOutlineArrowBackIosNew /> <MdArrowForwardIos />{" "}
