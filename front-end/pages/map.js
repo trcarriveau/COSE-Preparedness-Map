@@ -305,12 +305,6 @@ function Map() {
                 </div>
 
             </div> */}
-            {/* **************TESTING AREA********* */}
-
-             <Course courseName={'SE 490'} RG_var={'ghj'}/>
-            {/* **************TESTING AREA********* */}
-
- 
                 
             <div className={styles.typeKey}>             
                 <div className={styles.keyRow}>
