@@ -3,9 +3,11 @@ import User from "../components/User";
 import Users from "../components/Users";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
+import { GiMagnifyingGlass } from "react-icons/gi";
 import { icons } from "react-icons/lib";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import SearchBar from "../Components/SearchBar";
 
 export default function userAccess() {
   const [users, setUsers] = useState([
@@ -64,6 +66,10 @@ export default function userAccess() {
     [users, selectedUserId]
   );
 
+  const [searchResults, setSearchResults] = useState(users);
+
+  const [searchedUser, setSearchedUser] = useState([]);
+
   const getUserId = (id) => {
     //setSelectedUserId(id);
     console.log("In selectUser, id is: ", id);
@@ -71,41 +77,57 @@ export default function userAccess() {
   };
 
   const toggleRole = ({ user }) => {
-   /* if (user.role === "admin") {
+    /* if (user.role === "admin") {
       user.role = "user";
     } else if (user.role === "user") {
       user.role = "admin";
     }*/
-    console.log("click")
+    console.log("click");
   };
 
   const deleteUser = (id) => {
     console.log("delete", id);
   };
 
+  const handleSubmit = (e) => e.preventDefault();
+  const handleChange = (e) => setSearchedUser(e.target.value);
+  useEffect(() => {
+    const results = users.filter((o) => o.username.includes(searchedUser));
+    setSearchResults(results);
+  }, [searchedUser]);
+
   return (
     <div className={styles.container}>
+      SearchBar1
+      <form className="search" onSubmit={handleSubmit}>
+        <input
+          //className={search_input}
+          type="text"
+          id="search"
+          onChange={handleChange}
+        />
+        <button>
+          <GiMagnifyingGlass />
+        </button>
+        {searchedUser}
+      </form>
+      {/* <SearchBar users={users} setSearchResults={setSearchResults} /> */}
       <div className={styles.usercontainer}>
         <h3> Users</h3>
-        <Users users={users} getUserId={getUserId} />
+        <Users users={searchResults} getUserId={getUserId} />
       </div>
       <div className={styles.verticalContainer}>
-          <div className={styles.arrow}>
-              < MdOutlineArrowBackIosNew onClick={toggleRole} /></div>
         <div className={styles.arrow}>
-              <MdArrowForwardIos />
+          <MdOutlineArrowBackIosNew onClick={toggleRole} />
         </div>
-          
-
-               
+        <div className={styles.arrow}>
+          <MdArrowForwardIos />
+        </div>
       </div>
-     
-
       <div className={styles.usercontainer}>
         <h3> Admin</h3>
         <Users users={admins} />
       </div>
-
     </div>
   );
 }
