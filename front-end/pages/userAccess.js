@@ -71,11 +71,12 @@ export default function userAccess() {
   };
 
   const toggleRole = ({ user }) => {
-    if (user.role === "admin") {
+   /* if (user.role === "admin") {
       user.role = "user";
     } else if (user.role === "user") {
       user.role = "admin";
-    }
+    }*/
+    console.log("click")
   };
 
   const deleteUser = (id) => {
@@ -88,14 +89,23 @@ export default function userAccess() {
         <h3> Users</h3>
         <Users users={users} getUserId={getUserId} />
       </div>
-      <div className={styles.arrow}>
-        <MdOutlineArrowBackIosNew /> <MdArrowForwardIos />{" "}
+      <div className={styles.verticalContainer}>
+          <div className={styles.arrow}>
+              < MdOutlineArrowBackIosNew onClick={toggleRole} /></div>
+        <div className={styles.arrow}>
+              <MdArrowForwardIos />
+        </div>
+          
+
+               
       </div>
+     
+
       <div className={styles.usercontainer}>
         <h3> Admin</h3>
         <Users users={admins} />
       </div>
-      <div>Test selectedID: {selectedUserId}</div>
+
     </div>
   );
 }
