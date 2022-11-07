@@ -20,6 +20,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //use cookie for tracking logins
 // app.use(cookie());
 
+/*  $$$$$$$$$$$ CORS TESTING $$$$$$$$$$$$$ */
+var cors = require("cors");
+app.use(cors());
+var corsOptions = {
+  origin: "http://localhost:3000",
+  optionSucessStatus: 200,
+};
+
 /* ####################### Start - Mongo DB Models ####################### */
 const Users = mongoose.model("Users", {
   Name: String,
@@ -264,7 +272,7 @@ app.get("/user_access", async (req, res) => {
 });
 
 //Just a test route for showing backend data on the front end side
-app.get("/test_api", (req, res) => {
+app.get("/test_api", cors(corsOptions), (req, res) => {
   console.log("Hit test_api");
   res.json({ message: "hello from the back end :)" });
 });

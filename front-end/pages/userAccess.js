@@ -59,6 +59,22 @@ export default function userAccess() {
     },
   ]);
 
+  const [users2, setUsers2] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("http://localhost:3080/user_access");
+        const userList = await response.json();
+        setUsers2(userList);
+        console.log(userList);
+      } catch (err) {
+        console.log(err.stack);
+      }
+    };
+
+    (async () => await fetchUsers())();
+  }, []);
   //array and function for setting user selection based on userID
   const [selectedUserId, setSelectedUserId] = useState();
   const selectedUser = useMemo(
