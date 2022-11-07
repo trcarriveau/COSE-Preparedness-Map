@@ -10,37 +10,7 @@ import { useState, useMemo, useEffect } from "react";
 import SearchBar from "../Components/SearchBar";
 
 export default function userAccess() {
-  const [users, setUsers] = useState([
-    {
-      _id: "1",
-      username: "user1",
-      email: "email1",
-      password: "passwd1",
-      role: "user",
-    },
-
-    {
-      _id: "2",
-      username: "user2",
-      email: "email2",
-      password: "passwd2",
-      role: "user",
-    },
-    {
-      _id: "3",
-      username: "user3",
-      email: "email3",
-      password: "passwd3",
-      role: "user",
-    },
-    {
-      _id: "4",
-      username: "user4",
-      email: "email4",
-      password: "passwd4",
-      role: "admin",
-    },
-  ]);
+  const [users, setUsers] = useState([]);
 
   const [admins, setAdmins] = useState([
     {
@@ -59,14 +29,12 @@ export default function userAccess() {
     },
   ]);
 
-  const [users2, setUsers2] = useState([]);
-
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const response = await fetch("http://localhost:3080/user_access");
         const userList = await response.json();
-        setUsers2(userList);
+        setUsers(userList);
         console.log(userList);
       } catch (err) {
         console.log(err.stack);
@@ -108,9 +76,9 @@ export default function userAccess() {
   const handleSubmit = (e) => e.preventDefault();
   const handleChange = (e) => setSearchedUser(e.target.value);
   useEffect(() => {
-    const results = users2.filter((o) => o.username.includes(searchedUser));
+    const results = users.filter((o) => o.username.includes(searchedUser));
     setSearchResults(results);
-  }, [users2, searchedUser]);
+  }, [users, searchedUser]);
 
   return (
     <div className={styles.container}>
