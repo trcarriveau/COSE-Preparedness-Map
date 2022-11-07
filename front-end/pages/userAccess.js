@@ -108,9 +108,9 @@ export default function userAccess() {
   const handleSubmit = (e) => e.preventDefault();
   const handleChange = (e) => setSearchedUser(e.target.value);
   useEffect(() => {
-    const results = users.filter((o) => o.username.includes(searchedUser));
+    const results = users2.filter((o) => o.username.includes(searchedUser));
     setSearchResults(results);
-  }, [searchedUser]);
+  }, [users2, searchedUser]);
 
   return (
     <div className={styles.container}>
@@ -130,7 +130,7 @@ export default function userAccess() {
       {/* <SearchBar users={users} setSearchResults={setSearchResults} /> */}
       <div className={styles.usercontainer}>
         <h3> Users</h3>
-        <Users users={searchResults} getUserId={getUserId} />
+        {searchResults && <Users users={searchResults} getUserId={getUserId} />}
       </div>
       <div className={styles.verticalContainer}>
         <div className={styles.arrow}>

@@ -20,7 +20,7 @@ const User = ({ name, role, id, getUserId }) => {
       onClick={() => getUserId(id)}
       //onClick={clickHandler(getUserId)}
     >
-      {name} {role} {id}
+      Name: {name} Role: {role}
     </div>
   );
 };
