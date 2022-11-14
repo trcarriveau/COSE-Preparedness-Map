@@ -1,23 +1,25 @@
 import React from "react";
 import { useState } from "react";
 
-const User = ({ name, role, id, getUserId }) => {
-  const [isActive, setIsActive] = useState(false);
+const User = ({ name, role, id, getUserId, active, onClick }) => {
+  // const [isActive, setIsActive] = useState(false);
 
-  const clickHandler = (getUserId) => {
+  const clickHandler = () => {
     setIsActive((current) => !current);
-    console.log({ id });
-    getUserId(id);
   };
 
   //TODO: Change background color toggles
   return (
     <div
       style={{
-        backgroundColor: isActive ? "blue" : "green",
+        backgroundColor: active ? "blue" : "green",
       }}
       //onClick={onDelete}
-      onClick={() => getUserId(id)}
+      onClick={() => {
+        getUserId(id);
+        // clickHandler();
+        onClick();
+      }}
       //onClick={clickHandler(getUserId)}
     >
       Name: {name} Role: {role}

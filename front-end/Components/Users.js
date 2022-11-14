@@ -1,7 +1,8 @@
 import React from "react";
 import User from "./User";
+import { useState } from "react";
 
-const Users = ({ users, getUserId, searchResults }) => {
+const Users = ({ users, getUserId }) => {
   // const results = users.map((user) => (
   //   <User
   //     key={user.id}
@@ -13,6 +14,7 @@ const Users = ({ users, getUserId, searchResults }) => {
   // ));
 
   // const content = users?.length ? users : <p> No Matching Users</p>;
+  const [chosen, setChosen] = useState(false);
 
   return (
     <div>
@@ -23,6 +25,8 @@ const Users = ({ users, getUserId, searchResults }) => {
             role={user.role}
             id={user._id}
             getUserId={getUserId}
+            active={user === chosen}
+            onClick={() => setChosen(user)}
           />
         </React.Fragment>
       ))}
