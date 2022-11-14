@@ -37,6 +37,20 @@
     
 
   }
+
+  .courseApp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content:flex-start;
+    width: 400px;
+    min-height: 100px;
+    background:yellow ;
+    text-align: left;
+    margin: 110px auto;
+    border-radius: 5px;
+    padding-bottom: 10px;
+  }
   
   .courseForm {
     margin-bottom: 15px;
