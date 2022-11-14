@@ -11,24 +11,9 @@ import SearchBar from "../Components/SearchBar";
 
 export default function userAccess() {
   const [users, setUsers] = useState([]);
+  const [reRender, setReRender] = useState([false]);
 
-  const [admins, setAdmins] = useState([
-    {
-      _id: "5",
-      username: "Admin1",
-      email: "email5",
-      password: "passwd5",
-      role: "admin",
-    },
-    {
-      _id: "6",
-      username: "Admin2",
-      email: "email6",
-      password: "passwd6",
-      role: "admin",
-    },
-  ]);
-
+  //get users from backend
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -46,71 +31,87 @@ export default function userAccess() {
   //array and function for setting user selection based on userID
   const [selectedUserId, setSelectedUserId] = useState();
   const selectedUser = useMemo(
-    () => users.find((user) => user.id === selectedUserId),
+    () => users.find((user) => user._id === selectedUserId),
     [users, selectedUserId]
   );
 
+  //these values hold the information entered in the search bar --> the query values
   const [searchResults, setSearchResults] = useState(users);
-
   const [searchedUser, setSearchedUser] = useState([]);
 
+  //function passed down to retrive userID when a user is clicked
   const getUserId = (id) => {
-    //setSelectedUserId(id);
     console.log("In selectUser, id is: ", id);
     setSelectedUserId(id);
   };
 
-  const toggleRole = ({ user }) => {
-    /* if (user.role === "admin") {
-      user.role = "user";
-    } else if (user.role === "user") {
-      user.role = "admin";
-    }*/
-    console.log("click");
+  //function to convert a user's role to admin
+  const makeAdmin = () => {
+    if (selectedUserId) {
+      console.log("there is an id");
+      selectedUser.role = "admin";
+      setSelectedUserId();
+      setReRender(!reRender);
+    }
+  };
+  //function to convert a user's role to user
+  const makeUser = () => {
+    if (selectedUserId) {
+      console.log("there is an id");
+      selectedUser.role = "user";
+      setSelectedUserId();
+      setReRender(!reRender);
+    }
   };
 
-  const deleteUser = (id) => {
-    console.log("delete", id);
-  };
+  //filters all users into users that have a role of user
+  //these values fill the users in the left box
+  const usersRoleUser = useMemo(
+    () => users.filter((user) => user.role === "user"),
+    [users, searchResults, reRender]
+  );
+  //filters all users into users that have a role of admin
+  //these values fill the users in the right box
+  const admins = useMemo(
+    () => users.filter((user) => user.role === "admin"),
+    [users, searchResults, reRender]
+  );
 
+  //functionality for the search bar text input
   const handleSubmit = (e) => e.preventDefault();
   const handleChange = (e) => setSearchedUser(e.target.value);
   useEffect(() => {
-    const results = users.filter((o) => o.username.includes(searchedUser));
+    const results = usersRoleUser.filter((o) =>
+      o.username.includes(searchedUser)
+    );
     setSearchResults(results);
-  }, [users, searchedUser]);
+  }, [users, searchedUser, reRender]);
 
   return (
     <div className={styles.container}>
       SearchBar1
       <form className="search" onSubmit={handleSubmit}>
-        <input
-          //className={search_input}
-          type="text"
-          id="search"
-          onChange={handleChange}
-        />
+        <input type="text" id="search" onChange={handleChange} />
         <button>
           <GiMagnifyingGlass />
         </button>
         {searchedUser}
       </form>
-      {/* <SearchBar users={users} setSearchResults={setSearchResults} /> */}
       <div className={styles.usercontainer}>
         <h3> Users</h3>
         {searchResults && <Users users={searchResults} getUserId={getUserId} />}
       </div>
       <div className={styles.verticalContainer}>
         <div className={styles.arrow}>
-          <MdOutlineArrowBackIosNew onClick={toggleRole} />
+          <MdArrowForwardIos onClick={makeAdmin} />
         </div>
         <div className={styles.arrow}>
-          <MdArrowForwardIos />
+          <MdOutlineArrowBackIosNew onClick={makeUser} />
         </div>
       </div>
       <div className={styles.usercontainer}>
         <h3> Admin</h3>
-        <Users users={admins} />
+        {admins && <Users users={admins} getUserId={getUserId} />}
       </div>
     </div>
   );
