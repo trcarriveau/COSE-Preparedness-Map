@@ -15,6 +15,29 @@ a {
   box-sizing: border-box;
 }
 
+#themeChanger {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+
+.light {
+  color-scheme: light;
+  color: black;
+  background: white;
+}
+
+.dark {
+  color-scheme: dark;
+  color: white;
+  background: black;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -22,5 +45,15 @@ a {
   body {
     color: white;
     background: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: black;
+    background: white;
   }
 }
