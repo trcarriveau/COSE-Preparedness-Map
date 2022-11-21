@@ -45,7 +45,7 @@
       "is_extra_curricular": false
     },
     {
-      "item_name": "SE 231",
+      "item_name": "SE 222",
       "item_description": "",
       "item_skill": [
         {
@@ -57,17 +57,22 @@
           "skill_id": {
             "$oid": "632bb4db0e17f09d9c34c01f"
           }
-        },
-        {
-          "skill_id": {
-            "$oid": "3"
-          }
         }
       ],
       "item_type": [
         {
           "type_id": {
             "$oid": "632bb5313b2e349d9cfebcbd"
+          }
+        },
+        {
+          "type_id": {
+            "$oid": "632bb5f20e17f09d9c34c023"
+          }
+        },
+        {
+          "type_id": {
+            "$oid": "632bb5fd0e17f09d9c34c024"
           }
         }
       ],

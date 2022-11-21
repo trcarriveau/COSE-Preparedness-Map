@@ -11,7 +11,7 @@ import { GiCube } from "react-icons/gi";
 const Context = createContext();
 
 export function TypesProvider({ children }) {
-  const [types, setTypes] = useState('');
+  const [types, setTypes] = useState("");
 
   return (
     <Context.Provider value={[types, setTypes]}>{children}</Context.Provider>

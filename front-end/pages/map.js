@@ -5,10 +5,6 @@ import Year from "../components/Year";
 import CoreSkill from "../components/CoreSkill";
 import CoreSkills from "../components/CoreSkills";
 import Colors from "../components/Colors";
-import Course from "../components/Course";
-import Courses from "../components/Courses";
-import Extracurricular from "../components/Extracurricular";
-import Season from "../components/Season";
 import Seasons from "../components/Seasons";
 import Semester from "../components/Semester";
 import Type from "../components/Type";
@@ -24,8 +20,6 @@ import { GiCube } from "react-icons/gi";
 
 //test data for types
 // import type_data from '../components/test_objects/cose-types.json'
-import type_data from "../components/test_objects/cose-types.json";
-import skill_data from "../Components/test_objects/cose-skills.json";
 import map_data from "../Components/test_objects/cose-maps.json";
 
 import { useEffect, useState } from "react";
@@ -70,6 +64,18 @@ function Map() {
   const [mapItems, setMapItems] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  //change this fetch to match backend
+  const fetchMap = async () => {
+    const response = await fetch("./api/cose-map");
+    const data = await response.json();
+    console.log("Map.js fetchMap data is: ", data);
+    setMap(data);
+  };
+  //   //testing function
+  //   const getMap = (map) => {
+  //     setMapItems(map.filter((map) => map.map_name == "Software Engineering"))
+  //     console.log(mapItems)
+  //   }
   // console.log(type_data)
 
   //   useEffect( () => {
@@ -88,16 +94,6 @@ function Map() {
   //     setIsLoading(false)
   //   })
 
-  const setCoreSkills = () => {
-    //console.log("am I working");
-    // console.log(map[0].map_items);
-    // {
-    //   data.map((skill) => {
-    //     console.log(skill);
-    //   });
-    // }
-  };
-
   useEffect(() => {
     setIsLoading(true);
     fetch("./api/cose-map")
@@ -107,7 +103,6 @@ function Map() {
         setIsLoading(false);
         //console.log("Map.js Use Effect: map: ",map)
       });
-    setCoreSkills(map);
   }, []);
 
   if (isLoading) return <p>Loading...</p>;
@@ -122,7 +117,7 @@ function Map() {
         className={styles.middle}
         style={{ backgroundColor: Colors.background }}
       >
-        <CoreSkills skills={skills1} />
+        <CoreSkills />
         <div className={styles.semesters_all}>
           {/* //TODO: Add a Width/Years Variable if expanding beyond 4 years */}
 
