@@ -1,35 +1,35 @@
-//Individual component responsible for row label on the career map 
+//Individual component responsible for row label on the career map
 
-import React from 'react'
+import Paper from "@mui/material/Paper";
 
 //TODO: Consider using style component to adjust opacity from a single secondary color using an opacity
 //variable passed along with color
 
-const CoreSkill = ({title, color}) => {
+const CoreSkill = ({ title, color }) => {
   return (
-    <div 
+    <Paper
       style={{
-        display: 'flex',
-        width: '100%',
-        height: '100%',
+        display: "flex",
+        width: "100%",
+        height: "100%",
         backgroundColor: color,
-        margin: '2px'
-      }}>
-      <h2 
-          style={{
-              display: 'flex',
-              backgroundColor: color, 
-              width: '95%', 
-              height: '180px', 
-              justifyContent: 'center', 
-              alignItems: 'center',
-
-          }}
+        margin: "2px",
+      }}
+    >
+      <h2
+        style={{
+          display: "flex",
+          backgroundColor: color,
+          width: "95%",
+          height: "180px",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
-          {title}
+        {title}
       </h2>
-    </div>
-  )
-}
+    </Paper>
+  );
+};
 
-export default CoreSkill
+export default CoreSkill;
