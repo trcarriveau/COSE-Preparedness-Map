@@ -1,0 +1,113 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-right: 600px;
+    
+   }
+   
+   .courseApp {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content:flex-start;
+      width: 300px;
+      min-height: 600px;
+      background:grey ;
+      text-align: left;
+      margin: 110px auto;
+      border-radius: 5px;
+      padding-bottom: 10px;
+    }
+    
+    .courseApp1 {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: start;
+      width: 350px;
+      min-height: 500px;
+      background:green ;
+      text-align: left;
+      margin:auto;
+      border-radius: 5px;
+      padding-bottom:10px;
+      border-width: thick;
+      
+      
+  
+    }
+  
+    .courseApp2 {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content:flex-start;
+      width: 400px;
+      min-height: 100px;
+      background:yellow ;
+      text-align: left;
+      margin: 110px auto;
+      border-radius: 5px;
+      padding-bottom: 10px;
+    }
+    
+    .courseForm {
+      margin-bottom: 15px;
+    }
+    .courseRow{
+      background-color: red;
+    }
+    
+    .courseInput {
+      padding: 14px 32px 14px 16px;
+      border-radius: 4px 0 0 4px;
+      border: 2px solid black;
+      outline: none;
+      width: 190px;
+      background: transparent;
+      color: #fff;
+    }
+    
+    .courseInput::placeholder {
+      color: #e2e2e2;
+    }
+    
+    .courseButton {
+      padding: 16px;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      outline: none;
+      background-color:red;
+      color: #fff;
+      text-transform: capitalize;
+    }
+    .courseButton1 {
+      padding: 16px;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      outline: none;
+      background-color:red;
+      color: #fff;
+      text-transform: capitalize;
+    }
+    .icons {
+      display: flex;
+      flex-direction: row;
+      height: 50px;
+      width: 130px;
+      align-items: right;
+      cursor: pointer;
+    }
+    .deleteIcon {
+      display: flex;
+      flex-direction: row;
+      height: 15px;
+      width: 400px;
+      margin-left: 2px;
+      color:black;
+    }
+    
+   
