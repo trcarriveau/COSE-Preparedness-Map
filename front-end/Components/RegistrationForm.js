@@ -43,7 +43,7 @@ class RegistrationForm extends React.Component {
     let setResp = this;
     const res = await fetch("http://localhost:3080/registration", options);
     const msg = await res.json();
-    console.log("msg: "+msg);
+    console.log("msg: " + msg);
     console.log(msg);
 
     let feedback = "";
@@ -56,7 +56,7 @@ class RegistrationForm extends React.Component {
         feedback += `${err.msg}\n`;
       });
     } else {
-      feedback += msg.errorMessage
+      feedback += msg.errorMessage;
     }
 
     if (typeof msg == "object" && msg.hasOwnProperty("message")) {

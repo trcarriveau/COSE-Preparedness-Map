@@ -21,35 +21,12 @@ const Seasons = () => {
 
   const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
 
-  //   const years_semesters2 = {
-  //     total_years: 4,
-  //     semesters: 9,
-  //     years: [
-  //       {
-  //         year: 1,
-  //         has_summer: false,
-  //       },
-  //       {
-  //         year: 2,
-  //         has_summer: true,
-  //       },
-  //       {
-  //         year: 3,
-  //         has_summer: true,
-  //       },
-  //       {
-  //         year: 4,
-  //         has_summer: false,
-  //       },
-  //     ],
-  //   };
-
   let fall = "";
   let spring = "";
   let summer = "";
   let seasons = [];
   let i = 1;
-  let has_summer = false;
+  //let has_summer = false;
   //TODO Adjust summer to be dynamic and available in any column
   while (i <= years_semesters.years.length) {
     if (i % 4 == 1) {
@@ -75,74 +52,58 @@ const Seasons = () => {
     seasons.push(fall);
     seasons.push(spring);
     if (years_semesters.years[i - 1].has_summer) {
+      console.log("in if  i is : ", i);
       seasons.push(summer);
-      has_summer = true;
+      //has_summer = true;
     }
-    seasons.push(has_summer);
-    has_summer = false;
+    //seasons.push(has_summer);
+    //has_summer = false;
     i++;
   }
-
+  console.log("after loop seasons is: ", seasons);
   return (
-    // <div
-    //   className={styles.seasonsContainer}
-    //   style={{ backgroundColor: Colors.background }}
-    // >
-    // <Grid
-    //   container
-    //   spacing={1}
-    //   className={styles.years}
-    //   style={{ backgroundColor: Colors.background }}
-    // >
-    //   {seasons.map((season, index) => (
-    //     <Grid
-    //       item
-    //       xs="auto"
-    //       style={{ backgroundColor: "red", flex: season.has_summer ? 1.5 : 1 }}
-    //     >
-    //       <Paper>
-    //         <Season
-    //           key={season.id}
-    //           label={season.label}
-    //           color={
-    //             season.color
-    //             // index % 2
-    //             //   ? season_colors[(index - 1) % season_colors.length]
-    //             //   : season_colors[index % season_colors.length]
-    //             //season_colors[Math.floor(index / 2) % season_colors.length]
-    //           }
-    //         />
-    //       </Paper>
-    //     </Grid>
-    //   ))}
-    // </Grid>
-    // </div>
-    <Grid
-      container
-      direction="row"
-      style={{ paddingLeft: "20%", backgroundColor: "blue" }}
+    <div
+      className={styles.seasonsContainer}
+      style={{ backgroundColor: Colors.background }}
     >
-      {years_semesters.years.map((year, index) => (
-        <Grid
-          item
-          xs="auto"
-          style={{ flexDirection: "row", flex: year.has_summer ? 1.5 : 1 }}
-        >
-          <Paper>
-            <Season
-              key={seasons[index].id}
-              label={seasons[index].label}
-              color={season_colors[index % season_colors.length]}
-            />
-          </Paper>
-          <Season
-            key={seasons[index + 1].id}
-            label={seasons[index + 1].label}
-            color={season_colors[index % season_colors.length]}
-          />
-        </Grid>
-      ))}
-    </Grid>
+      <Paper
+        className={styles.seasons}
+        style={{ backgroundColor: Colors.background }}
+      >
+        {seasons.map((season, index) => (
+          <>
+            <Season key={season.id} label={season.label} color={season.color} />
+          </>
+        ))}
+      </Paper>
+    </div>
+
+    //   <Grid
+    //     container
+    //     direction="row"
+    //     style={{ paddingLeft: "20%", backgroundColor: "blue" }}
+    //   >
+    //     {years_semesters.years.map((year, index) => (
+    //       <Grid
+    //         item
+    //         xs= {3}
+    //         // style={{ flexDirection: "row", flex: year.has_summer ? 1.5 : 1 }}
+    //       >
+    //         <Paper>
+    //           <Season
+    //             key={seasons[index].id}
+    //             label={seasons[index].label}
+    //             color={season_colors[index % season_colors.length]}
+    //           />
+    //         </Paper>
+    //         <Season
+    //           key={seasons[index + 1].id}
+    //           label={seasons[index + 1].label}
+    //           color={season_colors[index % season_colors.length]}
+    //         />
+    //       </Grid>
+    //     ))}
+    //   </Grid>
   );
 };
 

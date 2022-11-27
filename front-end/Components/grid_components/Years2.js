@@ -8,42 +8,6 @@ import Grid2 from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Paper from "@mui/material/Paper";
 import { useYearsSemestersContext } from "../../contexts/years_semesters";
 
-//TODO: update years to have a years object parameter that replaces the array with values from DB
-// const years = [
-//   {
-//     color: Colors.primaryLightest,
-//     yearNumber: "1",
-//     studentClass: "Freshman",
-//     has_summer: false,
-//   },
-
-//   {
-//     color: Colors.primaryLight,
-//     yearNumber: "2",
-//     studentClass: "Sophomore",
-//     has_summer: false,
-//   },
-//   {
-//     color: Colors.primaryMain,
-//     yearNumber: "3",
-//     studentClass: "Junior",
-//     has_summer: true,
-//   },
-//   {
-//     color: Colors.primaryDark,
-//     yearNumber: "4",
-//     studentClass: "Senior",
-//     has_summer: false,
-//   },
-// ];
-
-const season_colors = [
-  Colors.primaryLightest,
-  Colors.primaryLight,
-  Colors.primaryMain,
-  Colors.primaryDark,
-];
-
 const studentClass = ["Freshman", "Sophomore", "Junior", "Senior"];
 
 const Years = () => {
@@ -58,7 +22,7 @@ const Years = () => {
         <Grid item xs="auto" style={{ flex: year.has_summer ? 1.5 : 1 }}>
           <Paper>
             <Year
-              color={season_colors[index % season_colors.length]}
+              color={Colors.PrimaryArr[index % Colors.PrimaryArr.length]}
               yearNumber={year.year}
               studentClass={
                 index < studentClass.length
