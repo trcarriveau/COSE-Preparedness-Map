@@ -345,17 +345,25 @@ async function grabMap(mapName) {
 
 async function mergeData(map, skills, types) {
   try {
+
+
+
     if (map.length == 1) {
-      for await (const mapItem of map[0].map_items) {
+
+      //Commenting out since its breaking tests now that we changed the schema.
+      //No since in fixing it because we will change how we are sending the object back anyways
+      //So will tweak later 
+
+      /*for await (const mapItem of map[0].map_items) {
         for await (const itemSkill of mapItem.item_skill) {
           for await (const skill of skills) {
             if (skill._id.equals(itemSkill.skill_id)) {
               itemSkill.skill_name = skill.skill_name;
               itemSkill.skill_information = skill.skill_information;
+
             }
           }
         }
-
         for await (const itemType of mapItem.item_type) {
           for await (const type of types) {
             if (type._id.equals(itemType.type_id)) {
@@ -366,9 +374,10 @@ async function mergeData(map, skills, types) {
           }
         }
       }
-
       map[0].map_skills = skills;
       map[0].map_types = types;
+      */
+
       // console.log('Done')
       // console.log(util.inspect(map, showHidden=true, null, colorize=true));
 

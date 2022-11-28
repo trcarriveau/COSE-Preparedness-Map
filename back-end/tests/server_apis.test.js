@@ -34,307 +34,383 @@ afterAll(async () => {
 
 /* ======================================  Tests ====================================== */
 
-/* ################# Registration API - Start ################# */
-describe('POST - /registration', function() {
-
-  it.only('Not a Good Email Address', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+let test_suite = [
+  {
+    suite_name: 'POST - /registration',
+    test_cases: [
+      {
+        test_title: 'Not a Good Email Address',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoegmail.com',
         password: '12345678',
-        confirmPassword: '12345678',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errors[0].msg).toMatch('Invalid value');
-        expect(res.body.errors[0].param).toMatch('email');
-        expect(res.body.errors[0].location).toMatch('body');
-        done();
-      });
-  });
-
-  it.only('Not Minimum Password Length', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: '12345678',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'msg',
+            expect_value: 'Invalid value'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'param',
+            expect_value: 'email'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'location',
+            expect_value: 'body'
+          }
+        ]
+      },
+      {
+        test_title: 'Not Minimum Password Length',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe@gmail.com',
         password: 'Vikings',
-        confirmPassword: 'Vikings',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errors[0].msg).toMatch('Invalid value');
-        expect(res.body.errors[0].param).toMatch('password');
-        expect(res.body.errors[0].location).toMatch('body');
-        done();
-      });
-  });
-
-  it.only('Non Matching Passwords', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: 'Vikings',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'msg',
+            expect_value: 'Invalid value'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'param',
+            expect_value: 'password'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'location',
+            expect_value: 'body'
+          }
+        ]
+      },
+      {
+        test_title: 'Non Matching Passwords',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe@gmail.com',
         password: 'VikingsRock',
-        confirmPassword: 'VikingsRock!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errors[0].msg).toMatch('Password confirmation does not match password');
-        expect(res.body.errors[0].param).toMatch('confirmPassword');
-        expect(res.body.errors[0].location).toMatch('body');
-        done();
-      });
-  });
-
-  it.only('Not Minimum Password Length AND Non Matching Passwords', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: 'VikingsRock!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'msg',
+            expect_value: 'Password confirmation does not match password'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'param',
+            expect_value: 'confirmPassword'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'location',
+            expect_value: 'body'
+          }
+        ]
+      },
+      {
+        test_title: 'Not Minimum Password Length AND Non Matching Passwords',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe@gmail.com',
         password: 'Vikings',
-        confirmPassword: 'Vikings!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errors[0].msg).toMatch('Invalid value');
-        expect(res.body.errors[0].param).toMatch('password');
-        expect(res.body.errors[0].location).toMatch('body');
-        expect(res.body.errors[1].msg).toMatch('Password confirmation does not match password');
-        expect(res.body.errors[1].param).toMatch('confirmPassword');
-        expect(res.body.errors[1].location).toMatch('body');
-        done();
-      });
-  });
-  
-  it.only('Good registration', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: 'Vikings!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'msg',
+            expect_value: 'Invalid value'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'param',
+            expect_value: 'password'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 0,
+            expect_path_key: 'location',
+            expect_value: 'body'
+          },{
+            expect_path_name: 'errors',
+            expect_path_index: 1,
+            expect_path_key: 'msg',
+            expect_value: 'Password confirmation does not match password'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 1,
+            expect_path_key: 'param',
+            expect_value: 'confirmPassword'
+          },
+          {
+            expect_path_name: 'errors',
+            expect_path_index: 1,
+            expect_path_key: 'location',
+            expect_value: 'body'
+          }
+        ]
+      },
+      {
+        test_title: 'Good registration',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe@gmail.com',
         password: '!VikingsRock!',
-        confirmPassword: '!VikingsRock!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(200)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.message).toMatch('We created your account');
-        done();
-      });
-  });
-
-  it.only('Duplicate Registration - Both Username and Email', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: '!VikingsRock!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 200,
+        response_body: [
+          {
+            expect_path_key: 'message',
+            expect_value: 'We created your account'
+          }
+        ]
+      },
+      {
+        test_title: 'Duplicate Registration - Both Username and Email',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe@gmail.com',
         password: '!VikingsRock!',
-        confirmPassword: '!VikingsRock!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('Username and Email already exist');
-        done();
-      });
-  });
-
-  it.only('Duplicate Registration - Just Username', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: '!VikingsRock!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'Username and Email already exist'
+          }
+        ]
+      },
+      {
+        test_title: 'Duplicate Registration - Just Username',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe',
         email: 'johndoe1@gmail.com',
         password: '!VikingsRock!',
-        confirmPassword: '!VikingsRock!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('Username already exists');
-        done();
-      });
-  });
-
-  it.only('Duplicate Registration - Just Email', function(done) {
-    request(app)
-      .post('/registration')
-      .type('application/json')
-      .send({
+        confirm_password: '!VikingsRock!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'Username already exists'
+          }
+        ]
+      },
+      {
+        test_title: 'Duplicate Registration - Just Email',
+        endpoint: '/registration',
+        send_type: 'application/json',
         username: 'JohnDoe1',
         email: 'johndoe@gmail.com',
         password: '!VikingsRock!',
-        confirmPassword: '!VikingsRock!',
-        major: "Software Engineering"
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('Email already exist');
-        done();
-      });
-  });
-});
-/* ################# Registration API - End ################# */
-
-
-/* #################### Login API - Start #################### */
-describe('POST - /login', function() {
-  it.only('Non Existing User - Sign In With Username', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        confirm_password: '!VikingsRock!',
+        major: 'Software Engineering',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'Email already exist'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    suite_name: 'POST - /login',
+    test_cases: [
+      {
+        test_title: 'Non Existing User - Sign In With Username',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'JonnyDoe',
-        password: '!VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('The username does not exist');
-        done();
-      });
-  });
-
-  it.only('Non Existing User - Sign In With Email', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        password: '!VikingsRock!',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'The username does not exist'
+          }
+        ]
+      },
+      {
+        test_title: 'Non Existing User - Sign In With Email',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'JonnyDoe@gmail.com',
-        password: '!VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('The email does not exist');
-        done();
-      });
-  });
-
-  it.only('Existing User - Bad Password - Sign In With Username', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        password: '!VikingsRock!',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'The email does not exist'
+          }
+        ]
+      },
+      {
+        test_title: 'Existing User - Bad Password - Sign In With Username',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'JohnDoe',
-        password: 'VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('The password is invalid');
-        done();
-      });
-  });
-
-  it.only('Existing User - Bad Password - Sign In With Email', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        password: 'VikingsRock!',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'The password is invalid'
+          }
+        ]
+      },
+      {
+        test_title: 'Existing User - Bad Password - Sign In With Email',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'johndoe@gmail.com',
-        password: 'VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(400)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.errorMessage).toMatch('The password is invalid');
-        done();
-      });
-  });
-
-  it.only('Existing User - Sign In With Username', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        password: 'VikingsRock!',
+        response_type: 'application/json',
+        response_status: 400,
+        response_body: [
+          {
+            expect_path_key: 'errorMessage',
+            expect_value: 'The password is invalid'
+          }
+        ]
+      },
+      {
+        test_title: 'Existing User - Sign In With Username',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'JohnDoe',
-        password: '!VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(200)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.message).toMatch('Successfulled logged in!');
-        expect(res.body.username).toMatch('JohnDoe');
-        expect(res.body.major).toMatch('Software Engineering');
-        expect(res.body.map.map_name).toMatch('Software Engineering');
-        done();
-      });
-  });
-
-  it.only('Existing User - Sign In With Email', function(done) {
-    request(app)
-      .post('/login')
-      .type('application/json')
-      .send({
+        password: '!VikingsRock!',
+        response_type: 'application/json',
+        response_status: 200,
+        response_body: [
+          {
+            expect_path_key: 'message',
+            expect_value: 'Successfulled logged in!'
+          },
+          {
+            expect_path_key: 'username',
+            expect_value: 'JohnDoe'
+          },
+          {
+            expect_path_key: 'major',
+            expect_value: 'Software Engineering'
+          },
+          {
+            expect_path_name: 'map',
+            expect_path_key: 'map_name',
+            expect_value: 'Software Engineering'
+          }
+        ]
+      },
+      {
+        test_title: 'Existing User - Sign In With Email',
+        endpoint: '/login',
+        send_type: 'application/json',
         username: 'johndoe@gmail.com',
-        password: '!VikingsRock!'
-      })
-      .set('Accept', 'application/json')
-      .expect(200)
-      .end(function (err, res) {
-        if (err) throw err;
-        console.log(res.body);
-        expect(res.body.message).toMatch('Successfulled logged in!');
-        expect(res.body.username).toMatch('JohnDoe');
-        expect(res.body.major).toMatch('Software Engineering');
-        expect(res.body.map.map_name).toMatch('Software Engineering');
-        done();
-      });
-  });
-});
-/* #################### Login API - End #################### */
+        password: '!VikingsRock!',
+        response_type: 'application/json',
+        response_status: 200,
+        response_body: [
+          {
+            expect_path_key: 'message',
+            expect_value: 'Successfulled logged in!'
+          },
+          {
+            expect_path_key: 'username',
+            expect_value: 'JohnDoe'
+          },
+          {
+            expect_path_key: 'major',
+            expect_value: 'Software Engineering'
+          },
+          {
+            expect_path_name: 'map',
+            expect_path_key: 'map_name',
+            expect_value: 'Software Engineering'
+          }
+        ]
+      }
+    ]
+  }
+]
 
-/* ======================================  Tests ====================================== */
+for (const suite of test_suite) [
+  describe(suite.suite_name, function() {
+    for (const test of suite.test_cases) {
+      it.only(test.test_title, function(done) {
+        request(app)
+          .post(test.endpoint)
+          .type(test.send_type)
+          .send({
+            username: test.username,
+            email: test.email,
+            password: test.password,
+            confirmPassword: test.confirm_password,
+            major: test.major
+          })
+          .set('Accept', test.response_type)
+          .expect(test.response_status)
+          .end(function (err, res) {
+            if (err) throw err;
+            console.log(res.body)
+            for (const response of test.response_body ) {
+              if (response.hasOwnProperty('expect_path_name') && response.hasOwnProperty('expect_path_index') && response.hasOwnProperty('expect_path_key')) {
+                expect(res.body[response.expect_path_name][response.expect_path_index][response.expect_path_key]).toMatch(response.expect_value);
+              } else if (response.hasOwnProperty('expect_path_name') && response.hasOwnProperty('expect_path_key')) {
+                expect(res.body[response.expect_path_name][response.expect_path_key]).toMatch(response.expect_value);
+              } else {
+                expect(res.body[response.expect_path_key]).toMatch(response.expect_value);
+              }
+            }
+            done();
+          });
+      });
+    }
+  })
+]
