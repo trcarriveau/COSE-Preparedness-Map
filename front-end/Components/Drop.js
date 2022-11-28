@@ -1,51 +1,38 @@
-import {useState} from 'react';
-import { FaAccessibleIcon } from "react-icons/fa";
+import Select from "react-select";
+import {FaAccessibleIcon} from "react-icons/fa";
+import { useState } from "react";
+
+
+const options = [
+  { value: "1", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "2", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) },
+  { value: "3", label: (<div><FaAccessibleIcon /></div>) }
+];
 
 function Drop() {
-    const[icon,setIcon]=useState("selectIcon");
-
-    const handleOnChange = (e) => {
-        setIcon(e.target.value);   
-    };
-    const makeFirstLetterCapital = (str) => {
-        return str.charAt(0).toUpperCase() + str.slice(1);
-      };
-    const renderResult = () => {
-        let result;
-        icon === "selectIcon"
-        ? (result = "select the icon")
-        : (result = makeFirstLetterCapital(icon));
-      return result;
-    };
-
-return (
+  const [selectedOption, setSelect] = useState(null);
+  const handleChange = selectedOption => {
+    setSelect(selectedOption);
+  };
+  return (
     <>
-    <div className="container mt-3">
-    <div>
-    </div>
-    <div className="mt-4">
-    <select className="form-select" value={icon} onChange={handleOnChange}>
-        <option value="selectIcons">Select the icon</option>
-        <option value="1"
-                icon={<FaAccessibleIcon />}>
-            <FaAccessibleIcon />
-        </option>
-        <option value="2"
-                Icon={<FaAccessibleIcon />}>
-            <FaAccessibleIcon />
-        </option>
-        <option value="3"
-                Icon={<FaAccessibleIcon />}>
-            <FaAccessibleIcon />
-        </option>
-      </select>
-    </div>
-    <div>
-      <h1>{renderResult()}</h1>
-    </div>
-    </div>
+      <Select
+        isMulti
+        value={selectedOption}
+        onChange={handleChange}
+        options={options}
+        
+      />
     </>
-);
-}
+      
+    
+  );
+};
 
 export default Drop;
