@@ -9,7 +9,9 @@ import Colors from "../Components/Colors";
 import CoreSkills from "../Components/CoreSkills";
 import Seasons from "../Components/Seasons";
 import Seasons2 from "../Components/grid_components/Seasons2";
+import Seasons3 from "../Components/grid_components/Seasons3";
 import SemestersRow from "../Components/SemestersRow";
+import TypesKey from "../components/TypesKey";
 
 //test imports
 import { styled } from "@mui/material/styles";
@@ -29,10 +31,11 @@ const grid = () => {
 
   return (
     <div style={{ backgroundColor: Colors.background }}>
-      <Years />
+      {/* <Years /> */}
       <Years2 />
-      <Seasons total_years={years_semesters.total_years} />
-      <Seasons2 />
+      {/* <Seasons total_years={years_semesters.total_years} />
+      <Seasons2 /> */}
+      <Seasons3 />
       <div
         className={styles.middle}
         style={{ backgroundColor: Colors.background }}
@@ -44,6 +47,26 @@ const grid = () => {
           columns={years_semesters.semesters}
           rows={coreSkills.length}
         />
+      </div>
+
+      <div className={styles.key}>
+        <TypesKey />
+        <div className={styles.typeKey}>
+          <div className={styles.keyRow}>
+            <div
+              className={styles.box}
+              style={{ backgroundColor: Colors.course }}
+            ></div>
+            <div className={styles.keyText}>Course</div>
+          </div>
+          <div className={styles.keyRow}>
+            <div
+              className={styles.box}
+              style={{ backgroundColor: Colors.ec }}
+            ></div>
+            <div className={styles.keyText}>Extracurricular</div>
+          </div>
+        </div>
       </div>
     </div>
   );

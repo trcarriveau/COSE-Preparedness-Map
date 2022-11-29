@@ -1,9 +1,10 @@
 import { useYearsSemestersContext } from "../contexts/years_semesters";
+import { useCoreSkillsContext } from "../contexts/skills";
 import Colors from "./Colors";
 
 //Imports during testing
 import Semesters from "./grid_components/Semesters";
-import Semester2 from "./grid_components/Semester2";
+import Semesters2 from "./grid_components/Semesters2";
 
 const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const test2 = [1, 20, 3, 4, 5, 6, 7, 8, 9];
@@ -12,6 +13,7 @@ const test4 = [100, 2, 3, 4, 5, 6, 7, 8, 9];
 const test5 = [1000, 2, 3, 4, 5, 6, 7, 8, 9];
 const GridContainer = ({ columns, rows }) => {
   const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
+  const [coreSkills, setCoreSkills] = useCoreSkillsContext();
 
   return (
     <div
@@ -26,11 +28,11 @@ const GridContainer = ({ columns, rows }) => {
         gridGap: "2px",
       }}
     >
-      <Semesters columns={columns} data={test} />
-      <Semesters columns={columns} data={test2} />
-      <Semesters columns={columns} data={test3} />
-      <Semesters columns={columns} data={test4} />
-      <Semesters columns={columns} data={test5} />
+      {coreSkills.map((skill) => (
+        <>
+          <Semesters2 columns={columns} skill_name={skill.skill_name} />
+        </>
+      ))}
     </div>
   );
 };

@@ -144,7 +144,7 @@ function Map() {
         <TypesKey />
 
         {/* **************TESTING AREA********* */}
-
+        {/* 
         <div>
           {career_map.map((items) => (
             <>
@@ -163,9 +163,9 @@ function Map() {
                 {filteredMap.map_name}
               </>
             ))}
-        </div>
+        </div> */}
 
-        <button onClick={fetchMap}>test fetchMap</button>
+        {/* <button onClick={fetchMap}>test fetchMap</button> */}
 
         {/* **************TESTING AREA********* */}
 

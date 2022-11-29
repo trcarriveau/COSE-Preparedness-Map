@@ -1,41 +1,30 @@
 //This is a component to hold the contents of a single courses and ecs component
 //It will display their output on a particular fall/spring rectangle on the career-map
 
-import { getStepConnectorUtilityClass } from "@mui/material";
 import React from "react";
-import Courses from "./Courses2";
+import Courses from "../Courses";
 import Extracurriculars from "../Extracurriculars";
 
 //TODO receive prop data for a semester
 
-const Semester = ({ courses }) => {
-  let classes = [];
-  let ecs = [];
-
-  courses.forEach((course, index) => {
-    if (course.is_extra_curricular == false) {
-      classes.push(course);
-    } else if (course.is_extra_curricular) {
-      ecs.push(course);
-    }
-  });
-
+const Semester = ({ color }) => {
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        width: "50%",
+        backgroundColor: color,
         marginLeft: "2px",
         marginRight: "2px",
-        flexGrow: 1,
       }}
     >
       <div style={styles.coursesContainer}>
-        <Courses courses={classes} />
+        <Courses courses={courses} />
       </div>
       <div style={styles.ecContainer}>
-        <Extracurriculars extracurriculars={ecs} />
+        <Extracurriculars />
       </div>
     </div>
   );

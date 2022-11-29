@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid"; // Grid version 1
 import Paper from "@mui/material/Paper";
 
 import { useYearsSemestersContext } from "../../contexts/years_semesters";
+import { useMapDataContext } from "../../contexts/mapdata";
 
 const Seasons = () => {
   //TODO: Apply colors and labels from position in array
@@ -20,6 +21,7 @@ const Seasons = () => {
   //   const season_labels = ["Fall", "Spring"];
 
   const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
+  const [mapData, setMapData] = useMapDataContext();
 
   let fall = "";
   let spring = "";

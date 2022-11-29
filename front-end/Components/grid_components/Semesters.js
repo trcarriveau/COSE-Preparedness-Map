@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Paper } from "@mui/material";
 import Colors from "../Colors";
-const test2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 import { useYearsSemestersContext } from "../../contexts/years_semesters";
 import { useState } from "react";
 const Semesters = ({ columns, data }) => {

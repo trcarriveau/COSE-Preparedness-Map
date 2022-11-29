@@ -49,7 +49,7 @@ const Seasons = ({ total_years }) => {
         className={styles.seasons}
         style={{ backgroundColor: Colors.background }}
       >
-        {seasons.map((season, index) => (
+        {seasons.map((season) => (
           <>
             <Season key={season.id} label={season.label} color={season.color} />
           </>

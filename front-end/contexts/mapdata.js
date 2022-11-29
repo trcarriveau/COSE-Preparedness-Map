@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const Context = createContext();
 
 export function MapDataProvider({ children }) {
-  const [mapData, setMapData] = useState('');
+  const [mapData, setMapData] = useState("");
   return (
     <Context.Provider value={[mapData, setMapData]}>
       {children}

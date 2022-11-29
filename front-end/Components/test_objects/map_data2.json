@@ -1,0 +1,540 @@
+{
+    "total_years": 4,
+    "semesters": 9,
+    "years": [
+        {
+            "year": 1,
+            "semesters": [
+                {
+                    "YearName": "Fall",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 221",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 221",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 221",
+                                    "Type": {
+                                        "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
+                                        "TypeIcon": "Orange Pentagon"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                                {
+                                    "CourseName": "Math 271",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "GENG 101",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "YearName": "Spring",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 231",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 231",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 231",
+                                    "Type": {
+                                        "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
+                                        "TypeIcon": "Orange Pentagon"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                                {
+                                    "CourseName": "Math 221",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "Student Group",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "year": 2,
+            "semesters": [
+                {
+                    "YearName": "Fall",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 340",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 340",
+                                    "Type": {
+                                        "TypeName": "Research Activities",
+                                        "TypeIcon": "Green Triangle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 211",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                                {
+                                    "CourseName": "Math 312",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "CMST 192",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "YearName": "Spring",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 345",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 345",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 345",
+                                    "Type": {
+                                        "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
+                                        "TypeIcon": "Orange Pentagon"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                                {
+                                    "CourseName": "Math Elective 1",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "ENGL 332/CMST 341",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "year": 3,
+            "semesters": [
+                {
+                    "YearName": "Fall",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "Hackathons",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 465",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 460",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "Goal Area 6",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "YearName": "Spring",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "Mock Interview",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 470",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 470",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "Student Ambassador",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "YearName": "Summer",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 444",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "Research Assistance",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "Research Assistance",
+                                    "is_extra_curricular": true
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "year": 4,
+            "semesters": [
+                {
+                    "YearName": "Fall",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 490",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 490",
+                                    "Type": {
+                                        "TypeName": "Research Activities",
+                                        "TypeIcon": "Green Triangle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 480",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "Goal Area 5",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "YearName": "Spring",
+                    "Skills": [
+                        {
+                            "SkillName": "Soft Skills",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 491",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Life Long Learning",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE 490",
+                                    "Type": {
+                                        "TypeName": "Research Activities",
+                                        "TypeIcon": "Green Triangle"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Special Technical Skills, Techniques and Tools",
+                            "Courses": [
+                                {
+                                    "CourseName": "SE Elective 3",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "Yellow Star"
+                                    },
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        },
+                        {
+                            "SkillName": "Fundamental Knowledge & Concepts",
+                            "Courses": [
+                            ]
+                        },
+                        {
+                            "SkillName": "Citizenship",
+                            "Courses": [
+                                {
+                                    "CourseName": "Goal Area 7",
+                                    "is_extra_curricular": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
