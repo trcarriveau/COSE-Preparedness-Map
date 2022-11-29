@@ -19,6 +19,9 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Years from "../Components/Years";
 import Years2 from "../Components/grid_components/Years2";
+import { Icon } from "@mui/material";
+import { green } from "@mui/material/colors";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 import { useYearsSemestersContext } from "../contexts/years_semesters";
 import { useCoreSkillsContext } from "../contexts/skills";
@@ -30,7 +33,7 @@ const grid = () => {
   const [coreSkills, setCoreSkills] = useCoreSkillsContext();
 
   return (
-    <div style={{ backgroundColor: Colors.background }}>
+    <Box style={{ backgroundColor: Colors.background, padding: "50px" }}>
       {/* <Years /> */}
       <Years2 />
       {/* <Seasons total_years={years_semesters.total_years} />
@@ -49,7 +52,24 @@ const grid = () => {
         />
       </div>
 
-      <div className={styles.key}>
+      <Box
+        sx={{
+          "& > :not(style)": {
+            m: 2,
+          },
+        }}
+      >
+        {/* <Icon>add_circle</Icon>
+        <Icon>star</Icon>
+        <Icon color="primary">add_circle</Icon>
+        <Icon sx={{ color: green[500] }}>add_circle</Icon>
+        <Icon fontSize="small">add_circle</Icon>
+        <Icon sx={{ fontSize: 30 }}>add_circle</Icon> */}
+        {/* <Icon baseClassName="fas" className="fa-plus-circle" color="green" />
+        <DeleteIcon /> */}
+      </Box>
+
+      <Box className={styles.key}>
         <TypesKey />
         <div className={styles.typeKey}>
           <div className={styles.keyRow}>
@@ -67,8 +87,8 @@ const grid = () => {
             <div className={styles.keyText}>Extracurricular</div>
           </div>
         </div>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
