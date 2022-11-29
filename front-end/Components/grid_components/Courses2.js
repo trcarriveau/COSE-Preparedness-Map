@@ -2,9 +2,10 @@
 //and displaying them in a column
 
 import { formControlUnstyledClasses } from "@mui/base";
-import Course from "../Course";
+import Course from "./Course2";
 import Extracurricular from "../Extracurricular";
 import Types from "./Types2";
+import Type from "../Type";
 
 const Courses = ({ courses }) => {
   return (
@@ -12,14 +13,7 @@ const Courses = ({ courses }) => {
     <>
       {courses.map((course) => (
         <>
-          {course.is_extra_curricular ? (
-            <Extracurricular ecName={course.CourseName} />
-          ) : (
-            <Course
-              courseName={course.CourseName}
-              types={<Types types2={courses.type} />}
-            />
-          )}
+          <Course courseName={course.CourseName} types={<Types />} />
         </>
       ))}
     </>

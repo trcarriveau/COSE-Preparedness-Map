@@ -19,24 +19,28 @@ const Semesters = ({ columns, skill_name }) => {
           {year.semesters.map((semester, index) => (
             <Paper
               elevation={2}
-              style={{ backgroundColor: `${Colors.PrimaryArr[year.year - 1]}` }}
+              style={{
+                backgroundColor: `${Colors.PrimaryArr[year.year - 1]}`,
+                display: "flex",
+              }}
             >
               {semester.Skills.filter(
                 (skill) => skill.SkillName == skill_name
               ).map((filteredSkill) => (
                 //TODO Course and EC component calls should be changed to Courses/ECs in case of multiples
-                <>
-                  <Courses courses={filteredSkill.Courses} />
-                  {/* {filteredSkill.Courses.map((course) => (
-                    <>
-                      {course.is_extra_curricular ? (
-                        <Extracurricular ecName={course.CourseName} />
-                      ) : (
-                        <Course courseName={course.CourseName} />
-                      )}
-                    </>
-                  ))} */}
-                </>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    marginLeft: "2px",
+                    marginRight: "2px",
+                    flexGrow: 1,
+                  }}
+                >
+                  {/* <Courses courses={filteredSkill.Courses} /> */}
+                  <Semester courses={filteredSkill.Courses} />
+                </div>
               ))}
             </Paper>
           ))}
@@ -47,26 +51,3 @@ const Semesters = ({ columns, skill_name }) => {
 };
 
 export default Semesters;
-
-{
-  /* <Season
-style={{
-    gridColumn: `${index + (1 % columns)} / ${
-        index + (2 % columns)
-    }`,
-    gridRow: "auto",
-}}
-key={index}
-label={semester.YearName}
-color={Colors.PrimaryArr[year.year - 1]}
-/> */
-}
-{
-  /* {semester.skills
-  .filter((skill) => {
-    return skill.SkillName === "Soft Skills";
-  })
-  .map((skill) => {
-      return <div>Nested Looop: {skill.SkillName}</div>;
-  })} */
-}

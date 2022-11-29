@@ -1,7 +1,7 @@
 //component responsible for display of a single course on on the map
-import React from "react";
+
 import Colors from "../Colors";
-import Type from "./Types2";
+import Types from "./Types2";
 
 //temp trait is a stand in until we have functional type icons and labels using types component
 const Course = ({
@@ -37,6 +37,7 @@ const Course = ({
         }}
       >
         {temp_trait}
+        <Types />
       </div>
       <div>{courseName}</div>
       {/* Nothing to display below  Just used for justify-content space-between  */}

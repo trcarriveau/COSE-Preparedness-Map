@@ -1,35 +1,31 @@
-//This component iterates through Extracurricular objects and is used for displaying them within 
-//a one semester grid space 
+//This component iterates through Extracurricular objects and is used for displaying them within
+//a one semester grid space
 
-import React from 'react'
-import Extracurricular from './Extracurricular'
-import styles from '../styles/Map.module.css'
+import React from "react";
+import Extracurricular from "./Extracurricular";
+import styles from "../styles/Map.module.css";
 
-//TODO: convert ecs const to db values and pass down as props 
+//TODO: convert ecs const to db values and pass down as props
 
-const ecs = [
-    {
-        ecName: 'test'
-    },
-    {
-        ecName: 'test2'
-    },
-]
+// const ecs = [
+//     {
+//         ecName: 'test'
+//     },
+//     {
+//         ecName: 'test2'
+//     },
+// ]
 
-const Extracurriculars = () => {
+const Extracurriculars = ({ extracurriculars }) => {
   return (
     <>
-        {ecs.map((ec) =>
-            (
-            <>
-                <Extracurricular
-                    ecName={ec.ecName} 
-                
-                />
-            </>
-            ))}
+      {extracurriculars.map((ec) => (
+        <>
+          <Extracurricular ecName={ec.CourseName} />
+        </>
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default Extracurriculars
+export default Extracurriculars;

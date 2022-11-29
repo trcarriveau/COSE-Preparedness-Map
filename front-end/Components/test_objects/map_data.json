@@ -18,6 +18,22 @@
                                         "TypeIcon": "Red Circle"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Test: Extra Course",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Test: With EC",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Red Circle"
+                                    },
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },

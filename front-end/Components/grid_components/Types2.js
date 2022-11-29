@@ -44,7 +44,7 @@ const Types = ({ types, type_icon2 }) => {
             // type_icon={type.TypeIcon}
             type_icon2={type.type_icon}
             type_color={type.type_color}
-            type_name={type.TypeName}
+            type_name={type.typeName}
           />
         </div>
       ))}
