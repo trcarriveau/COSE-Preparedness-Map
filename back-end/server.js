@@ -288,7 +288,7 @@ app.post(
       }
 
       //Should we also send back the username? for cookie/session stuff?
-      let map = await grabMap(user.major);
+      let mapData = await doMapThing('Software Engineering');
 
       goodMsg = "Successfulled logged in!";
 
@@ -298,7 +298,7 @@ app.post(
           message: goodMsg,
           username: user.username,
           major: user.major,
-          map: map,
+          mapData: mapData,
         });
     } catch (error) {
       console.log("Caught Error in /login:" + error);
