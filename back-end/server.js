@@ -357,15 +357,15 @@ async function doMapThing(mapName) {
   for (const skill of skills) {
     map_skills.push({skill_id: skill._id, skill_name: skill.skill_name})
   }
-  console.log(skills);
+  // console.log(skills);
 
   let types = await grabTypes(mapName)
 
-  // let map_types = []
-  // for (const type of types) {
-  //   map_types.push({TypeName: type.type_name, TypeIcon: type.type_icon})
-  // }
-  // console.log(types);
+  let map_types = []
+  for (const type of types) {
+    map_types.push({type_id: type._id, type_name: type.type_name, type_icon: type.type_icon})
+  }
+  console.log(types);
 
   map = await matchSkillsTypes(map, skills, types)
 
@@ -388,7 +388,7 @@ async function doMapThing(mapName) {
 
 
   // console.log('Data:');
-  let data = {map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters,  year_information: semesters.yearsInformation, years: coreData}, map_types: types, map_skills: map_skills}
+  let data = {map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters,  year_information: semesters.yearsInformation, years: coreData}, map_types: map_types, map_skills: map_skills}
   // console.log(util.inspect({map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters, years: coreData}}, true, null, true));
 
   return data
