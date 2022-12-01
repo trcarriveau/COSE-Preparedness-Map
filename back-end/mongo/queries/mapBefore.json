@@ -1,0 +1,1324 @@
+{
+    "_id": "632bb2d73b2e349d9cfebcb9",
+    "map_name": "Software Engineering",
+    "map_items": [
+        {
+            "item_name": "SE 221",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "MATH 271",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "CS 201",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Basic Science 1",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "GENG 101",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb51b0e17f09d9c34c022",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "ENGL 191",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Student Group",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 231",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5313b2e349d9cfebcbd"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 210",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5080e17f09d9c34c020"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "MATH 221",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "CS 301",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Basic Science 2",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                },
+                {
+                    "skill_id": "632bb5080e17f09d9c34c020"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Huskies Invent",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Student Group",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Work Study",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 1,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 340",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb60a0e17f09d9c34c025"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "CMST 341",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 240",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5313b2e349d9cfebcbd"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 211",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5080e17f09d9c34c020"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "MATH 312",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "STAT 353",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Basic Science 3",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "CMST 192",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Std. Res. Grant",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                },
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Work Study",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 341",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb60a0e17f09d9c34c025"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 345",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5313b2e349d9cfebcbd"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Math Elective 1",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Math Elective 2",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Basic Science 4",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb5120e17f09d9c34c021"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "ENGL 332/CMST 341",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SCSU Colloquium",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                },
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Std. Res. Grant",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                },
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Work Study",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 2,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 460",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 465",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE Elective 1",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Goal Area 6",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Corporate Visits",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Guest Lectures",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Student Ambassador",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Orientation",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Club Leadership",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 470",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 475",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE Elective 2",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Mock Interview",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Corporate Visits",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Guest Lectures",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Student Ambassador",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Club Leadership",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 444",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb6160e17f09d9c34c026"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Summer"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Research Assistance",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                },
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                },
+                {
+                    "skill_id": "632bb5080e17f09d9c34c020"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 3,
+                    "semester": "Summer"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 480",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5f20e17f09d9c34c023"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE 490",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Goal Area 5",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Corporate Visits",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Guest Lectures",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Outreach Involvment",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Club Leadership",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Fall"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "SE 491",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb4433b2e349d9cfebcba",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                },
+                {
+                    "skill_id": {
+                        "$oid": "632bb4db0e17f09d9c34c01f",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "SE Elective 3",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": {
+                        "$oid": "632bb5080e17f09d9c34c020",
+                        "type_id": "632bb5fd0e17f09d9c34c024"
+                    }
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Goal Area 7",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Goal Area 5",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb51b0e17f09d9c34c022"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": false
+        },
+        {
+            "item_name": "Hackathons",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Mock Interview",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Corporate Visits",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4433b2e349d9cfebcba"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        },
+        {
+            "item_name": "Guest Lectures",
+            "item_description": "",
+            "item_skill": [
+                {
+                    "skill_id": "632bb4db0e17f09d9c34c01f"
+                }
+            ],
+            "item_year_semester": [
+                {
+                    "year": 4,
+                    "semester": "Spring"
+                }
+            ],
+            "is_extra_curricular": true
+        }
+    ]
+}

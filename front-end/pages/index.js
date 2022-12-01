@@ -13,7 +13,13 @@ import Button from "../Components/Button";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 
+//Context 
+import { useMapDataContext } from "../contexts/mapdata";
+
+
 export default function Home() {
+	const [mapData, setMapData] = useMapDataContext();
+
   const router = useRouter() 
 
   //example function that can be passed in a button component
@@ -55,6 +61,8 @@ export default function Home() {
       if (res.status >= 200 && res.status < 300) {
         setMessage(resJson.message);
         console.log("Range 200-300", resJson);
+				
+				setMapData(resJson.mapData) 
         //TODO Redirect to map
         router.push('/map')
         //TODO Username as a cookie

@@ -32,9 +32,16 @@ import Extracurriculars from "../components/Extracurriculars";
 import SemestersRow from "../components/SemestersRow";
 import TypesKey from "../components/TypesKey";
 
+//Context 
+import { useMapDataContext } from "../contexts/mapdata";
+
 
 
 function Map() {
+	const [mapData, setMapData] = useMapDataContext();
+
+	console.log('Map Data from Context')
+	console.log(mapData)
 
   
   //testing reading JSON info 

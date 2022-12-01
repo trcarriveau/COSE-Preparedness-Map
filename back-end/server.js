@@ -345,250 +345,250 @@ const server = app.listen(port, () => {
 });
 
 async function doMapThing(mapName) {
-	// mapName = "Software Engineering"
+  // mapName = "Software Engineering"
 
-	let map = await grabMap(mapName)
+  let map = await grabMap(mapName)
 
-	let skills = await grabSkills(mapName)
+  let skills = await grabSkills(mapName)
 
-	let map_skills = []
-	for (const skill of skills) {
-		map_skills.push({SkillName: skill.skill_name})
-	}
-	// console.log(skills);
+  let map_skills = []
+  for (const skill of skills) {
+    map_skills.push({SkillName: skill.skill_name})
+  }
+  // console.log(skills);
 
-	let types = await grabTypes(mapName)
+  let types = await grabTypes(mapName)
 
-	let map_types = []
-	for (const type of types) {
-		map_types.push({TypeName: type.type_name, TypeIcon: type.type_icon})
-	}
-	// console.log(types);
+  let map_types = []
+  for (const type of types) {
+    map_types.push({TypeName: type.type_name, TypeIcon: type.type_icon})
+  }
+  // console.log(types);
 
-	map = await matchSkillsTypes(map, skills, types)
+  map = await matchSkillsTypes(map, skills, types)
 
-	let numYears = await grabNumYears(mapName)
+  let numYears = await grabNumYears(mapName)
 
-	// console.log('Number of Years:')
-	// console.log(numYears.length)
+  // console.log('Number of Years:')
+  // console.log(numYears.length)
 
-	let semesters =  await grabNumSemesters(map, numYears)
+  let semesters =  await grabNumSemesters(map, numYears)
 
-	// console.log(`SEMESTERS:`);
-	// console.log(semesters)
-	// console.log('Semester Array:')
-	// console.log(semesters.semesterArr);
-	// console.log('Number of Semesters:')
-	// console.log(semesters.numSemesters);
-
-
-	let coreData = await generateCoreData(map, numYears, semesters.semesterArr, skills)
+  // console.log(`SEMESTERS:`);
+  // console.log(semesters)
+  // console.log('Semester Array:')
+  // console.log(semesters.semesterArr);
+  // console.log('Number of Semesters:')
+  // console.log(semesters.numSemesters);
 
 
-	// console.log('Data:');
-	let data = {total_years: numYears.length, total_semesters: semesters.numSemesters, map_skills: map_skills, map_types: map_types, years: coreData}
-	// console.log(util.inspect({map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters, years: coreData}}, true, null, true));
+  let coreData = await generateCoreData(map, numYears, semesters.semesterArr, skills)
 
-	return data
+
+  // console.log('Data:');
+  let data = {total_years: numYears.length, total_semesters: semesters.numSemesters, map_skills: map_skills, map_types: map_types, years: coreData}
+  // console.log(util.inspect({map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters, years: coreData}}, true, null, true));
+
+  return data
 }
 
 async function matchSkillsTypes (map, skills, types) {
-	try {
-		for await(const course of map.map_items) {
-			// console.log(`\nCourse Name: ${course.item_name}`);
-			for await(const skill of course.item_skill) {
-				if(skill.skill_id.hasOwnProperty('type_id')) {
-					// console.log(`\tSkill ID: ${skill.skill_id['$oid']}`)
-					// console.log(`\tType ID: ${skill.skill_id.type_id}`)
+  try {
+    for await(const course of map.map_items) {
+      // console.log(`\nCourse Name: ${course.item_name}`);
+      for await(const skill of course.item_skill) {
+        if(skill.skill_id.hasOwnProperty('type_id')) {
+          // console.log(`\tSkill ID: ${skill.skill_id['$oid']}`)
+          // console.log(`\tType ID: ${skill.skill_id.type_id}`)
 
-					for (const sk of skills) {
-						if (sk._id == skill.skill_id['$oid']) {
-							skill.skill_name = sk.skill_name
-						}
-					}
+          for (const sk of skills) {
+            if (sk._id == skill.skill_id['$oid']) {
+              skill.skill_name = sk.skill_name
+            }
+          }
 
-					for (const ty of types) {
-						if (ty._id.equals(skill.skill_id.type_id)) {
-							skill.skill_id.type_name = ty.type_name
-							skill.skill_id.type_icon = ty.type_icon
-						}
-					}
-				}	else {
-					// console.log(`\tSkill ID: ${skill.skill_id}`)
-					for (const sk of skills) {
-						if (sk._id.equals(skill.skill_id)) {
-							// console.log('Yup-----------------');
-							skill.skill_name = sk.skill_name
-							// console.log(skill);
-						}
-					}
-				}
-			}
-		}
-		return map
-	} catch (err) {
-		console.log(`Caught Err in matchSkillsTypes ${err}`);
-	}
-	
+          for (const ty of types) {
+            if (ty._id.equals(skill.skill_id.type_id)) {
+              skill.skill_id.type_name = ty.type_name
+              skill.skill_id.type_icon = ty.type_icon
+            }
+          }
+        }	else {
+          // console.log(`\tSkill ID: ${skill.skill_id}`)
+          for (const sk of skills) {
+            if (sk._id.equals(skill.skill_id)) {
+              // console.log('Yup-----------------');
+              skill.skill_name = sk.skill_name
+              // console.log(skill);
+            }
+          }
+        }
+      }
+    }
+    return map
+  } catch (err) {
+    console.log(`Caught Err in matchSkillsTypes ${err}`);
+  }
+  
 }
 
 async function grabMap(mapName) {
-	try {
-		let map = await CoseMaps.find({ map_name: mapName }).lean();
+  try {
+    let map = await CoseMaps.find({ map_name: mapName }).lean();
 
-		return map[0]
-	} catch (err) {
-		console.log(`Caught err in grabMap: ${err}`);
-	}
+    return map[0]
+  } catch (err) {
+    console.log(`Caught err in grabMap: ${err}`);
+  }
 }
 
 async function grabSkills(mapName) {
-	try {
-		return await CoseSkills.find({ skill_map: mapName });
-	} catch (err) {
-		console.log(`Caught err in grabSkills: ${err}`);
-	}
+  try {
+    return await CoseSkills.find({ skill_map: mapName });
+  } catch (err) {
+    console.log(`Caught err in grabSkills: ${err}`);
+  }
 }
 
 async function grabTypes(mapName) {
-	try {
-		return await CoseTypes.find({ type_map: mapName });
-	} catch (err) {
-		console.log(`Caught err in grabTypes: ${err}`);
-	}
+  try {
+    return await CoseTypes.find({ type_map: mapName });
+  } catch (err) {
+    console.log(`Caught err in grabTypes: ${err}`);
+  }
 }
 
 async function grabNumYears(mapName) {
-	try {
-		let numYears = await CoseMaps.find().distinct('map_items.item_year_semester.year', {map_name: mapName});
+  try {
+    let numYears = await CoseMaps.find().distinct('map_items.item_year_semester.year', {map_name: mapName});
 
-		return numYears
-	} catch (err) {
-		console.log(`Caught err in grabNumYears: ${err}`);
-	}
+    return numYears
+  } catch (err) {
+    console.log(`Caught err in grabNumYears: ${err}`);
+  }
 }
 
 async function grabNumSemesters(map, numYears) {
-	try {
-		
+  try {
+    
 
-		let semesterArr = []
+    let semesterArr = []
 
-		let numSemesters = 0;
-		for await(const year of numYears) {
-			let yearKey = `year_${year}`
-			let yearSems = []
+    let numSemesters = 0;
+    for await(const year of numYears) {
+      let yearKey = `year_${year}`
+      let yearSems = []
 
-			for (const course of map.map_items) {
-				// console.log(`year: ${year} - course: ${course.item_name} - semester: ${course.item_year_semester[0].semester}`)
+      for (const course of map.map_items) {
+        // console.log(`year: ${year} - course: ${course.item_name} - semester: ${course.item_year_semester[0].semester}`)
 
-				// if (course.item_year_semester[0].year == year) {
-				// 	console.log(`year: ${year} - course: ${course.item_name}  - semester: ${course.item_year_semester[0].semester}`)
-				// }
-				
+        // if (course.item_year_semester[0].year == year) {
+        // 	console.log(`year: ${year} - course: ${course.item_name}  - semester: ${course.item_year_semester[0].semester}`)
+        // }
+        
 
-				if (course.item_year_semester[0].year == year && !yearSems.includes(course.item_year_semester[0].semester)) {
-					yearSems.push(course.item_year_semester[0].semester)
-					numSemesters++
-				}
-			}
-			// semesterArr.push({[yearKey]: yearSems})
-			semesterArr.push({year: year, semesters: yearSems})
-		}
+        if (course.item_year_semester[0].year == year && !yearSems.includes(course.item_year_semester[0].semester)) {
+          yearSems.push(course.item_year_semester[0].semester)
+          numSemesters++
+        }
+      }
+      // semesterArr.push({[yearKey]: yearSems})
+      semesterArr.push({year: year, semesters: yearSems})
+    }
 
-		return {numSemesters: numSemesters, semesterArr: semesterArr}
-	} catch (err) {
-		console.log(`Caught err in grabNumSemesters: ${err}`);
-	}
-	
+    return {numSemesters: numSemesters, semesterArr: semesterArr}
+  } catch (err) {
+    console.log(`Caught err in grabNumSemesters: ${err}`);
+  }
+  
 }
 
 async function generateCoreData(map, numYears, semesterArr, skills) {
-	try {
-		let coreData = []
-		/*
-		{
-					"year": 1,
-					"semesters": [
-						{
-							"YearName": "Fall",
-							"Skills": [
-								{
-									"SkillName": "Soft Skills",
-									"Courses": [
-										{
-											"CourseName": "SE 221",
-											"Type": {
-												"TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-												"TypeIcon": "Red Circle"
-											},
-											"is_extra_curricular": false
-										}
-									]
-								}
-		*/
+  try {
+    let coreData = []
+    /*
+    {
+          "year": 1,
+          "semesters": [
+            {
+              "YearName": "Fall",
+              "Skills": [
+                {
+                  "SkillName": "Soft Skills",
+                  "Courses": [
+                    {
+                      "CourseName": "SE 221",
+                      "Type": {
+                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                        "TypeIcon": "Red Circle"
+                      },
+                      "is_extra_curricular": false
+                    }
+                  ]
+                }
+    */
 
-		for await(const year of numYears) {
-			let semesters = []
-			let skArr = []
-			
-			// console.log(`\n\nYear: ${year}`);
-			for (const semester of semesterArr) {
-				if (semester.year == year) {
-					// console.log(semester);
-					for (const sem of semester.semesters) {
-						// console.log(`\nSemester: ${sem}`);
-						let Skills = []
-						// let idk = ''
-						for (const skill of skills) {
-							
-							// console.log('SKILL: ', skill.skill_name);
-							let courseArr = []
-							
-							// 
-							// console.log(skill);
-							for (const course of map.map_items) {
-								if (course.item_year_semester[0].year == year && course.item_year_semester[0].semester == sem) {
-									// console.log(util.inspect(course, true, null, true));
-									for (const itemskill of course.item_skill) {
-										if (itemskill.skill_id.hasOwnProperty('type_id')) {
-											// console.log('JJJJJJJJJJJJJJJJJJJJJJJJ');
-											// console.log(skill);
-											if (itemskill.skill_name == skill.skill_name) {
-												// console.log('JJJJJJJJJJJJJJJJJJJJJJJJ');
-												// console.log(`\t\tCourse: ${course.item_name} - Year: ${course.item_year_semester[0].year} - Semester: ${sem} - Skill: ${itemskill.skill_name}`);
+    for await(const year of numYears) {
+      let semesters = []
+      let skArr = []
+      
+      // console.log(`\n\nYear: ${year}`);
+      for (const semester of semesterArr) {
+        if (semester.year == year) {
+          // console.log(semester);
+          for (const sem of semester.semesters) {
+            // console.log(`\nSemester: ${sem}`);
+            let Skills = []
+            // let idk = ''
+            for (const skill of skills) {
+              
+              // console.log('SKILL: ', skill.skill_name);
+              let courseArr = []
+              
+              // 
+              // console.log(skill);
+              for (const course of map.map_items) {
+                if (course.item_year_semester[0].year == year && course.item_year_semester[0].semester == sem) {
+                  // console.log(util.inspect(course, true, null, true));
+                  for (const itemskill of course.item_skill) {
+                    if (itemskill.skill_id.hasOwnProperty('type_id')) {
+                      // console.log('JJJJJJJJJJJJJJJJJJJJJJJJ');
+                      // console.log(skill);
+                      if (itemskill.skill_name == skill.skill_name) {
+                        // console.log('JJJJJJJJJJJJJJJJJJJJJJJJ');
+                        // console.log(`\t\tCourse: ${course.item_name} - Year: ${course.item_year_semester[0].year} - Semester: ${sem} - Skill: ${itemskill.skill_name}`);
 
-												courseArr.push({CourseName: course.item_name, Type: {TypeName: itemskill.skill_id.type_name, TypeIcon: itemskill.skill_id.type_icon}, is_extra_curricular: course.is_extra_curricular})
-											}
-										} else {
-											if (itemskill.skill_name == skill.skill_name) {
-												courseArr.push({CourseName: course.item_name, is_extra_curricular: course.is_extra_curricular})
-											}
-										}
-									}
-									
-								}
-							}
-							// console.log(`Year: ${year} - Semester: ${sem}`);
-							// console.log(randomArr);
-							// idk = {SkillName: skill.skill_name, Courses: randomArr}
-							Skills.push({SkillName: skill.skill_name, Courses: courseArr})
-							// semesters[loopCount].push(idk)
-						}
-					semesters.push({SemesterName: sem, Skills})
-					}
-				}
-			}
-			coreData.push({year: year, semesters: semesters})
-		}
-		// console.log(skills);
-		// console.log(util.inspect(coreData, true, null, true));
+                        courseArr.push({CourseName: course.item_name, Type: {TypeName: itemskill.skill_id.type_name, TypeIcon: itemskill.skill_id.type_icon}, is_extra_curricular: course.is_extra_curricular})
+                      }
+                    } else {
+                      if (itemskill.skill_name == skill.skill_name) {
+                        courseArr.push({CourseName: course.item_name, is_extra_curricular: course.is_extra_curricular})
+                      }
+                    }
+                  }
+                  
+                }
+              }
+              // console.log(`Year: ${year} - Semester: ${sem}`);
+              // console.log(randomArr);
+              // idk = {SkillName: skill.skill_name, Courses: randomArr}
+              Skills.push({SkillName: skill.skill_name, Courses: courseArr})
+              // semesters[loopCount].push(idk)
+            }
+          semesters.push({SemesterName: sem, Skills})
+          }
+        }
+      }
+      coreData.push({year: year, semesters: semesters})
+    }
+    // console.log(skills);
+    // console.log(util.inspect(coreData, true, null, true));
 
-		return coreData
-	} catch (err) {
-		console.log(`Caught err in generateCoreData: ${err}`);
-	}
-	
+    return coreData
+  } catch (err) {
+    console.log(`Caught err in generateCoreData: ${err}`);
+  }
+  
 }
 
 
