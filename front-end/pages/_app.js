@@ -1,18 +1,21 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 import { MapDataProvider } from "../contexts/mapdata";
 import { CoreSkillsProvider } from "../contexts/skills";
 import { TypesProvider } from "../contexts/types";
+import { YearsInformationProvider } from "../contexts/year_information";
 
 function MyApp({ Component, pageProps }) {
   return (
     <MapDataProvider>
-      <CoreSkillsProvider>
-        <TypesProvider>
-          <Component {...pageProps} />
-        </TypesProvider>
-      </CoreSkillsProvider>
+      <YearsInformationProvider>
+        <CoreSkillsProvider>
+          <TypesProvider>
+            <Component {...pageProps} />
+          </TypesProvider>
+        </CoreSkillsProvider>
+      </YearsInformationProvider>
     </MapDataProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
