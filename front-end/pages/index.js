@@ -15,10 +15,14 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 
 //Context 
 import { useMapDataContext } from "../contexts/mapdata";
+import { useCoreSkillsContext } from "../contexts/skills";
+import { useTypesContext } from "../contexts/types";
 
 
 export default function Home() {
 	const [mapData, setMapData] = useMapDataContext();
+	const [coreSkills, setCoreSkills] = useCoreSkillsContext();
+	const [types, setTypes] = useTypesContext();
 
   const router = useRouter() 
 
@@ -62,7 +66,12 @@ export default function Home() {
         setMessage(resJson.message);
         console.log("Range 200-300", resJson);
 				
-				setMapData(resJson.mapData) 
+				//Set Contexts
+				await setMapData(resJson.mapData) 
+				await setCoreSkills(resJson.mapSkills)
+				await setTypes(resJson.mapTypes)
+
+
         //TODO Redirect to map
         router.push('/map')
         //TODO Username as a cookie

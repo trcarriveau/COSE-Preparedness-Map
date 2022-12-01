@@ -288,7 +288,7 @@ app.post(
       }
 
       //Should we also send back the username? for cookie/session stuff?
-      let mapData = await doMapThing('Software Engineering');
+      let data = await doMapThing('Software Engineering');
 
       goodMsg = "Successfulled logged in!";
 
@@ -298,7 +298,9 @@ app.post(
           message: goodMsg,
           username: user.username,
           major: user.major,
-          mapData: mapData,
+          mapData: data.map_data,
+					mapSkills: data.map_skills,
+					mapTypes: data.map_types
         });
     } catch (error) {
       console.log("Caught Error in /login:" + error);
@@ -351,18 +353,18 @@ async function doMapThing(mapName) {
 
   let skills = await grabSkills(mapName)
 
-  let map_skills = []
-  for (const skill of skills) {
-    map_skills.push({SkillName: skill.skill_name})
-  }
+  // let map_skills = []
+  // for (const skill of skills) {
+  //   map_skills.push({SkillName: skill.skill_name})
+  // }
   // console.log(skills);
 
   let types = await grabTypes(mapName)
 
-  let map_types = []
-  for (const type of types) {
-    map_types.push({TypeName: type.type_name, TypeIcon: type.type_icon})
-  }
+  // let map_types = []
+  // for (const type of types) {
+  //   map_types.push({TypeName: type.type_name, TypeIcon: type.type_icon})
+  // }
   // console.log(types);
 
   map = await matchSkillsTypes(map, skills, types)
@@ -374,8 +376,8 @@ async function doMapThing(mapName) {
 
   let semesters =  await grabNumSemesters(map, numYears)
 
-  // console.log(`SEMESTERS:`);
-  // console.log(semesters)
+  console.log(`SEMESTERS:`);
+  console.log(semesters)
   // console.log('Semester Array:')
   // console.log(semesters.semesterArr);
   // console.log('Number of Semesters:')
@@ -386,7 +388,7 @@ async function doMapThing(mapName) {
 
 
   // console.log('Data:');
-  let data = {total_years: numYears.length, total_semesters: semesters.numSemesters, map_skills: map_skills, map_types: map_types, years: coreData}
+  let data = {map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters,  year_information: semesters.yearsInformation, years: coreData}, map_types: types, map_skills: skills}
   // console.log(util.inspect({map_data: {total_years: numYears.length, total_semesters: semesters.numSemesters, years: coreData}}, true, null, true));
 
   return data
@@ -473,6 +475,7 @@ async function grabNumSemesters(map, numYears) {
     
 
     let semesterArr = []
+		let yearArr = []
 
     let numSemesters = 0;
     for await(const year of numYears) {
@@ -494,9 +497,11 @@ async function grabNumSemesters(map, numYears) {
       }
       // semesterArr.push({[yearKey]: yearSems})
       semesterArr.push({year: year, semesters: yearSems})
+			let hasSummer = (yearSems.includes('Summer')) ? true : false
+			yearArr.push({year: year, has_summer: hasSummer})
     }
 
-    return {numSemesters: numSemesters, semesterArr: semesterArr}
+    return {numSemesters: numSemesters, semesterArr: semesterArr, yearsInformation: yearArr}
   } catch (err) {
     console.log(`Caught err in grabNumSemesters: ${err}`);
   }

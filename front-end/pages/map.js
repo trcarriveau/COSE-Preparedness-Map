@@ -24,7 +24,7 @@ import {HiUserGroup} from 'react-icons/hi'
 import {GiCube} from 'react-icons/gi'
 
 //test data for types 
-import type_data from '../components/test_objects/cose-types.json'
+// import type_data from '../components/test_objects/cose-types.json'
 
 import { useState} from 'react'
 import Types from "../components/Types";
@@ -34,30 +34,40 @@ import TypesKey from "../components/TypesKey";
 
 //Context 
 import { useMapDataContext } from "../contexts/mapdata";
+import { useCoreSkillsContext } from "../contexts/skills";
+import { useTypesContext } from "../contexts/types";
 
 
 
 function Map() {
 	const [mapData, setMapData] = useMapDataContext();
+	const [coreSkills, setCoreSkills] = useCoreSkillsContext();
+	const [types, setTypes] = useTypesContext();
 
 	console.log('Map Data from Context')
 	console.log(mapData)
 
+	console.log('Skill Data from Context')
+	console.log(coreSkills)
+
+	console.log('Type Data from Context')
+	console.log(types)
+
   
   //testing reading JSON info 
-  const [types, setTypes] = useState(
-    {
-        type_map: "Software Engineering",
-        type_name: "Labs & Experimental Learning (ISELF VizLab)",
-        type_information: "",
-        type_icon: GrGroup  
-    }
+  // const [types, setTypes] = useState(
+  //   {
+  //       type_map: "Software Engineering",
+  //       type_name: "Labs & Experimental Learning (ISELF VizLab)",
+  //       type_information: "",
+  //       type_icon: GrGroup  
+  //   }
 
-  )
+  // )
 
 
 
-  console.log(type_data)
+  // console.log(type_data)
 
   return (
     <div>    
