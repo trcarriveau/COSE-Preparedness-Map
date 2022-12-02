@@ -7,19 +7,19 @@ import styles from "../styles/Map.module.css";
 
 //TODO: convert ecs const to db values and pass down as props
 
-// const ecs = [
-//     {
-//         ecName: 'test'
-//     },
-//     {
-//         ecName: 'test2'
-//     },
-// ]
+const ecs = [
+  {
+    CourseName: "test",
+  },
+  {
+    CourseName: "test2",
+  },
+];
 
 const Extracurriculars = ({ extracurriculars }) => {
   return (
     <>
-      {extracurriculars.map((ec) => (
+      {ecs.map((ec) => (
         <>
           <Extracurricular ecName={ec.CourseName} />
         </>

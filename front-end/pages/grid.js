@@ -19,9 +19,11 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Years from "../Components/Years";
 import Years2 from "../Components/grid_components/Years2";
-import { Icon } from "@mui/material";
+
 import { green } from "@mui/material/colors";
 import DeleteIcon from "@mui/icons-material/Delete";
+import CircleIcon from "@mui/icons-material/Circle";
+import { MdCircle } from "react-icons/md";
 
 import { useYearsSemestersContext } from "../contexts/years_semesters";
 import { useCoreSkillsContext } from "../contexts/skills";
@@ -52,22 +54,18 @@ const grid = () => {
         />
       </div>
 
-      <Box
-        sx={{
-          "& > :not(style)": {
-            m: 2,
-          },
-        }}
-      >
-        {/* <Icon>add_circle</Icon>
-        <Icon>star</Icon>
+      <div>
+        {/* <MdCircle />
+        <CircleIcon /> */}
+
+        {/* 
         <Icon color="primary">add_circle</Icon>
         <Icon sx={{ color: green[500] }}>add_circle</Icon>
         <Icon fontSize="small">add_circle</Icon>
         <Icon sx={{ fontSize: 30 }}>add_circle</Icon> */}
         {/* <Icon baseClassName="fas" className="fa-plus-circle" color="green" />
         <DeleteIcon /> */}
-      </Box>
+      </div>
 
       <Box className={styles.key}>
         <TypesKey />

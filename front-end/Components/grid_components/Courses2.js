@@ -19,7 +19,8 @@ const Courses = ({ courses }) => {
           <Course
             courseName={course.CourseName}
             // temp_trait={<CircleIcon style={{ color: "red" }} />}
-            types={course.Type}
+            //types={course.Type}
+            // temp_trait={}
           />
         </>
       ))}

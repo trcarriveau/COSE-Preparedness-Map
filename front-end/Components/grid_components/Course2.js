@@ -40,6 +40,8 @@ const Course = ({ courseName, temp_trait, types }) => {
         <CircleIcon />
         <Icon>star</Icon>;<Types /> */}
         {/* <Type type_icon={types.TypeIcon} /> */}
+        {types?.TypeIcon}
+        {temp_trait}
       </div>
       <div>{courseName}</div>
       {/* Nothing to display below  Just used for justify-content space-between  */}
