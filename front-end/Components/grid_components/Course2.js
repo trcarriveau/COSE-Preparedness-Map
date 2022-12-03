@@ -7,10 +7,11 @@ import CircleIcon from "@mui/icons-material/Circle";
 import Type from "../Type";
 import Box from "@mui/material/Box";
 
-import Icon from "@mui/material/Icon";
+import Icon from "../Icon";
 
 //temp trait is a stand in until we have functional type icons and labels using types component
 const Course = ({ courseName, temp_trait, types }) => {
+  console.log("In course type is: ", types);
   return (
     // <div style={styles.courseContainer}>
 
@@ -40,8 +41,8 @@ const Course = ({ courseName, temp_trait, types }) => {
         <CircleIcon />
         <Icon>star</Icon>;<Types /> */}
         {/* <Type type_icon={types.TypeIcon} /> */}
-        {types?.TypeIcon}
-        {temp_trait}
+        {/* {types?.TypeIcon} */}
+        {types ? <Icon icon_name={types.TypeIcon} /> : null}
       </div>
       <div>{courseName}</div>
       {/* Nothing to display below  Just used for justify-content space-between  */}

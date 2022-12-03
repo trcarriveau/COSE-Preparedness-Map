@@ -58,8 +58,8 @@ function Map() {
 
   // )
 
-  const [skills, setSkills] = useState(skill_data);
-  const [career_map, setcareer_Map] = useState(map_data);
+  // const [skills, setSkills] = useState(skill_data);
+  // const [career_map, setcareer_Map] = useState(map_data);
   const [map, setMap] = useState(null);
   const [mapItems, setMapItems] = useState(null);
   const [isLoading, setIsLoading] = useState(false);

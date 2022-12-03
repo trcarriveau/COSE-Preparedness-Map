@@ -15,25 +15,13 @@
                                     "CourseName": "SE 221",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "CircleIcon"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
                                 },
                                 {
-                                    "CourseName": "Test: Extra Course",
-                                    "Type": {
-                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
-                                    },
-                                    "is_extra_curricular": false
-                                },
-                                {
-                                    "CourseName": "Test: With EC",
-                                    "Type": {
-                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
-                                    },
-                                    "is_extra_curricular": true
+                                    "CourseName": "Hackathons",
+                                     "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -44,7 +32,7 @@
                                     "CourseName": "SE 221",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -57,7 +45,7 @@
                                     "CourseName": "SE 221",
                                     "Type": {
                                         "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
-                                        "TypeIcon": "Orange Pentagon"
+                                        "TypeIcon": "ComputerIcon"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -69,6 +57,14 @@
                                 {
                                     "CourseName": "Math 271",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "CS 201",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Basic Science 1",
+                                    "is_extra_curricular": false
                                 }
                             ]
                         },
@@ -79,9 +75,17 @@
                                     "CourseName": "GENG 101",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Engl 191",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Student Group",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         }
@@ -97,9 +101,17 @@
                                     "CourseName": "SE 231",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Huskies Invent",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Hackathons",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -110,7 +122,7 @@
                                     "CourseName": "SE 231",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -123,9 +135,21 @@
                                     "CourseName": "SE 231",
                                     "Type": {
                                         "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
-                                        "TypeIcon": "Orange Pentagon"
+                                        "TypeIcon": "ComputerIcon"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE 210",
+                                    "Type": {
+                                        "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
+                                        "TypeIcon": "ComputerIcon"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Hackathons",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -135,6 +159,14 @@
                                 {
                                     "CourseName": "Math 221",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "CS 301",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Basic Science 2",
+                                    "is_extra_curricular": false
                                 }
                             ]
                         },
@@ -143,6 +175,10 @@
                             "Courses": [
                                 {
                                     "CourseName": "Student Group",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Work Study",
                                     "is_extra_curricular": true
                                 }
                             ]
@@ -164,9 +200,17 @@
                                     "CourseName": "SE 340",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "CMST 341",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Std. Res. Grant",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -177,15 +221,27 @@
                                     "CourseName": "SE 340",
                                     "Type": {
                                         "TypeName": "Research Activities",
-                                        "TypeIcon": "Green Triangle"
+                                        "TypeIcon": "Triangle"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Std. Res. Grant",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
                         {
                             "SkillName": "Special Technical Skills, Techniques and Tools",
                             "Courses": [
+                                {
+                                    "CourseName": "SE 240",
+                                    "Type": {
+                                        "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
+                                        "TypeIcon": "ComputerIcon"
+                                    },
+                                    "is_extra_curricular": false
+                                },
                                 {
                                     "CourseName": "SE 211",
                                     "is_extra_curricular": false
@@ -198,6 +254,14 @@
                                 {
                                     "CourseName": "Math 312",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "STAT 353",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Basic Science 3",
+                                    "is_extra_curricular": false
                                 }
                             ]
                         },
@@ -207,6 +271,10 @@
                                 {
                                     "CourseName": "CMST 192",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Work Study",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         }
@@ -219,12 +287,28 @@
                             "SkillName": "Soft Skills",
                             "Courses": [
                                 {
+                                    "CourseName": "SE 341",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "People"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
                                     "CourseName": "SE 345",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SCSU Colloquium",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Std. Res. Grant",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -235,9 +319,25 @@
                                     "CourseName": "SE 345",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE 341",
+                                    "Type": {
+                                        "TypeName": "Research Activities",
+                                        "TypeIcon": "Triangle"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SCSU Colloquium",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Std. Res. Grant",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -248,7 +348,7 @@
                                     "CourseName": "SE 345",
                                     "Type": {
                                         "TypeName": "Labs & Experimental Learning (ISELF VizLab)",
-                                        "TypeIcon": "Orange Pentagon"
+                                        "TypeIcon": "ComputerIcon"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -260,6 +360,14 @@
                                 {
                                     "CourseName": "Math Elective 1",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Math Elective 2",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Basic Science 4",
+                                    "is_extra_curricular": false
                                 }
                             ]
                         },
@@ -269,6 +377,10 @@
                                 {
                                     "CourseName": "ENGL 332/CMST 341",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Work Study",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         }
@@ -288,6 +400,10 @@
                                 {
                                     "CourseName": "Hackathons",
                                     "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Corporate Visits",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -298,9 +414,13 @@
                                     "CourseName": "SE 465",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Guest Lectures",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -311,7 +431,23 @@
                                     "CourseName": "SE 460",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE 465",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "People"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE Elective 1",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -328,6 +464,18 @@
                                 {
                                     "CourseName": "Goal Area 6",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Club Leadership",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Orientation",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Student Ambassador",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         }
@@ -340,7 +488,15 @@
                             "SkillName": "Soft Skills",
                             "Courses": [
                                 {
+                                    "CourseName": "Corporate Visits",
+                                    "is_extra_curricular": true
+                                },
+                                {
                                     "CourseName": "Mock Interview",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Hackathons",
                                     "is_extra_curricular": true
                                 }
                             ]
@@ -352,7 +508,7 @@
                                     "CourseName": "SE 470",
                                     "Type": {
                                         "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-                                        "TypeIcon": "Red Circle"
+                                        "TypeIcon": "Read"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -365,7 +521,23 @@
                                     "CourseName": "SE 470",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE 475",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "People"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "SE Elective 2",
+                                    "Type": {
+                                        "TypeName": "Group-based Semester Long Industry-Directed Projects",
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -379,6 +551,10 @@
                         {
                             "SkillName": "Citizenship",
                             "Courses": [
+                                {
+                                    "CourseName": "Club Leadership",
+                                    "is_extra_curricular": true
+                                },
                                 {
                                     "CourseName": "Student Ambassador",
                                     "is_extra_curricular": true
@@ -395,8 +571,16 @@
                             "Courses": [
                                 {
                                     "CourseName": "SE 444",
+                                    "Type": {
+                                        "TypeName": "Professional Working Experience",
+                                        "TypeIcon": "Cube"
+                                    },
                                     "is_extra_curricular": false
-                                }
+                                },
+                                {
+                                    "CourseName": "Research Assist",
+                                    "is_extra_curricular": true
+                                }                             
                             ]
                         },
                         {
@@ -444,9 +628,17 @@
                                     "CourseName": "SE 490",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Hackathons",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Corporate Visits",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -454,11 +646,23 @@
                             "SkillName": "Life Long Learning",
                             "Courses": [
                                 {
+                                    "CourseName": "SE 480",
+                                    "Type": {
+                                        "TypeName": "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+                                        "TypeIcon": "Read"
+                                    },
+                                    "is_extra_curricular": false
+                                },
+                                {
                                     "CourseName": "SE 490",
                                     "Type": {
                                         "TypeName": "Research Activities",
-                                        "TypeIcon": "Green Triangle"
+                                        "TypeIcon": "Triangle"
                                     },
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Guest Lectures",
                                     "is_extra_curricular": false
                                 }
                             ]
@@ -470,7 +674,7 @@
                                     "CourseName": "SE 480",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -487,6 +691,14 @@
                                 {
                                     "CourseName": "Goal Area 5",
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Club Leadership",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Outreach Involvement",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         }
@@ -502,9 +714,21 @@
                                     "CourseName": "SE 491",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Hackathons",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Mock Interview",
+                                    "is_extra_curricular": true
+                                },
+                                {
+                                    "CourseName": "Corporate Visits",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -515,9 +739,13 @@
                                     "CourseName": "SE 490",
                                     "Type": {
                                         "TypeName": "Research Activities",
-                                        "TypeIcon": "Green Triangle"
+                                        "TypeIcon": "Triangle"
                                     },
                                     "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Guest Lectures",
+                                    "is_extra_curricular": true
                                 }
                             ]
                         },
@@ -528,7 +756,7 @@
                                     "CourseName": "SE Elective 3",
                                     "Type": {
                                         "TypeName": "Group-based Semester Long Industry-Directed Projects",
-                                        "TypeIcon": "Yellow Star"
+                                        "TypeIcon": "People"
                                     },
                                     "is_extra_curricular": false
                                 }
@@ -544,6 +772,10 @@
                             "Courses": [
                                 {
                                     "CourseName": "Goal Area 7",
+                                    "is_extra_curricular": false
+                                },
+                                {
+                                    "CourseName": "Goal Area 5",
                                     "is_extra_curricular": false
                                 }
                             ]

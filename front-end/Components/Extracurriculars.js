@@ -19,7 +19,7 @@ const ecs = [
 const Extracurriculars = ({ extracurriculars }) => {
   return (
     <>
-      {ecs.map((ec) => (
+      {extracurriculars.map((ec) => (
         <>
           <Extracurricular ecName={ec.CourseName} />
         </>

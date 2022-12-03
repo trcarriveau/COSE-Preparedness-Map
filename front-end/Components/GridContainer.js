@@ -6,11 +6,6 @@ import Colors from "./Colors";
 import Semesters from "./grid_components/Semesters";
 import Semesters2 from "./grid_components/Semesters2";
 
-const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const test2 = [1, 20, 3, 4, 5, 6, 7, 8, 9];
-const test3 = [10, 2, 3, 4, 5, 6, 7, 8, 9];
-const test4 = [100, 2, 3, 4, 5, 6, 7, 8, 9];
-const test5 = [1000, 2, 3, 4, 5, 6, 7, 8, 9];
 const GridContainer = ({ columns, rows }) => {
   const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
   const [coreSkills, setCoreSkills] = useCoreSkillsContext();

@@ -1,6 +1,7 @@
 //Component for displaying an icon associated with a class type
 
 import React from "react";
+import Icon from "./Icon";
 
 // import CircleIcon from "@mui/icons-material/Circle";
 // import styled from "@emotion/styled";
@@ -23,7 +24,7 @@ const Type = ({
 }) => {
   return (
     <div style={{ paddingLeft: "1px" }}>
-      {type_icon2}
+      {type_icon2 ? <Icon icon_name={type_icon2} /> : null}
       {type_icon} &nbsp; {type_name}
     </div>
   );

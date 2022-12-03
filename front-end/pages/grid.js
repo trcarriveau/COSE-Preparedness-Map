@@ -12,6 +12,7 @@ import Seasons2 from "../Components/grid_components/Seasons2";
 import Seasons3 from "../Components/grid_components/Seasons3";
 import SemestersRow from "../Components/SemestersRow";
 import TypesKey from "../components/TypesKey";
+import Icon from "../Components/Icon";
 
 //test imports
 import { styled } from "@mui/material/styles";
@@ -23,17 +24,23 @@ import Years2 from "../Components/grid_components/Years2";
 import { green } from "@mui/material/colors";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CircleIcon from "@mui/icons-material/Circle";
+import ComputerIcon from "@mui/icons-material/Computer";
 import { MdCircle } from "react-icons/md";
 
 import { useYearsSemestersContext } from "../contexts/years_semesters";
 import { useCoreSkillsContext } from "../contexts/skills";
+import { useMapDataContext } from "../contexts/mapdata";
+
 import { Container } from "@mui/system";
 import GridContainer from "../Components/GridContainer";
 
 const grid = () => {
   const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
   const [coreSkills, setCoreSkills] = useCoreSkillsContext();
+  const [mapData, setMapData] = useMapDataContext();
 
+  const [isLoading, setIsLoading] = useState(false);
+  const icon_testing = ["CircleIcon", "ComputerIcon"];
   return (
     <Box style={{ backgroundColor: Colors.background, padding: "50px" }}>
       {/* <Years /> */}
@@ -55,8 +62,18 @@ const grid = () => {
       </div>
 
       <div>
-        {/* <MdCircle />
-        <CircleIcon /> */}
+        {/* <MdCircle />*/}
+        {/* <CircleIcon style={{ color: "red" }} />
+        <ComputerIcon /> */}
+        {/* <Icon icon_name={icon_testing} icon_color={"red"} /> */}
+        {/* <Icon icon_name={"ComputerIcon"} icon_color={"red"} /> */}
+
+        <Icon icon_name={"CircleIcon"} />
+        <Icon icon_name={"ComputerIcon"} icon_color={"red"} />
+        <Icon icon_name={"People"} />
+        <Icon icon_name={"Read"} />
+        <Icon icon_name={"Triangle"} />
+        <Icon icon_name={"Cube"} />
 
         {/* 
         <Icon color="primary">add_circle</Icon>
