@@ -38,7 +38,7 @@ const Icon = (icon_name, icon_color) => {
     case "Read":
       return <AutoStoriesIcon style={{ color: "red" }} />;
     case "Triangle":
-      return <ChangeHistoryIcon style={{ color: "lawngreen" }} />;
+      return <ChangeHistoryIcon style={{ color: "lgreen" }} />;
     case "People":
       return <PeopleIcon style={{ color: "yellow" }} />;
     case "Cube":

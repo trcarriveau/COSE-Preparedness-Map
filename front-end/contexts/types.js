@@ -1,44 +1,44 @@
 import { createContext, useContext, useState } from "react";
 
 //TODO  Remove after testing
-const coded_types = [
-  {
-    type_map: "Software Engineering",
-    type_name: "Professional Working Experience",
-    type_information: "",
-    type_icon: <RiComputerFill style={{ color: "gray" }} />,
-    type_color: "orange",
-  },
-  {
-    type_map: "Software Engineering",
-    type_name:
-      "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
-    type_information: "",
-    type_icon: <GiArchiveResearch style={{ color: "red" }}></GiArchiveResearch>,
-    type_color: "red",
-  },
-  {
-    type_map: "Software Engineering",
-    type_name: "Group-based Semester Long Industry-Directed Projects",
-    type_information: "",
-    type_icon: <HiUserGroup style={{ color: "black" }}></HiUserGroup>,
-    type_color: "orange",
-  },
-  {
-    type_map: "Software Engineering",
-    type_name: "Research Activities",
-    type_information: "",
-    type_icon: <BsTriangleFill style={{ color: "green" }}></BsTriangleFill>,
-    type_color: "orange",
-  },
-  {
-    type_map: "Software Engineering",
-    type_name: "Professional Working Experience",
-    type_information: "",
-    type_icon: <GiCube style={{ color: "gray" }}></GiCube>,
-    type_color: "orange",
-  },
-];
+// const coded_types = [
+//   {
+//     type_map: "Software Engineering",
+//     type_name: "Professional Working Experience",
+//     type_information: "",
+//     type_icon: <RiComputerFill style={{ color: "gray" }} />,
+//     type_color: "orange",
+//   },
+//   {
+//     type_map: "Software Engineering",
+//     type_name:
+//       "Read Search & Discuss (Exploratory assignment: literature review + oral presentaion + report)",
+//     type_information: "",
+//     type_icon: <GiArchiveResearch style={{ color: "red" }}></GiArchiveResearch>,
+//     type_color: "red",
+//   },
+//   {
+//     type_map: "Software Engineering",
+//     type_name: "Group-based Semester Long Industry-Directed Projects",
+//     type_information: "",
+//     type_icon: <HiUserGroup style={{ color: "black" }}></HiUserGroup>,
+//     type_color: "orange",
+//   },
+//   {
+//     type_map: "Software Engineering",
+//     type_name: "Research Activities",
+//     type_information: "",
+//     type_icon: <BsTriangleFill style={{ color: "green" }}></BsTriangleFill>,
+//     type_color: "orange",
+//   },
+//   {
+//     type_map: "Software Engineering",
+//     type_name: "Professional Working Experience",
+//     type_information: "",
+//     type_icon: <GiCube style={{ color: "gray" }}></GiCube>,
+//     type_color: "orange",
+//   },
+// ];
 
 //icons (from react-icons)
 import { RiComputerFill } from "react-icons/ri";
@@ -52,8 +52,9 @@ const Context = createContext();
 
 export function TypesProvider({ children }) {
   //const [types, setTypes] = useState("");
+  const [types, setTypes] = useState();
   //TODO  Remove this
-  const [types, setTypes] = useState(coded_types);
+  //const [types, setTypes] = useState(coded_types);
 
   return (
     <Context.Provider value={[types, setTypes]}>{children}</Context.Provider>
