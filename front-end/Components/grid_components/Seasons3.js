@@ -25,7 +25,7 @@ const Seasons = () => {
               <>
                 <Season
                   key={index}
-                  label={semester.YearName}
+                  label={semester.SemesterName}
                   color={Colors.PrimaryArr[year.year - 1]}
                 />
               </>

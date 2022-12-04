@@ -10,17 +10,16 @@ import Type from "../Type";
 import CircleIcon from "@mui/icons-material/Circle";
 
 const Courses = ({ courses }) => {
+  console.log("Y5  in Courses, courses is", courses);
+
   return (
-    // <div className={styles.semester}>
     <>
       {courses.map((course) => (
         <>
-          {/* <Course courseName={course.CourseName} types={<Types />} /> */}
           <Course
             courseName={course.CourseName}
-            // temp_trait={<CircleIcon style={{ color: "red" }} />}
             types={course.Type}
-            // temp_trait={}
+            courseDescription="Course Description: This feature coming soon"
           />
         </>
       ))}

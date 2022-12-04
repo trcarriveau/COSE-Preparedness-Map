@@ -15,21 +15,12 @@ import Colors from "./Colors";
 // import { BsTriangleFill } from "react-icons/bs";
 // import TypesKey from "./TypesKey";
 
-const Type = ({
-  type_map,
-  type_name,
-  type_information,
-  type_icon,
-  type_icon2,
-  type_color,
-}) => {
+const Type = ({ type_name, type_icon, color }) => {
   return (
     <div style={{ paddingLeft: "1px", display: "flex", flexDirection: "row" }}>
       {/* {type_icon2 ? <Icon icon_name={type_icon2} /> : null} */}
-      <Paper elevation={10}>
-        {" "}
-        {type_icon ? <Icon icon_name={type_icon} /> : null}{" "}
-      </Paper>{" "}
+      {/* <Paper elevation={10} style={{ backgroundColor: color }}> */}{" "}
+      {type_icon ? <Icon icon_name={type_icon} /> : null} {/* </Paper>{" "} */}
       &nbsp; {type_name}
       {/* {type_icon} &nbsp; {type_name} */}
     </div>

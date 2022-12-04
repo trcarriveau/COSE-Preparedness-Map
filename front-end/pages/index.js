@@ -4,6 +4,9 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 
 //our components
 import Colors from "../Components/Colors";
@@ -34,6 +37,7 @@ export default function Home() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [user, setUser] = useState({});
   const [message, setMessage] = useState();
+  const [loading, setLoading] = useState(false);
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
@@ -51,6 +55,8 @@ export default function Home() {
     event.preventDefault();
     console.log("before send user is", user);
 
+    setLoading(true);
+
     try {
       let res = await fetch("http://localhost:3080/login", {
         method: "POST",
@@ -66,9 +72,7 @@ export default function Home() {
         console.log("Range 200-300", resJson);
 
         //Set Contexts
-
-        //TODO: Renable setMapData
-        //await setMapData(resJson.mapData);
+        await setMapData(resJson.mapData);
         await setCoreSkills(resJson.mapSkills);
         await setTypes(resJson.mapTypes);
 
@@ -89,6 +93,7 @@ export default function Home() {
       //console.log(err);
     }
   };
+
   return (
     <div className={styles.body}>
       <Image
@@ -145,9 +150,24 @@ export default function Home() {
               />
             )}
           </div>
-          <h2 className={styles.textError} style={{ color: Colors.text_error }}>
-            {message}
-          </h2>
+          {loading ? (
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          ) : (
+            <h2
+              className={styles.textError}
+              style={{ color: Colors.text_error }}
+            >
+              {message}
+            </h2>
+          )}
           <button
             className={styles.button3}
             style={{ backgroundColor: Colors.button }}

@@ -1,17 +1,17 @@
 //component responsible for display of a single course on on the map
 
 import Colors from "../Colors";
-import Types from "./Types2";
+import Types from "../Types";
 import Paper from "@mui/material/Paper";
 import CircleIcon from "@mui/icons-material/Circle";
 import Type from "../Type";
 import Box from "@mui/material/Box";
 
 import Icon from "../Icon";
+import { Tooltip } from "@mui/material";
 
 //temp trait is a stand in until we have functional type icons and labels using types component
-const Course = ({ courseName, temp_trait, types }) => {
-  console.log("In course type is: ", types);
+const Course = ({ courseName, courseDescription, types }) => {
   return (
     // <div style={styles.courseContainer}>
 
@@ -36,15 +36,16 @@ const Course = ({ courseName, temp_trait, types }) => {
           gap: "5px",
         }}
       >
-        {/* {temp_trait}
-        {types ? `<${types.TypeIcon} />` : null}
-        <CircleIcon />
-        <Icon>star</Icon>;<Types /> */}
-        {/* <Type type_icon={types.TypeIcon} /> */}
-        {/* {types?.TypeIcon} */}
-        {types ? <Icon icon_name={types.TypeIcon} /> : null}
+        {/* TODO Convert this Icon call into a Type call */}
+        {/* {types ? <Icon icon_name={types.TypeIcon} /> : null} */}
+
+        {types ? <Types type_to_find={"632bb5313b2e349d9cfebcbd"} /> : null}
+
+        <Types type_to_find={"632bb5313b2e349d9cfebcbd"} />
       </div>
-      <div>{courseName}</div>
+      <Tooltip title={courseDescription}>
+        <Box>{courseName}</Box>
+      </Tooltip>
       {/* Nothing to display below  Just used for justify-content space-between  */}
       <div
         style={{

@@ -7,7 +7,6 @@ import Semesters from "./grid_components/Semesters";
 import Semesters2 from "./grid_components/Semesters2";
 
 const GridContainer = ({ columns, rows }) => {
-  const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
   const [coreSkills, setCoreSkills] = useCoreSkillsContext();
 
   return (
@@ -15,7 +14,6 @@ const GridContainer = ({ columns, rows }) => {
       style={{
         flex: 1 /* fills the remaining part of the viewport below header */,
         background: `${Colors.background}`,
-        // background: "white",
         display: "grid",
         gridColumnCount: 9,
         gridTemplateColumns: `repeat(${columns}, 1fr)`,

@@ -6,7 +6,7 @@ import { createContext, useContext, useState } from "react";
 const Context = createContext();
 
 export function MapDataProvider({ children }) {
-  const [mapData, setMapData] = useState(map);
+  const [mapData, setMapData] = useState(null);
   //TODO reimplement this import once testing is complete
   //const [mapData, setMapData] = useState("");
   return (

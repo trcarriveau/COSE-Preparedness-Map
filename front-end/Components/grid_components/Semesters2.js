@@ -12,6 +12,7 @@ import Courses from "./Courses2";
 
 const Semesters = ({ columns, skill_name }) => {
   const [mapData, setMapData] = useMapDataContext();
+  console.log("Y3, in Semesters2 mapData is", mapData);
   return (
     <>
       {mapData.years.map((year, index) => (
@@ -27,7 +28,6 @@ const Semesters = ({ columns, skill_name }) => {
               {semester.Skills.filter(
                 (skill) => skill.SkillName == skill_name
               ).map((filteredSkill) => (
-                //TODO Course and EC component calls should be changed to Courses/ECs in case of multiples
                 <div
                   style={{
                     display: "flex",
@@ -38,7 +38,6 @@ const Semesters = ({ columns, skill_name }) => {
                     flexGrow: 1,
                   }}
                 >
-                  {/* <Courses courses={filteredSkill.Courses} /> */}
                   <Semester courses={filteredSkill.Courses} />
                 </div>
               ))}
