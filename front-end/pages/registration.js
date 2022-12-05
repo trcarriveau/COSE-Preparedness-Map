@@ -5,7 +5,6 @@ import Colors from "../Components/Colors";
 import Button from "../Components/Button";
 import RegistrationForm from "../Components/RegistrationForm";
 
-
 //TODO:
 // Password matching hook
 
@@ -21,8 +20,8 @@ export default function Registration({ msg }) {
       confirmPassword: event.target.confirmPassword.value,
     };
 
-    console.log("Data:");
-    console.log(data);
+    // console.log("Data:");
+    // console.log(data);
 
     const options = {
       method: "POST",

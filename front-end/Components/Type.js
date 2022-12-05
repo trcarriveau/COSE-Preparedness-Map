@@ -19,7 +19,13 @@ import Colors from "./Colors";
 
 const Type = ({ type_name, type_icon, color }) => {
   return (
-    <Box style={{ paddingLeft: "1px", display: "flex", flexDirection: "row" }}>
+    <Box
+      style={{
+        paddingLeft: "1px",
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
       {/* {type_icon2 ? <Icon icon_name={type_icon2} /> : null} */}
       {/* <Paper elevation={10} style={{ backgroundColor: color }}> */}{" "}
       {type_icon ? <Icon icon_name={type_icon} /> : null} {/* </Paper>{" "} */}

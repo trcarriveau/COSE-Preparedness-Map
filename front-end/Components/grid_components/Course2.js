@@ -49,20 +49,29 @@ const Course = ({ courseName, courseDescription, types }) => {
               <Type type_icon={types.TypeIcon} />
             </Box>
           </Tooltip>
-        ) : null}
+        ) : (
+          <Box
+            style={{
+              display: "flex",
+              marginRight: "10px",
+            }}
+          >
+            <></>
+          </Box>
+        )}
       </Box>
       <Tooltip title={courseDescription}>
         <Box>{courseName}</Box>
       </Tooltip>
       {/* Nothing to display below  Just used for justify-content space-between  */}
-      <div
+      <Box
         style={{
           display: "flex",
           marginRight: "10px",
         }}
       >
         <></>
-      </div>
+      </Box>
     </Paper>
   );
 };

@@ -27,6 +27,7 @@ const CoreSkills = () => {
           <CoreSkill
             title={skill.skill_name}
             color={skill_colors[index % skill_colors.length]}
+            style={{ padding: "5%" }}
           />
         </>
       ))}

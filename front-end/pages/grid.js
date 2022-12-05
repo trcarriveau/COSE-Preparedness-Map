@@ -34,7 +34,6 @@ import { Container } from "@mui/system";
 import GridContainer from "../Components/GridContainer";
 
 const grid = () => {
-  const [years_semesters, setYears_Semesters] = useYearsSemestersContext();
   const [coreSkills, setCoreSkills] = useCoreSkillsContext();
   const [mapData, setMapData] = useMapDataContext();
 
