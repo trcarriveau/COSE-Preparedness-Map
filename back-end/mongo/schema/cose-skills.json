@@ -1,5 +1,12 @@
 [{
   "_id": {
+    "$oid": "632bb4433b2e349d9cfebcba"
+  },
+  "skill_map": "Software Engineering",
+  "skill_name": "Soft Skills",
+  "skill_information": ""
+},{
+  "_id": {
     "$oid": "632bb4db0e17f09d9c34c01f"
   },
   "skill_map": "Software Engineering",
@@ -25,12 +32,5 @@
   },
   "skill_map": "Software Engineering",
   "skill_name": "Citizenship",
-  "skill_information": ""
-},{
-  "_id": {
-    "$oid": "632bb4433b2e349d9cfebcba"
-  },
-  "skill_map": "Software Engineering",
-  "skill_name": "Soft Skills",
   "skill_information": ""
 }]
