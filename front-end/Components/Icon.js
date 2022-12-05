@@ -8,6 +8,8 @@ import ChangeHistoryIcon from "@mui/icons-material/ChangeHistory";
 import PeopleIcon from "@mui/icons-material/People";
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 
+import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+
 //icons (from react-icons)
 import { RiComputerFill } from "react-icons/ri";
 import { GiArchiveResearch } from "react-icons/gi";
@@ -63,19 +65,17 @@ const Icon = (icon_name, icon_color) => {
       //return <CircleIcon style={{ color: icon_color }} />;
       return <CircleIcon sx={{ boxShadow: 10 }} style={{ color: "red" }} />;
     case "ComputerIcon":
-      return (
-        <RiComputerFill sx={{ boxShadow: 10 }} style={{ color: "gray" }} />
-      );
+      return <RiComputerFill style={{ color: "orange" }} />;
     case "Read":
       return <GiArchiveResearch style={{ color: "red" }}></GiArchiveResearch>;
     case "Triangle":
-      return <BsTriangleFill style={{ color: "green" }}></BsTriangleFill>;
+      return <BsTriangleFill style={{ color: "lawngreen" }}></BsTriangleFill>;
     case "People":
       return <HiUserGroup style={{ color: "black" }}></HiUserGroup>;
     case "Cube":
       return <GiCube style={{ color: "gray" }}></GiCube>;
     default:
-      return "This is default";
+      return <QuestionMarkIcon />;
   }
 };
 

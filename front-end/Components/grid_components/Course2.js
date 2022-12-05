@@ -9,9 +9,11 @@ import Box from "@mui/material/Box";
 
 import Icon from "../Icon";
 import { Tooltip } from "@mui/material";
+import { BsTypeStrikethrough } from "react-icons/bs";
 
 //temp trait is a stand in until we have functional type icons and labels using types component
 const Course = ({ courseName, courseDescription, types }) => {
+  console.log("Y9 in Course2  types is ", types);
   return (
     // <div style={styles.courseContainer}>
 
@@ -28,7 +30,7 @@ const Course = ({ courseName, courseDescription, types }) => {
         margin: "2px",
       }}
     >
-      <div
+      <Box
         style={{
           display: "flex",
           marginLeft: "10px",
@@ -39,10 +41,16 @@ const Course = ({ courseName, courseDescription, types }) => {
         {/* TODO Convert this Icon call into a Type call */}
         {/* {types ? <Icon icon_name={types.TypeIcon} /> : null} */}
 
-        {types ? <Types type_to_find={"632bb5313b2e349d9cfebcbd"} /> : null}
+        {/* {types ? <Types type_to_find={types.TypeIcon} /> : null} */}
 
-        <Types type_to_find={"632bb5313b2e349d9cfebcbd"} />
-      </div>
+        {types ? (
+          <Tooltip title={types.TypeName}>
+            <Box>
+              <Type type_icon={types.TypeIcon} />
+            </Box>
+          </Tooltip>
+        ) : null}
+      </Box>
       <Tooltip title={courseDescription}>
         <Box>{courseName}</Box>
       </Tooltip>

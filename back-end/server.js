@@ -447,7 +447,7 @@ async function matchSkillsTypes(map, skills, types) {
 async function grabMap(mapName) {
   try {
     let map = await CoseMaps.find({ map_name: mapName }).lean();
-    console.log("This is grabMap and map is", map);
+
     return map[0];
   } catch (err) {
     console.log(`Caught err in grabMap: ${err}`);

@@ -80,8 +80,6 @@ const Types = ({ type_to_find }) => {
   const getType = (type) => type.type_id == type_to_find;
 
   const foundType = types.filter(getType);
-  console.log("Y5 -> in types: foundType is: ", foundType);
-  console.log("Y5 -> in types: foundType name is: ", foundType[0].type_name);
 
   return (
     <>

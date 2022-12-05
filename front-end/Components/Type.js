@@ -3,7 +3,9 @@
 import React from "react";
 import Icon from "./Icon";
 import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 import Colors from "./Colors";
+
 // import CircleIcon from "@mui/icons-material/Circle";
 // import styled from "@emotion/styled";
 
@@ -17,13 +19,13 @@ import Colors from "./Colors";
 
 const Type = ({ type_name, type_icon, color }) => {
   return (
-    <div style={{ paddingLeft: "1px", display: "flex", flexDirection: "row" }}>
+    <Box style={{ paddingLeft: "1px", display: "flex", flexDirection: "row" }}>
       {/* {type_icon2 ? <Icon icon_name={type_icon2} /> : null} */}
       {/* <Paper elevation={10} style={{ backgroundColor: color }}> */}{" "}
       {type_icon ? <Icon icon_name={type_icon} /> : null} {/* </Paper>{" "} */}
       &nbsp; {type_name}
       {/* {type_icon} &nbsp; {type_name} */}
-    </div>
+    </Box>
   );
 };
 

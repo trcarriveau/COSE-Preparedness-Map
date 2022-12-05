@@ -10,7 +10,7 @@ import Type from "../Type";
 import CircleIcon from "@mui/icons-material/Circle";
 
 const Courses = ({ courses }) => {
-  console.log("Y5  in Courses, courses is", courses);
+  console.log("Y6  in Courses, courses is", courses);
 
   return (
     <>
