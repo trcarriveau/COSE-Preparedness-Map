@@ -24,6 +24,7 @@ const Type = ({ type_name, type_icon, color }) => {
         paddingLeft: "1px",
         display: "flex",
         flexDirection: "row",
+        alignItems: "center",
       }}
     >
       {type_icon ? <Icon icon_name={type_icon} /> : null} {/* </Paper>{" "} */}

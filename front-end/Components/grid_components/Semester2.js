@@ -29,6 +29,8 @@ const Semester = ({ courses }) => {
         marginLeft: "2px",
         marginRight: "2px",
         flexGrow: 1,
+        paddingTop: "5px",
+        paddingBottom: "5px",
       }}
     >
       <div style={styles.coursesContainer}>

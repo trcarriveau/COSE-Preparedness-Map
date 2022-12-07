@@ -22,15 +22,15 @@ const TypesKey = () => {
       <div className={styles.keyText}>
         {types.map((type, index) => (
           //TODO: Update types context object to have an ID and change this key
-          <Tooltip title={type.type_name}>
-            <Box key={index}>
-              <Type
-                type_icon={type.type_icon}
-                type_name={type.type_name}
-                color={Colors.primaryLightest}
-              />
-            </Box>
-          </Tooltip>
+          // <Tooltip title={type.type_name}>
+          <Box key={index}>
+            <Type
+              type_icon={type.type_icon}
+              type_name={type.type_name}
+              color={Colors.primaryLightest}
+            />
+          </Box>
+          // </Tooltip>
         ))}
       </div>
     </Paper>

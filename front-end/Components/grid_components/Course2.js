@@ -36,13 +36,9 @@ const Course = ({ courseName, courseDescription, types }) => {
           marginLeft: "10px",
           flexDirection: "row",
           gap: "5px",
+          alignItems: "center",
         }}
       >
-        {/* TODO Convert this Icon call into a Type call */}
-        {/* {types ? <Icon icon_name={types.TypeIcon} /> : null} */}
-
-        {/* {types ? <Types type_to_find={types.TypeIcon} /> : null} */}
-
         {types ? (
           <Tooltip title={types.TypeName}>
             <Box>
