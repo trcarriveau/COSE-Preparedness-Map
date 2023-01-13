@@ -317,6 +317,20 @@ app.post(
 );
 
 //Just a test route for showing backend data on the front end side
+app.get("/scrape", async (req, res) => {
+  console.log("Hit scrape");
+	let map_name = req.query.map
+
+	console.log(`Query params: ${map_name}`)
+	const map = await CoseMaps.find({ map_name: map_name }).lean();
+
+	let map_id = map[0].map_id
+	console.log(`Map ID: ${map_id}`)
+
+  res.json({ message: `Map ID: ${map_id}` });
+});
+
+//Just a test route for showing backend data on the front end side
 app.get("/test_api", (req, res) => {
   console.log("Hit test_api");
   res.json({ message: "hello from the back end :)" });
