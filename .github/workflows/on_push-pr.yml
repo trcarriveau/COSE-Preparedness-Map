@@ -41,7 +41,9 @@ jobs:
     - name: Import Mongo Records
       run: |
         cd back-end/mongo/schema
-        mongoimport --db "COSE-Preparedness-Map" --collection "cose-maps"  --type "json" --jsonArray --legacy --file "cose-maps.json" 
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-maps"  --type "json" --jsonArray --legacy --file "cose-maps.json"
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-skills" --type "json" --jsonArray --legacy --file "cose-skills.json"        
+        mongoimport --db "COSE-Preparedness-Map" --collection "cose-types"  --type "json" --jsonArray --legacy --file "cose-types.json"
     
     - name: Install Node Modules
       run: |
